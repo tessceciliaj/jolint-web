@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Assignment README
 
-## Getting Started
+## Purpose
 
-First, run the development server:
+The purpose of this assignment is to provide you with a development experience that closely mirrors real-world scenarios. You will collaborate in teams, engage with the client, and undergo a comprehensive assessment process.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Team
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   TessCeciliaJ
+-   Freddiekaplan
+-   Linjoh92
+-   Maxhaggmancmedu
+-   Prickar
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Team Grading
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The team grade focuses on evaluating your team's collaborative approach and the quality of the final product. To achieve a "Godkänt" grade, your team must:
 
-## Learn More
+-   Document your way of working
+-   Specify the technologies used
+-   Describe conflict resolution strategies
+-   Implement Scrum/Kanban methodologies
+-   Create a backlog of tickets
+-   Ensure each ticket has a User Story
+-   Define Acceptance Criteria for each ticket
+-   Develop a sprint or Kanban board(s) where every ticket is clearly represented and progresses across the board
+-   Assign numbers to tickets for easy reference
+-   Create appropriate development branches in the repository (e.g., development and master)
+-   Establish corresponding Vercel (or alternative) environments linked to the relevant branches
+-   Develop the two applications as detailed by Jolint:
+    -   Customer consent form
+    -   Client dashboard
+-   Ensure that the applications are completed (or as close as possible) by the due date, and the 'master' branch is bug-free
+-   Attend regular stand-up meetings
+-   Present the status of the projects to the client on a weekly basis
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For this assignment, we will be using the following technologies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   Next.js
+-   Tailwind CSS
+-   Framer Motion
