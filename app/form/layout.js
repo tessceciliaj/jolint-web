@@ -1,9 +1,11 @@
+import FormHeader from '../components/FormHeader'
+
 const layout = ({ children }) => {
     return (
-        <div>
-            <h3>Hello Layout</h3>
+        <>
+            <FormHeader />
             <main>{children}</main>
-        </div>
+        </>
     )
 }
 
