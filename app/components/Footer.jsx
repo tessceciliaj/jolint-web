@@ -1,3 +1,6 @@
+import Letter_Icon from '../../public/Letter_Icon.svg'
+import Linkedin_icon from '../../public/Linkedin_icon.svg'
+
 const Footer = () => {
     return (
         <>
@@ -12,8 +15,14 @@ const Footer = () => {
                     {/* <div className="w-full"></div> */}
                     <div className="w-full px-5 md:px-24">
                         {/* <div className="w-full pr-24"> */}
-                        <p className="mt-4 sm:mt-0">Jolint</p>
-                        <p className="mt-4">hello@jolint.com</p>
+                        <p className="mt-4 sm:mt-0">
+                            <img src={Linkedin_icon} alt="LinkedIN icon" />{' '}
+                            Jolint
+                        </p>
+                        <p className="mt-4">
+                            <img src={Letter_Icon} alt="Envelope icon" />{' '}
+                            hello@jolint.com
+                        </p>
                     </div>
                 </div>
                 <div className="text-center justify-center flex py-6">
