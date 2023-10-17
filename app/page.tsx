@@ -1,3 +1,4 @@
+import Button from './components/Button'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -7,7 +8,11 @@ export default function Home() {
             <Header />
             <h1 className="text-5xl font-poppins">Jolint-web</h1>
             <p className="font-kumbhSans">Brödtext</p>
+<<<<<<< HEAD
             <Footer />
+=======
+            <Button text="Click me!" />
+>>>>>>> TICKET-57/button-component
         </main>
     )
 }
