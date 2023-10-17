@@ -1,3 +1,4 @@
+import React from 'react'
 import PartBox from '../components/FormPartBox';
 import { partBoxInfo } from '../constants';  
 

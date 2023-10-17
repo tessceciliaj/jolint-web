@@ -1,3 +1,4 @@
+import React from 'react'
 import Logo from '../../public/JOLINTlogo.svg'
 import Image from 'next/image'
 

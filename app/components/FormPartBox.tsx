@@ -1,8 +1,13 @@
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
-const PartBox = (props) => {
+type PartBoxProps = {
+    icon: string;
+    title: string;
+    subTitle: string;
+}
 
-    const { icon, title, subTitle } = props
+const PartBox = ({icon, title, subTitle}: PartBoxProps) => {
 
     return (
         <div className="flex flex-col p-[21px] border-2 border-mediumDarkGray rounded-[10px] h-64 w-64 bg-lightColor">
@@ -15,7 +20,9 @@ const PartBox = (props) => {
                 <p className='text-base leading-8'>{subTitle}</p>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default PartBox
+export default PartBox;
+
+

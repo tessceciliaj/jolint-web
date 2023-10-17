@@ -1,3 +1,4 @@
+import React from 'react'
 import FormHeader from '../components/FormHeader'
 import { RootLayoutProps } from '../utils/types'
 
