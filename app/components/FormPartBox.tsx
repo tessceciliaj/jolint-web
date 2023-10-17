@@ -1,11 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import { PartBoxProps } from '../utils/types'
 
-type PartBoxProps = {
-    icon: string;
-    title: string;
-    subTitle: string;
-}
 
 const PartBox = ({icon, title, subTitle}: PartBoxProps) => {
 
