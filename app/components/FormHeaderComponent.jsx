@@ -1,4 +1,4 @@
-import { React } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import speaker from '../../public/volume-2.svg'
 

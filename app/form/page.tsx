@@ -1,3 +1,4 @@
+import React from 'react'
 import FormHeaderComponent from '../components/FormHeaderComponent'
 
 const Page = () => {
