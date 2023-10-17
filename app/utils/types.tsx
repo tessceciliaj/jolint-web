@@ -6,3 +6,9 @@ export type MetadataProps = {
     title: string
     description: string
 }
+
+export type PartBoxProps = {
+    icon: string;
+    title: string;
+    subTitle: string;
+}
