@@ -1,14 +1,19 @@
-import React from 'react'
-import FormHeaderComponent from '../components/FormHeaderComponent'
+'use client'
+import React, { useState } from 'react'
+import FormText from '../components/FormText'
+import { formTextParagraph } from '../constants'
 
 const Page = () => {
+    const [pageNumber, setPageNumber] = useState<number>(8)
+
     return (
-        <div className="mt-8">
-            <FormHeaderComponent
-                title="Consent Form for Data Processing"
-                subtitle="test"
+        <>
+            <FormText
+                title={formTextParagraph[pageNumber].title}
+                text1={formTextParagraph[pageNumber].text1}
+                text2={formTextParagraph[pageNumber].text2}
             />
-        </div>
+        </>
     )
 }
 
