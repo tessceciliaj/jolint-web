@@ -1,6 +1,7 @@
 import FormHeader from '../components/FormHeader'
+import { RootLayoutProps } from '../utils/types'
 
-const layout = ({ children }) => {
+const layout = ({ children }: RootLayoutProps) => {
     return (
         <>
             <FormHeader />
