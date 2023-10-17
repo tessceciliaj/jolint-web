@@ -1,10 +1,21 @@
-import React from 'react'
+import { React } from 'react'
+import Image from 'next/image'
+import speaker from '../../public/volume-2.svg'
 
-const FormHeaderComponent = (title, subtitle) => {
+const FormHeaderComponent = ({ title, subtitle }) => {
     return (
         <>
-            <h1>{title}</h1>
-            <h2>{subtitle}</h2>
+            <div className="flex flex-row">
+                <h1 className="font-bold text-4xl">{title}</h1>
+                <div className="ml-8">
+                    <Image src={speaker} alt="Speaker Icon" />
+                </div>
+            </div>
+            {subtitle && (
+                <h2 className=" font-semibold font-kumbhSans text-2xl">
+                    {subtitle}
+                </h2>
+            )}
         </>
     )
 }

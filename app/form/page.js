@@ -1,7 +1,12 @@
+import FormHeaderComponent from '../components/FormHeaderComponent'
+
 const Page = () => {
     return (
-        <div>
-            <h3>Im a form</h3>
+        <div className="mt-8">
+            <FormHeaderComponent
+                title="Consent Form for Data Processing"
+                subtitle="test"
+            />
         </div>
     )
 }
