@@ -1,16 +1,17 @@
 import React from 'react'
-import HeroImage from '../../public/Bg-Startsida.png'
-import Image from 'next/image'
 
 const Hero = () => {
     return (
-        <div>
-            <Image
-                src={HeroImage}
-                alt="gradiant image"
-                height={455}
-                className="w-full"
-            />
+        <div
+            className="bg-cover"
+            style={{
+                backgroundImage: 'url(/Bg-Startsida.png)',
+                width: '100%',
+                height: '455px',
+            }}
+        >
+            <h1 className="text-5xl font-poppins">Jolint-web</h1>
+            <p className="font-kumbhSans">Brödtext</p>
         </div>
     )
 }

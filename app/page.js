@@ -6,8 +6,6 @@ export default function Home() {
         <main className="flex min-h-screen flex-col">
             <Header />
             <Hero />
-            <h1 className="text-5xl font-poppins">Jolint-web</h1>
-            <p className="font-kumbhSans">Brödtext</p>
         </main>
     )
 }
