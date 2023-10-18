@@ -4,7 +4,7 @@ import FormText from '../components/FormText'
 import { formTextParagraph } from '../constants'
 
 const Page = () => {
-    const [pageNumber, setPageNumber] = useState<number>(13)
+    const [pageNumber, setPageNumber] = useState<number>(0)
 
     const nextPage = (): void => {
         setPageNumber((prev) => prev + 1)
