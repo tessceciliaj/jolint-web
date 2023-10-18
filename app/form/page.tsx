@@ -1,8 +1,13 @@
-import React from 'react'
-import PartBox from '../components/FormPartBox';
-import { partBoxInfo } from '../constants';  
+'use client'
+import React, { useState } from 'react'
+import PartBox from '../components/FormPartBox'
+import FormText from '../components/FormText'
+import { partBoxInfo } from '../constants'
+import { formTextParagraph } from '../constants'
 
 const Page = () => {
+    const [pageNumber, setPageNumber] = useState<number>(0)
+
     return (
         <>
             <div className="flex items-center justify-center my-20">
@@ -17,10 +22,14 @@ const Page = () => {
                     ))}
                 </section>
             </div>
+
+            <FormText
+                title={formTextParagraph[pageNumber].title}
+                text1={formTextParagraph[pageNumber].text1}
+                text2={formTextParagraph[pageNumber].text2}
+            />
         </>
-    );
+    )
 }
 
-export default Page;
-
-
+export default Page

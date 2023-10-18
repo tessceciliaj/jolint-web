@@ -1,5 +1,5 @@
+import React from 'react'
 import Image from 'next/image'
-
 import Letter_Icon from '../../public/Letter_Icon.svg'
 import Linkedin_icon from '../../public/Linkedin_icon-cropped.svg'
 
