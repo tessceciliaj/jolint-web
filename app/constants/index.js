@@ -83,3 +83,26 @@ export const formTextParagraph = [
         text2: '',
     },
 ]
+
+export const statistics = [
+    {
+        id: 1,
+        percentage: '31%',
+        advantage: 'Less Isolation',
+    },
+    {
+        id: 2,
+        percentage: '41%',
+        advantage: 'Lower sick leave',
+    },
+    {
+        id: 3,
+        percentage: '59%',
+        advantage: 'Lower staff turnover',
+    },
+    {
+        id: 4,
+        percentage: '61%',
+        advantage: 'More satisfied employees',
+    },
+]
