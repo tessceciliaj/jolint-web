@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React from 'react'
->>>>>>> TICKET-69/header-component
 import { navLinks } from '../constants'
 
 const NavBar = () => {
