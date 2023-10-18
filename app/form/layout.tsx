@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import FormHeader from '../components/FormHeader'
+import FormText from '../components/FormText'
 import Footer from '../components/Footer'
 import { RootLayoutProps } from '../utils/types'
 import speaker from '../../public/volume-2.svg'
@@ -18,7 +19,6 @@ const layout = ({ children }: RootLayoutProps) => {
                         <Image src={speaker} alt="Speaker Icon" />
                     </div>
                 </div>
-
                 {children}
             </main>
             <Footer />
