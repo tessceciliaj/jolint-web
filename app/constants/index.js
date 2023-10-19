@@ -19,6 +19,10 @@ export const navLinks = [
         id: 'contactus',
         title: 'Contact us',
     },
+    {
+        id: 'language',
+        title: 'English ',
+    },
 ]
 
 export const partBoxInfo = [
@@ -49,29 +53,6 @@ export const partBoxInfo = [
         subTitle: 'Sign to improve inclusion and belonging in your company',
         icon: '/formForm.svg',
         iconGray: '/formGrayForm.svg',
-    },
-]
-
-export const statistics = [
-    {
-        id: 1,
-        percentage: '31%',
-        advantage: 'Less Isolation',
-    },
-    {
-        id: 2,
-        percentage: '41%',
-        advantage: 'Lower sick leave',
-    },
-    {
-        id: 3,
-        percentage: '59%',
-        advantage: 'Lower staff turnover',
-    },
-    {
-        id: 4,
-        percentage: '61%',
-        advantage: 'More satisfied employees',
     },
 ]
 
@@ -135,5 +116,28 @@ export const formTextParagraph = [
         title: '9. Consent',
         text1: '9. 1. By signing below, I hereby consent to the processing of my personal data as described above.',
         text2: '',
+    },
+]
+
+export const statistics = [
+    {
+        id: 1,
+        percentage: '31%',
+        advantage: 'Less Isolation',
+    },
+    {
+        id: 2,
+        percentage: '41%',
+        advantage: 'Lower sick leave',
+    },
+    {
+        id: 3,
+        percentage: '59%',
+        advantage: 'Lower staff turnover',
+    },
+    {
+        id: 4,
+        percentage: '61%',
+        advantage: 'More satisfied employees',
     },
 ]
