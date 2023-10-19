@@ -20,3 +20,18 @@ export const navLinks = [
         title: 'Contact us',
     },
 ]
+
+export const advantagesText = [
+    {
+        id: 1,
+        text: 'Anonymous and objective analysis',
+    },
+    {
+        id: 2,
+        text: 'More aware employers',
+    },
+    {
+        id: 3,
+        text: 'Healthier work enviroment',
+    },
+]
