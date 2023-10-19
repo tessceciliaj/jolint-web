@@ -28,7 +28,7 @@ const Page = () => {
                          />
                      ))}
                  </section>
-                 <div className='flex sm:gap-[40px] gap-4 mt-[63px] w-full'>
+                 <div className='flex sm:gap-[40px] gap-4 mt-[30px] w-full'>
                      <button className='lightBtn'>Back</button>
                      <button className='blueBtn'>Learn More</button>
                  </div>
