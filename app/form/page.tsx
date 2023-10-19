@@ -4,6 +4,7 @@ import { partBoxInfo } from '../constants';
 import React, { useState } from 'react'
 import FormText from '../components/FormText'
 import { formTextParagraph } from '../constants'
+import Link from 'next/link';
 
 const Page = () => {
     const [pageNumber, setPageNumber] = useState<number>(0)
@@ -29,7 +30,9 @@ const Page = () => {
                      ))}
                  </section>
                  <div className='flex sm:gap-[40px] gap-4 mt-[30px] w-full'>
-                     <button className='lightBtn'>Back</button>
+                     <Link href="/">
+                         <button className='lightBtn'>Back</button>
+                     </Link>
                      <button className='blueBtn'>Learn More</button>
                  </div>
 
