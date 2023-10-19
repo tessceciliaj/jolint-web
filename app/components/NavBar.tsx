@@ -3,7 +3,7 @@ import { navLinks } from '../constants'
 
 const NavBar = () => {
     return (
-        <nav className="flex gap-4">
+        <nav className="gap-10 font-kumbhSans hidden md:flex">
             {navLinks.map((links) => {
                 return <div key={links.id}>{links.title}</div>
             })}
