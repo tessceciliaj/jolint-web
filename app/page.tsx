@@ -11,8 +11,8 @@ export default function Home() {
             <main className="flex min-h-screen flex-col">
                 <Header />
                 <Hero />
-                <Advantages />
                 <Statistic />
+                <Advantages />
                 <Footer />
             </main>
         </>
