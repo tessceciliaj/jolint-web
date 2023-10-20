@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .lightBtn {
-    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-transparent border-2 border-activeBlue;
+    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-transparent border-[3px] border-activeBlue;
 }
 
 .orangeBtn {
