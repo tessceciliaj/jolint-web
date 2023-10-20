@@ -6,7 +6,7 @@ import FormText from '../components/FormText'
 import { formTextParagraph } from '../constants'
 
 const Page = () => {
-    const [pageNumber, setPageNumber] = useState<number>(0)
+    const [pageNumber, setPageNumber] = useState<number>(9)
     const partBoxPages = [0, 3, 5, 9, 13]
 
     return (
@@ -24,7 +24,14 @@ const Page = () => {
                                 key={boxInfo.id}
                                 title={boxInfo.title}
                                 subTitle={boxInfo.subTitle}
-                                icon={boxInfo.icon}
+                                icon={
+                                    pageNumber >= boxInfo.activeOnPage
+                                        ? boxInfo.icon
+                                        : boxInfo.iconGray
+                                }
+                                activeOnPage={boxInfo.activeOnPage}
+                                checkmarkPage={boxInfo.checkmarkPage}
+                                currentPage={pageNumber}
                             />
                         ))}
                     </section>
