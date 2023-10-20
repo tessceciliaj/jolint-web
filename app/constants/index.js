@@ -24,7 +24,7 @@ export const navLinks = [
 export const advantagesText = [
     {
         id: 1,
-        text: 'Anonymous and objective analysis',
+        text: 'Anonymous and \nobjective analysis',
     },
     {
         id: 2,
@@ -32,6 +32,6 @@ export const advantagesText = [
     },
     {
         id: 3,
-        text: 'Healthier work enviroment',
+        text: 'Healthier work \nenviroment',
     },
 ]
