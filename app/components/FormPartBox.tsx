@@ -11,24 +11,27 @@ const PartBox = ({
     checkmarkPage,
 }: PartBoxProps) => {
     return (
-        <div
-            className={`flex flex-col p-[21px] border-2 rounded-[10px] h-64 w-64 ${
-                currentPage >= activeOnPage
-                    ? 'bg-lightColor border-mediumDarkGray'
-                    : ' bg-boxGray border-boxGray'
-            }`}
-        >
-            <div className="flex justify-between w-full mb-[15px]">
-                <Image src={icon} alt="Logo" width={51} height={51} />
-                <div
-                    className={`p-1 border-2 h-[28px] w-[28px] rounded-[5px] ${
-                        currentPage >= checkmarkPage
-                            ? ' bg-checkmarkGreen border-checkmarkGreen'
-                            : currentPage >= activeOnPage
-                            ? 'bg-lightColor border-mediumDarkGray'
-                            : ' bg-boxGray border-mediumDarkGray'
-                    }`}
-                ></div>
+        <div className="flex justify-between w-full mb-[15px]">
+            <div
+                className={`flex flex-col p-[21px] border-2 rounded-[10px] lg:h-[270px] xl:w-[270px] lg:w-[230px] md:w-[340px] sm:w-full md:h-[260px] 
+        ${
+            currentPage >= activeOnPage
+                ? ' bg-lightColor border-mediumDarkGray'
+                : ' bg-boxGray border-boxGray'
+        }`}
+            >
+                <div className="flex justify-between w-full mb-[15px]">
+                    <Image src={icon} alt="Logo" width={51} height={51} />
+                    <div
+                        className={`p-1 border-2 h-[28px] w-[28px] rounded-[5px] ${
+                            currentPage >= checkmarkPage
+                                ? ' bg-checkmarkGreen border-checkmarkGreen'
+                                : currentPage >= activeOnPage
+                                ? 'bg-lightColor border-mediumDarkGray'
+                                : ' bg-boxGray border-mediumDarkGray'
+                        }`}
+                    ></div>
+                </div>
             </div>
             <div>
                 <h2 className="text-2xl font-semibold mb-[8px]">{title}</h2>

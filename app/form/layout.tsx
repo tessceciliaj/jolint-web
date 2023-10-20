@@ -7,11 +7,11 @@ import speaker from '../../public/volume-2.svg'
 
 const layout = ({ children }: RootLayoutProps) => {
     return (
-        <>
+        <div className='min-h-screen flex flex-col'>
             <FormHeader />
-            <main>
-                <div className="mt-8 flex flex-row">
-                    <h1 className="font-bold text-4xl">
+            <main className='flex flex-grow flex-col items-center justify-start mt-[43px] mb-[143px] xl:mx-14 md:mx-10 sm:mx-8 mx-4'>
+                <div className="xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full flex flex-row">
+                    <h1 className="font-bold sm:text-4xl text-3xl w-fit">
                         Consent Form for Data Processing
                     </h1>
                     <div className="ml-8">
@@ -22,7 +22,7 @@ const layout = ({ children }: RootLayoutProps) => {
                 {children}
             </main>
             <Footer />
-        </>
+        </div>
     )
 }
 
