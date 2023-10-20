@@ -2,8 +2,8 @@ import React from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
-import Button from './components/Button'
 import Advantages from './components/Advantages'
+import Statistic from './components/Statistic'
 
 export default function Home() {
     return (
@@ -12,8 +12,8 @@ export default function Home() {
                 <Header />
                 <Hero />
                 <Advantages />
+                <Statistic />
                 <Footer />
-                <Button text="Click me!" />
             </main>
         </>
     )
