@@ -4,14 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn {
+    @apply w-[175px] h-[55px] rounded-[10px] font-semibold tracking-wide font-kumbhSans text-xl hover:bg-opacity-70;
+}
+
 .lightBtn {
-    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-transparent border-[3px] border-activeBlue;
+    @apply bg-transparent border-[3px] border-activeBlue hover:bg-opacity-70 hover:bg-activeBlue hover:border-transparent hover:text-white;
 }
 
 .orangeBtn {
-    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-accentColor text-lightColor;
+    @apply bg-accentColor text-lightColor;
 }
 
 .blueBtn {
-    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-activeBlue text-lightColor;
+    @apply bg-activeBlue text-lightColor;
 }

@@ -31,9 +31,9 @@ const Page = () => {
                  </section>
                  <div className='flex sm:gap-[40px] gap-4 mt-[30px] w-full'>
                      <Link href="/">
-                         <button className='lightBtn'>Back</button>
+                         <button className='lightBtn btn'>Back</button>
                      </Link>
-                     <button className='blueBtn'>Learn More</button>
+                     <button className='blueBtn btn'>Learn more</button>
                  </div>
 
             </div>
