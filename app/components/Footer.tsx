@@ -6,14 +6,14 @@ import Linkedin_icon from '../../public/Linkedin_icon-cropped.svg'
 const Footer = () => {
     return (
         <>
-            <footer className="bg-darkBlue text-lightColor w-full text-lg md:text-xl">
-                <div className="w-full flex flex-col sm:flex-row pt-14 pb-2 sm:space-x-[8%] xl:space-x-[16%]">
-                    <div className="w-full pl-5 md:pl-[10%]">
+            <footer className="bg-darkBlue text-lightColor w-full text-base flex flex-col justify-center items-center">
+                <div className="xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full flex flex-col sm:flex-row pt-16 pb-2 sm:space-x-[8%] xl:space-x-[16%] md:px-0 px-8">
+                    <div className="w-full">
                         <p>Jolint Network Analytics AB</p>
                         <p className="mt-4">Org. Nr. 559324-1770</p>
                         <p className="mt-4">Gothenburg, Sweden</p>
                     </div>
-                    <div className="w-full pl-5 md:pl-[10%]">
+                    <div className="w-fit min-w-[200px]">
                         <a href="https://www.linkedin.com/company/jolint-network-analytics-ab/">
                             <p className="mt-4 sm:mt-0">
                                 <Image
@@ -40,7 +40,7 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="text-center justify-center flex py-6">
+                <div className="text-center justify-center flex py-12">
                     <div className="flex flex-col sm:flex-row">
                         <div>
                             Copyright © 2023 Jolint
