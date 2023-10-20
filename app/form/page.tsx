@@ -20,7 +20,7 @@ const Page = () => {
                     />
                 </div>
                 {partBoxPages.includes(pageNumber) && (
-                    <section className="gap-[20px] w-full flex flex-col lg:grid-cols-4 max-w-fit md:grid md:grid-cols-2">
+                    <section className="gap-[20px] w-full flex flex-col lg:grid-cols-4 md:max-w-fit sm:grid sm:grid-cols-2">
                         {partBoxInfo.map((boxInfo) => (
                             <PartBox
                                 key={boxInfo.id}
@@ -42,7 +42,7 @@ const Page = () => {
                     <Link href="/">
                         <button className="lightBtn">Back</button>
                     </Link>
-                    <button className="blueBtn">Learn More</button>
+                    <button className="blueBtn">Learn more</button>
                 </div>
             </div>
         </>

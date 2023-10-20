@@ -13,7 +13,7 @@ const PartBox = ({
     return (
         <div className="flex justify-between w-full mb-[15px]">
             <div
-                className={`flex flex-col p-[21px] border-2 rounded-[10px] lg:h-[270px] xl:w-[270px] lg:w-[230px] md:w-[340px] sm:w-full md:h-[260px] 
+                className={`flex flex-col p-[21px] border-2 rounded-[10px] lg:h-[270px] xl:w-[270px] lg:w-[230px] md:w-[340px] sm:w-full md:h-[260px] w-full 
         ${
             currentPage >= activeOnPage
                 ? ' bg-lightColor border-mediumDarkGray'
@@ -32,10 +32,10 @@ const PartBox = ({
                         }`}
                     ></div>
                 </div>
-            </div>
-            <div>
-                <h2 className="text-2xl font-semibold mb-[8px]">{title}</h2>
-                <p className="text-base leading-8">{subTitle}</p>
+                <div>
+                    <h2 className="text-2xl font-semibold mb-[8px]">{title}</h2>
+                    <p className="text-base leading-8">{subTitle}</p>
+                </div>
             </div>
         </div>
     )
