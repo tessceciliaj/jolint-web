@@ -21,17 +21,16 @@ const Page = () => {
 
     return (
         <>
-            <div className="flex items-start flex-col justify-start font-kumbhSans md:w-fit w-full">
-                <div className="max-w-[505px] mb-[40px]">
+            <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full">
+                <div className={` ${pageNumber === 0 || pageNumber === 3 || pageNumber === 5 || pageNumber === 9 ? 'max-w-[505px]' : 'max-w-[850px]'} mb-[40px]`}>
                     <FormText
                         title={formTextParagraph[pageNumber].title}
                         text1={formTextParagraph[pageNumber].text1}
                         text2={formTextParagraph[pageNumber].text2}
                     />
                 </div>
-
                 {partBoxPages.includes(pageNumber) && (
-                    <section className="gap-[19px] w-full flex flex-col p-4 lg:grid-cols-4 max-w-fit md:grid md:grid-cols-2">
+                    <section className="gap-[20px] w-full flex flex-col lg:grid-cols-4 md:max-w-fit sm:grid sm:grid-cols-2">
                         {partBoxInfo.map((boxInfo) => (
                             <PartBox
                                 key={boxInfo.id}
@@ -49,29 +48,22 @@ const Page = () => {
                         ))}
                     </section>
                 )}
-
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
-                    <Link href="/">
-                        <button className="lightBtn">Back</button>
-                    </Link>
-                    <button className="blueBtn">Learn More</button>
+                    {pageNumber !== 0 && pageNumber !== 13 && (
+                        <button className="lightBtn" onClick={previousPage}>Back</button>
+                    )}
+                    {pageNumber !== 12 && pageNumber !== 13 && (
+                        <button className="blueBtn" onClick={nextPage}>Next</button>
+                    )}
+                    {pageNumber === 12 && <button className="orangeBtn" onClick={nextPage}>Submit</button>}
                 </div>
-            </div>
-
-            {pageNumber !== 0 && pageNumber !== 13 && (
-                <button onClick={previousPage}>Back</button>
-            )}
-            {pageNumber !== 12 && pageNumber !== 13 && (
-                <button onClick={nextPage}>Next</button>
-            )}
-            {pageNumber === 12 && <button onClick={nextPage}>Submit</button>}
-
-            <div className="flex justify-center">
-                {pageNumber === 13 && (
-                    <a href="./">
-                        <button>Close</button>
-                    </a>
-                )}
+                <div className="flex justify-center">
+                    {pageNumber === 13 && (
+                        <a href="./">
+                            <button className="blueBtn">Close</button>
+                        </a>
+                    )}
+                </div>
             </div>
         </>
     )
