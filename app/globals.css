@@ -15,3 +15,11 @@
 .blueBtn {
     @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-activeBlue text-lightColor;
 }
+
+.lightProgressDot  {
+    @apply w-[16px] h-[16px] border-[1px] border-activeBlue rounded-full
+}
+
+.blueProgressDot  {
+    @apply w-[16px] h-[16px] border-[1px] bg-activeBlue border-activeBlue rounded-full
+}
