@@ -18,7 +18,6 @@ const layout = ({ children }: RootLayoutProps) => {
                         <Image src={speaker} alt="Speaker Icon" />
                     </div>
                 </div>
-
                 {children}
             </main>
             <Footer />
