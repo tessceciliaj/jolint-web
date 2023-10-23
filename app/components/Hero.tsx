@@ -16,7 +16,7 @@ const Hero = () => {
         alignItems: 'center', 
       }}
     >
-      <div className="max-w-screen-md p-4 md:p-11">
+      <div className="max-w-screen-md p-2 md:p-8">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl font-poppins font-semibold">
             Let’s Create an Inclusive <br /> Workspace Together
@@ -43,7 +43,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="hidden md:flex md:flex-1 md:justify-end"> 
-        <Image src={HeroImage} alt="hero image" className="w-[532px] h-[456px]" />
+        <Image src={HeroImage} alt="hero image" className="w-[520px] h-[410px]" />
       </div>
     </div>
   );
