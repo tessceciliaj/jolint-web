@@ -19,10 +19,6 @@ export const navLinks = [
         id: 'contactus',
         title: 'Contact us',
     },
-    {
-        id: 'language',
-        title: 'English ',
-    },
 ]
 
 export const formTextParagraph = [
