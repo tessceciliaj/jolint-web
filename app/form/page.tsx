@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import PartBox from '../components/FormPartBox'
 import FormText from '../components/FormText'
+import ConsentSignature from '../components/ConsentSignature'
 import { partBoxInfo, formTextParagraph } from '../constants'
 import Link from 'next/link'
 
@@ -30,6 +31,9 @@ const Page = () => {
                             text2={formTextParagraph[pageNumber].text2}
                         />
                     )}
+
+                    {pageNumber === 12 && <ConsentSignature />}
+
                     {pageNumber === 13 && (
                         <div className="text-center">
                             <FormText
@@ -62,7 +66,7 @@ const Page = () => {
                 )}
 
                 {partBoxPages.includes(pageNumber) && pageNumber !== 0 && (
-                    <div className="flex flex-col w-full text-end text-xl">
+                    <div className="flex flex-col w-full text-end text-base">
                         {pageNumber >= 13
                             ? '4'
                             : pageNumber >= 9
@@ -76,7 +80,9 @@ const Page = () => {
 
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
                     {pageNumber !== 0 && pageNumber !== 13 && (
-                        <button className="lightBtn" onClick={previousPage}>Back</button>
+                        <button className="lightBtn" onClick={previousPage}>
+                            Back
+                        </button>
                     )}
 
                     {pageNumber === 0 && (
@@ -101,11 +107,14 @@ const Page = () => {
                     {/* Förslag: Borde vara "Done" */}
                     <div className="flex justify-center">
                         {pageNumber === 13 && (
-                             <Link href="/">
-                                 <button className="blueBtn" onClick={previousPage}>
-                                     Done
-                                 </button>
-                             </Link>
+                            <Link href="/">
+                                <button
+                                    className="blueBtn"
+                                    onClick={previousPage}
+                                >
+                                    Done
+                                </button>
+                            </Link>
                         )}
                     </div>
                 </div>
