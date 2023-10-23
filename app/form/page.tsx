@@ -61,6 +61,19 @@ const Page = () => {
                     </section>
                 )}
 
+                {partBoxPages.includes(pageNumber) && (
+                    <div className="flex flex-col w-full text-end text-xl">
+                        {pageNumber >= 13
+                            ? '4'
+                            : pageNumber >= 9
+                            ? '3'
+                            : pageNumber >= 5
+                            ? '2'
+                            : '1'}
+                        /4
+                    </div>
+                )}
+
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
                     {pageNumber !== 0 && pageNumber !== 13 && (
                         <Link href="/">
