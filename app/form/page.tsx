@@ -7,7 +7,7 @@ import { partBoxInfo, formTextParagraph } from '../constants'
 import Link from 'next/link'
 
 const Page = () => {
-    const [pageNumber, setPageNumber] = useState<number>(12)
+    const [pageNumber, setPageNumber] = useState<number>(0)
     const partBoxPages = [0, 3, 5, 9, 13]
 
     const nextPage = (): void => {
