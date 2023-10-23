@@ -41,10 +41,22 @@ export const formTextParagraph = [
         text2: '2. 1. 1. To clarify; the content of communications and calendars is never viewed nor processed. As such, Jolint will only be processing the metadata associated with those communication channels. This includes information such as frequency and duration of interactions, which is analysed in order to identify patterns and trends that can help improve the Company culture so as to ensure that all employees feel included and valued.',
     },
     {
+        id: '3_boxes',
+        title: '',
+        text1: 'Empower your workplace by authorizing consent for reliable data to enhance inclusion and belonging.',
+        text2: 'Click on the steps below to read and access the consent form.',
+    },
+    {
         id: '3_purpose',
         title: '3. Purpose of Processing',
         text1: '3. 1. The purpose of processing your personal data is to enable Jolint to provide the services as described above. The processing of your personal data will help us to improve inclusion and belonging in our organisation and create a more diverse and inclusive workplace.',
         text2: '3. 1. 1. To clarify; data collected will not be used for individual insights, but rather be processed on an aggregate level. This means that any insights or results obtained from the metadata will be presented in a way that makes it impossible to identify an individual. Thus, the focus will be on providing insights that assist the Company in creating a more inclusive workplace, improving opportunities for all employees.',
+    },
+    {
+        id: '5_boxes',
+        title: '',
+        text1: 'Empower your workplace by authorizing consent for reliable data to enhance inclusion and belonging.',
+        text2: 'Click on the steps below to read and access the consent form.',
     },
     {
         id: '4_lawful',
@@ -65,6 +77,12 @@ export const formTextParagraph = [
         text2: '',
     },
     {
+        id: '9_boxes',
+        title: '',
+        text1: 'Empower your workplace by authorizing consent for reliable data to enhance inclusion and belonging.',
+        text2: 'Click on the steps below to read and access the consent form.',
+    },
+    {
         id: '7_data',
         title: '7. Data Controller and Processor',
         text1: '7. 1. [Company Name] is the data controller for the personal data processed under this Agreement, and Jolint is the data processor.',
@@ -80,6 +98,12 @@ export const formTextParagraph = [
         id: '9_consent',
         title: '9. Consent',
         text1: '9. 1. By signing below, I hereby consent to the processing of my personal data as described above.',
+        text2: '',
+    },
+    {
+        id: '10_done',
+        title: '',
+        text1: 'Your consent form was successfully submitted. We appreciate your collaboration. Thank you!',
         text2: '',
     },
 ]
@@ -104,5 +128,59 @@ export const statistics = [
         id: 4,
         percentage: '61%',
         advantage: 'More satisfied employees',
+    },
+]
+
+export const partBoxInfo = [
+    {
+        id: '1',
+        title: 'Introduction',
+        subTitle: 'Let Jolint introduce themselves to you',
+        icon: '/formShakingHands.svg',
+        iconGray: '',
+        activeOnPage: 0,
+        checkmarkPage: 3,
+    },
+    {
+        id: '2',
+        title: 'Purpose',
+        subTitle: 'The purpose of having Jolint in your company',
+        icon: '/formMagnifyingGlass.svg',
+        iconGray: '/formGrayMagnifyingGlass.svg',
+        activeOnPage: 3,
+        checkmarkPage: 5,
+    },
+    {
+        id: '3',
+        title: 'Your Rights',
+        subTitle: 'Your rights with the processing of your personal data',
+        icon: '/formGDPR.svg',
+        iconGray: '/formGrayGDPR.svg',
+        activeOnPage: 5,
+        checkmarkPage: 9,
+    },
+    {
+        id: '4',
+        title: 'Consent',
+        subTitle: 'Sign to improve inclusion and belonging in your company',
+        icon: '/formForm.svg',
+        iconGray: '/formGrayForm.svg',
+        activeOnPage: 9,
+        checkmarkPage: 13,
+    },
+]
+
+export const advantagesText = [
+    {
+        id: 1,
+        text: 'Anonymous and \nobjective analysis',
+    },
+    {
+        id: 2,
+        text: 'More aware employers',
+    },
+    {
+        id: 3,
+        text: 'Healthier work \nenviroment',
     },
 ]
