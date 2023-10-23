@@ -61,7 +61,7 @@ const Page = () => {
                     </section>
                 )}
 
-                {partBoxPages.includes(pageNumber) && (
+                {partBoxPages.includes(pageNumber) && pageNumber !== 0 && (
                     <div className="flex flex-col w-full text-end text-xl">
                         {pageNumber >= 13
                             ? '4'
