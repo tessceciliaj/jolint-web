@@ -1,13 +1,17 @@
 'use client'
 import React, { useState } from 'react'
+import { format, isToday } from 'date-fns'
 import PartBox from '../components/FormPartBox'
 import FormText from '../components/FormText'
 import { partBoxInfo, formTextParagraph } from '../constants'
 import Link from 'next/link'
 
 const Page = () => {
-    const [pageNumber, setPageNumber] = useState<number>(0)
+    const [pageNumber, setPageNumber] = useState<number>(12)
     const partBoxPages = [0, 3, 5, 9, 13]
+    const today = new Date()
+    const formattedDate = format(today, 'dd MMMM yyyy')
+    // const formattedDate = format(today, 'yyyy-MM-dd')
 
     const nextPage = (): void => {
         setPageNumber((prev) => prev + 1)
@@ -30,6 +34,31 @@ const Page = () => {
                             text2={formTextParagraph[pageNumber].text2}
                         />
                     )}
+
+                    {pageNumber === 12 && (
+                        <section>
+                            <div className="flex flex-row my-8">
+                                <div>Name:</div>
+                                <input
+                                    className="ml-2 border-darkColor border-b border-dashed w-full sm:w-1/2 font-bold"
+                                    type="text"
+                                    id="name"
+                                ></input>
+                            </div>
+                            <div className="flex flex-row my-8">
+                                <div>
+                                    Today's Date:
+                                    <span className=" ml-2 font-bold">
+                                        {formattedDate}
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="flex flex-row mt-8">
+                                <div>Signature: </div>
+                            </div>
+                        </section>
+                    )}
+
                     {pageNumber === 13 && (
                         <div className="text-center">
                             <FormText
