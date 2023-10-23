@@ -19,6 +19,10 @@ export const navLinks = [
         id: 'contactus',
         title: 'Contact us',
     },
+    {
+        id: 'language',
+        title: 'English ',
+    },
 ]
 
 export const formTextParagraph = [
@@ -128,5 +132,59 @@ export const statistics = [
         id: 4,
         percentage: '61%',
         advantage: 'More satisfied employees',
+    },
+]
+
+export const partBoxInfo = [
+    {
+        id: '1',
+        title: 'Introduction',
+        subTitle: 'Let Jolint introduce themselves to you',
+        icon: '/formShakingHands.svg',
+        iconGray: '',
+        activeOnPage: 0,
+        checkmarkPage: 3,
+    },
+    {
+        id: '2',
+        title: 'Purpose',
+        subTitle: 'The purpose of having Jolint in your company',
+        icon: '/formMagnifyingGlass.svg',
+        iconGray: '/formGrayMagnifyingGlass.svg',
+        activeOnPage: 3,
+        checkmarkPage: 5,
+    },
+    {
+        id: '3',
+        title: 'Your Rights',
+        subTitle: 'Your rights with the processing of your personal data',
+        icon: '/formGDPR.svg',
+        iconGray: '/formGrayGDPR.svg',
+        activeOnPage: 5,
+        checkmarkPage: 9,
+    },
+    {
+        id: '4',
+        title: 'Consent',
+        subTitle: 'Sign to improve inclusion and belonging in your company',
+        icon: '/formForm.svg',
+        iconGray: '/formGrayForm.svg',
+        activeOnPage: 9,
+        checkmarkPage: 13,
+    },
+]
+
+export const advantagesText = [
+    {
+        id: 1,
+        text: 'Anonymous and \nobjective analysis',
+    },
+    {
+        id: 2,
+        text: 'More aware employers',
+    },
+    {
+        id: 3,
+        text: 'Healthier work \nenviroment',
     },
 ]
