@@ -4,18 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-    @apply w-[175px] h-[55px] rounded-[10px] font-semibold tracking-wide font-kumbhSans text-xl hover:bg-opacity-70;
-}
-
 .lightBtn {
-    @apply bg-transparent border-[3px] border-activeBlue hover:bg-opacity-70 hover:bg-activeBlue hover:border-transparent hover:text-white;
+    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-transparent border-[3px] border-activeBlue hover:bg-activeBlue hover:bg-opacity-70 hover:text-lightColor hover:border-none;
 }
 
 .orangeBtn {
-    @apply bg-accentColor text-lightColor;
+    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-accentColor text-lightColor hover:bg-opacity-70 ;
 }
 
 .blueBtn {
-    @apply bg-activeBlue text-lightColor;
+    @apply transition delay-300 duration-300 ease-in-out w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-activeBlue text-lightColor ;
+}
+
+.blueBtn:hover,
+.lightBtn:hover {
+    @apply  delay-300 bg-gradient-to-r from-darkBlue to-lightBlue ;
+}
+
+.lightProgressDot  {
+    @apply w-[16px] h-[16px] border-[1px] border-activeBlue rounded-full
+}
+
+.blueProgressDot  {
+    @apply w-[16px] h-[16px] border-[1px] bg-activeBlue border-activeBlue rounded-full
 }
