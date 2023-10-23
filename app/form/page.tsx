@@ -1,8 +1,8 @@
 'use client'
-import PartBox from '../components/FormPartBox'
-import { partBoxInfo, formTextParagraph } from '../constants'
 import React, { useState } from 'react'
+import PartBox from '../components/FormPartBox'
 import FormText from '../components/FormText'
+import { partBoxInfo, formTextParagraph } from '../constants'
 import Link from 'next/link'
 
 const Page = () => {
@@ -21,8 +21,8 @@ const Page = () => {
 
     return (
         <>
-            <div className="flex items-start flex-col justify-start font-kumbhSans md:w-fit w-full">
-                <div className="max-w-[505px] mb-[40px]">
+            <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full">
+                <div className="max-w-[850px] mb-[40px]">
                     {pageNumber !== 13 && (
                         <FormText
                             title={formTextParagraph[pageNumber].title}
@@ -42,7 +42,7 @@ const Page = () => {
                 </div>
 
                 {partBoxPages.includes(pageNumber) && (
-                    <section className="gap-[20px] w-full flex flex-col lg:grid-cols-4 max-w-fit md:grid md:grid-cols-2">
+                    <section className="gap-[20px] w-full flex flex-col lg:grid-cols-4 md:max-w-fit sm:grid sm:grid-cols-2">
                         {partBoxInfo.map((boxInfo) => (
                             <PartBox
                                 key={boxInfo.id}
@@ -76,17 +76,12 @@ const Page = () => {
 
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
                     {pageNumber !== 0 && pageNumber !== 13 && (
-                        <Link href="/">
-                            <button className="lightBtn" onClick={previousPage}>
-                                Back
-                            </button>
-                        </Link>
+                        <button className="lightBtn" onClick={previousPage}>Back</button>
                     )}
 
-                    {/* Förslag: Borde vara "Start" */}
                     {pageNumber === 0 && (
                         <button className="blueBtn" onClick={nextPage}>
-                            Learn More
+                            Start
                         </button>
                     )}
 
@@ -106,9 +101,11 @@ const Page = () => {
                     {/* Förslag: Borde vara "Done" */}
                     <div className="flex justify-center">
                         {pageNumber === 13 && (
-                            <Link href="/">
-                                <a className="lightBtn">Back</a>
-                            </Link>
+                             <Link href="/">
+                                 <button className="blueBtn" onClick={previousPage}>
+                                     Done
+                                 </button>
+                             </Link>
                         )}
                     </div>
                 </div>
