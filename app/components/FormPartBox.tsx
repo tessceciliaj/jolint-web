@@ -23,14 +23,18 @@ const PartBox = ({
                 <div className="flex justify-between w-full mb-[15px]">
                     <Image src={icon} alt="Logo" width={51} height={51} />
                     <div
-                        className={`p-1 border-2 h-[28px] w-[28px] rounded-[5px] ${
+                        className={`pt-[2px] border-2 h-[28px] w-[28px] rounded-[5px] ${
                             currentPage >= checkmarkPage
                                 ? ' bg-checkmarkGreen border-checkmarkGreen'
                                 : currentPage >= activeOnPage
                                 ? 'bg-lightColor border-mediumDarkGray'
                                 : ' bg-boxGray border-mediumDarkGray'
                         }`}
-                    ></div>
+                    >
+                        {currentPage >= checkmarkPage ? (
+                            <Image src={'/Checkbox_white.svg'} alt="Logo" width={25} height={20} />
+                        ) : null}  
+                    </div>
                 </div>
                 <div>
                     <h2 className="text-2xl font-semibold mb-[8px]">{title}</h2>
@@ -42,3 +46,5 @@ const PartBox = ({
 }
 
 export default PartBox
+
+
