@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PartBox from '../components/FormPartBox'
 import FormText from '../components/FormText'
 import ConsentSignature from '../components/ConsentSignature'
@@ -7,17 +7,36 @@ import { partBoxInfo, formTextParagraph } from '../constants'
 import Link from 'next/link'
 
 const Page = () => {
-    const [pageNumber, setPageNumber] = useState<number>(0)
+    const [pageNumber, setPageNumber] = useState<number>(12)
     const partBoxPages = [0, 3, 5, 9, 13]
+    const [completedForm, setCompletedForm] = useState<boolean>(false)
+    const [name, setName] = useState<string | undefined>('')
+    const [isEmpty, setIsEmpty] = useState<boolean>(true)
+
+    useEffect(() => {
+        // Check if the form is completed when name and isEmpty change
+        if (name !== undefined && !isEmpty) {
+            setCompletedForm(true)
+        } else {
+            setCompletedForm(false)
+        }
+    }, [name, isEmpty])
 
     const nextPage = (): void => {
         setPageNumber((prev) => prev + 1)
-        console.log(pageNumber + 1)
     }
 
     const previousPage = (): void => {
         setPageNumber((prev) => prev - 1)
-        console.log(pageNumber - 1)
+    }
+
+    const handleUpdateSignature = (
+        updatedIsEmpty: boolean,
+        updatedName: string
+    ) => {
+        // Update isEmpty and name when ConsentSignature component notifies
+        setIsEmpty(updatedIsEmpty)
+        setName(updatedName)
     }
 
     return (
@@ -32,7 +51,11 @@ const Page = () => {
                         />
                     )}
 
-                    {pageNumber === 12 && <ConsentSignature />}
+                    {pageNumber === 12 && (
+                        <ConsentSignature
+                            onUpdateSignature={handleUpdateSignature}
+                        />
+                    )}
 
                     {pageNumber === 13 && (
                         <div className="text-center">
@@ -99,12 +122,37 @@ const Page = () => {
                             </button>
                         )}
                     {pageNumber === 12 && (
-                        <button className="orangeBtn" onClick={nextPage}>
+                        <button
+                            className={`orangeBtn ${
+                                completedForm ? 'opacity-100' : 'opacity-50'
+                            }`}
+                            onClick={() => {
+                                setName(name)
+                                if (!isEmpty && name !== undefined) {
+                                    console.log('completed')
+                                    nextPage()
+                                } else {
+                                    console.log(
+                                        'Please fill in all required fields.'
+                                    )
+                                }
+                            }}
+                        >
                             Submit
                         </button>
+
+                        // <button
+                        //     className={`orangeBtn ${
+                        //         completedForm === true
+                        //             ? 'opacity-50'
+                        //             : 'opacity-100'
+                        //     }`}
+                        //     onClick={nextPage}
+                        // >
+                        //     Submit
+                        // </button>
                     )}
 
-                    {/* Förslag: Borde vara "Done" */}
                     <div className="flex justify-center">
                         {pageNumber === 13 && (
                             <Link href="/">
