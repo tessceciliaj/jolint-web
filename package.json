@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "canvas-confetti": "^1.9.0",
         "date-fns": "^2.30.0",
         "framer-motion": "^10.16.4",
         "lucide": "^0.286.0",
@@ -22,6 +23,7 @@
         "typescript": "^5.2.2"
     },
     "devDependencies": {
+        "@types/canvas-confetti": "^1.6.2",
         "@types/node": "20.8.6",
         "@types/react": "18.2.28",
         "autoprefixer": "^10",
