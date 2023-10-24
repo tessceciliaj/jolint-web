@@ -32,7 +32,7 @@ export default function Close() {
             </div>
             <p className='font-kumbhSans text-center'>Your consent form was successfully submitted. We appreciate your collaboration. Thank you!</p>
             <Link href="/">
-                <button className='blueBtn'>Done</button>
+                <button className='blueBtn'>Close</button>
             </Link>
         </div>
     );
