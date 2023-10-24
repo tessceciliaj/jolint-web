@@ -1,17 +1,17 @@
+'use client'
 import React, { useRef, useState, useEffect } from 'react'
 import { format } from 'date-fns'
 import SignaturePad from 'react-signature-pad-wrapper'
 
 interface ConsentSignatureProps {
-    onUpdateSignature: (isEmpty: boolean, name: string) => void
+    onDone: () => void // New prop to handle "Done" button click
 }
 
-const ConsentSignature: React.FC<ConsentSignatureProps> = ({
-    onUpdateSignature,
-}) => {
+const ConsentSignature: React.FC<ConsentSignatureProps> = ({ onDone }) => {
     const today = new Date()
     const formattedDate = format(today, 'dd MMMM yyyy')
     const signaturePadRef = useRef<SignaturePad | null>(null)
+    const nameInputRef = useRef<HTMLInputElement | null>(null)
     const [name, setName] = useState<string | undefined>('')
     const [updateSignature, setUpdateSignature] = useState<boolean>(false)
 
@@ -19,14 +19,22 @@ const ConsentSignature: React.FC<ConsentSignatureProps> = ({
         if (signaturePadRef.current) {
             signaturePadRef.current.clear()
             setUpdateSignature(false)
-            onUpdateSignature(true, name) // Notify parent component
         }
+    }
+
+    const handleDone = () => {
+        if (!name || name.trim() === '') {
+            console.log('Please fill in all required fields.')
+            return
+        }
+        onDone() // Notify parent component to proceed
     }
 
     useEffect(() => {
         if (signaturePadRef.current) {
             const isEmpty = signaturePadRef.current.isEmpty()
-            onUpdateSignature(isEmpty, name) // Notify parent component
+            // The following line is removed as it's not needed anymore
+            // onUpdateSignature(isEmpty, name);
         }
     }, [name, signaturePadRef])
 
@@ -46,9 +54,8 @@ const ConsentSignature: React.FC<ConsentSignatureProps> = ({
                         type="text"
                         id="name"
                         value={name}
-                        onChange={(e) => {
-                            setName(e.target.value)
-                        }}
+                        onChange={(e) => setName(e.target.value)}
+                        ref={nameInputRef}
                     ></input>
                 </div>
                 <div className="flex flex-row my-8">
@@ -75,6 +82,11 @@ const ConsentSignature: React.FC<ConsentSignatureProps> = ({
                             Clear
                         </button>
                     </div>
+                </div>
+                <div>
+                    <button className="mt-2" onClick={handleDone}>
+                        Done
+                    </button>
                 </div>
             </section>
         </div>

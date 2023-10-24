@@ -14,7 +14,6 @@ const Page = () => {
     const [isEmpty, setIsEmpty] = useState<boolean>(true)
 
     useEffect(() => {
-        // Check if the form is completed when name and isEmpty change
         if (name !== undefined && !isEmpty) {
             setCompletedForm(true)
         } else {
@@ -28,15 +27,6 @@ const Page = () => {
 
     const previousPage = (): void => {
         setPageNumber((prev) => prev - 1)
-    }
-
-    const handleUpdateSignature = (
-        updatedIsEmpty: boolean,
-        updatedName: string
-    ) => {
-        // Update isEmpty and name when ConsentSignature component notifies
-        setIsEmpty(updatedIsEmpty)
-        setName(updatedName)
     }
 
     return (
@@ -53,7 +43,7 @@ const Page = () => {
 
                     {pageNumber === 12 && (
                         <ConsentSignature
-                            onUpdateSignature={handleUpdateSignature}
+                            onDone={() => nextPage()} // Handle "Done" button click
                         />
                     )}
 
@@ -127,7 +117,7 @@ const Page = () => {
                                 completedForm ? 'opacity-100' : 'opacity-50'
                             }`}
                             onClick={() => {
-                                setName(name)
+                                // setName(name + ' ') // This line is no longer needed
                                 if (!isEmpty && name !== undefined) {
                                     console.log('completed')
                                     nextPage()
@@ -140,17 +130,6 @@ const Page = () => {
                         >
                             Submit
                         </button>
-
-                        // <button
-                        //     className={`orangeBtn ${
-                        //         completedForm === true
-                        //             ? 'opacity-50'
-                        //             : 'opacity-100'
-                        //     }`}
-                        //     onClick={nextPage}
-                        // >
-                        //     Submit
-                        // </button>
                     )}
 
                     <div className="flex justify-center">
