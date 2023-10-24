@@ -5,20 +5,19 @@
 @tailwind utilities;
 
 .lightBtn {
-    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-transparent border-[3px] border-activeBlue hover:bg-activeBlue hover:bg-opacity-70 hover:text-lightColor hover:border-none;
+    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-transparent border-[3px] border-activeBlue;
 }
 
 .orangeBtn {
-    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-accentColor text-lightColor hover:bg-opacity-70 ;
+    @apply w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-accentColor text-lightColor hover:bg-opacity-40 hover:text-accentColor hover:shadow-md transition delay-100 duration-100 ease-in-out;
 }
 
 .blueBtn {
-    @apply transition delay-300 duration-300 ease-in-out w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-activeBlue text-lightColor ;
+    @apply  w-[175px] h-[55px] rounded-[10px] font-semibold font-kumbhSans text-xl bg-activeBlue text-lightColor  hover:bg-lightBlue hover:shadow-md transition delay-100 duration-100 ease-in-out;
 }
 
-.blueBtn:hover,
-.lightBtn:hover {
-    @apply  delay-300 bg-gradient-to-r from-darkBlue to-lightBlue ;
+.lightBtn:hover{
+    @apply  transition delay-100 duration-100 ease-in-out bg-activeBlue bg-opacity-40 text-darkBlue border-opacity-0 shadow-lg;
 }
 
 .lightProgressDot  {
