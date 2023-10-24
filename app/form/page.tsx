@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import PartBox from '../components/FormPartBox'
 import FormText from '../components/FormText'
+import ConsentSignature from '../components/ConsentSignature'
 import { partBoxInfo, formTextParagraph } from '../constants'
 import Link from 'next/link'
 import ProgressDots from '../components/FormDots'; 
@@ -49,6 +50,9 @@ const Page = () => {
                             text2={formTextParagraph[pageNumber].text2}
                         />
                     )}
+
+                    {pageNumber === 12 && <ConsentSignature />}
+
                     {pageNumber === 13 && (
                         <div className="text-center">
                             <FormText
@@ -80,9 +84,24 @@ const Page = () => {
                     </section>
                 )}
 
+                {partBoxPages.includes(pageNumber) && pageNumber !== 0 && (
+                    <div className="flex flex-col w-full text-end text-base">
+                        {pageNumber >= 13
+                            ? '4'
+                            : pageNumber >= 9
+                            ? '3'
+                            : pageNumber >= 5
+                            ? '2'
+                            : '1'}
+                        /4
+                    </div>
+                )}
+
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
                     {pageNumber !== 0 && pageNumber !== 13 && (
-                        <button className="lightBtn" onClick={previousPage}>Back</button>
+                        <button className="lightBtn" onClick={previousPage}>
+                            Back
+                        </button>
                     )}
 
                     {pageNumber === 0 && (
@@ -106,11 +125,14 @@ const Page = () => {
 
                     <div className="flex justify-center">
                         {pageNumber === 13 && (
-                             <Link href="/">
-                                 <button className="blueBtn" onClick={previousPage}>
-                                     Done
-                                 </button>
-                             </Link>
+                            <Link href="/">
+                                <button
+                                    className="blueBtn"
+                                    onClick={previousPage}
+                                >
+                                    Done
+                                </button>
+                            </Link>
                         )}
                     </div>
                 </div>
