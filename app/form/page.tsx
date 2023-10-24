@@ -125,7 +125,7 @@ const Page = () => {
 
                     <div className="flex justify-center">
                         {pageNumber === 13 && (
-                            <Link href="/">
+                            <Link href="/form/finish">
                                 <button
                                     className="blueBtn"
                                 >
