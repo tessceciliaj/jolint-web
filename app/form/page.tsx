@@ -128,7 +128,6 @@ const Page = () => {
                             <Link href="/">
                                 <button
                                     className="blueBtn"
-                                    onClick={previousPage}
                                 >
                                     Done
                                 </button>
