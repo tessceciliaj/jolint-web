@@ -184,3 +184,14 @@ export const advantagesText = [
         text: 'Healthier work \nenviroment',
     },
 ]
+
+export const metadata = {
+        title: 'Jolint',
+        description: 'Jolint webb',
+    }
+
+
+
+
+
+
