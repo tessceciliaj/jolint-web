@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import Link from 'next/link'
 import PartBox from '../components/FormPartBox'
 import FormText from '../components/FormText'
 import ConsentSignature from '../components/ConsentSignature'
@@ -99,6 +100,16 @@ const Page = () => {
                                 Next
                             </button>
                         )}
+
+                        <div className="flex justify-center">
+                            {pageNumber === 13 && (
+                                <Link href="/form/finish">
+                                    <button className="orangeBtn">
+                                        Submit
+                                    </button>
+                                </Link>
+                            )}
+                        </div>
                     </div>
                 )}
             </div>

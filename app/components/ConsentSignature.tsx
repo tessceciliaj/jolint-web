@@ -69,8 +69,11 @@ const ConsentSignature: React.FC<ConsentSignatureProps> = ({
                         />
                     </div>
                     <div>
-                        <button className="mt-2" onClick={clearSignature}>
-                            Clear
+                        <button
+                            className="mt-2 text-darkGray italic text-sm"
+                            onClick={clearSignature}
+                        >
+                            Redo signature
                         </button>
                     </div>
                 </div>
