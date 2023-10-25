@@ -184,3 +184,36 @@ export const advantagesText = [
         text: 'Healthier work \nenviroment',
     },
 ]
+
+export const howitworks = [
+    {
+        id: 1,
+        alt: 'howToNetwork',
+        title: 'Data Extraction ',
+        text: "Jolint pulls out interaction info from common work tools like email, but without touching any personal details. Imagine it like seeing where conversations happen without knowing who said what. This way, Jolint gets a bird's-eye view of how people connect at work while keeping everyone's privacy intact.",
+    },
+    {
+        id: 2,
+        alt: 'howToSecurity',
+        title: 'Anonymization',
+        text: "Jolint gives everyone an anonymized ID, replacing real names and emails to keep things private. So, even when looking at how people interact, there's no way to tell who's who, ensuring everyone's privacy while still understanding the big picture of connections at work.",
+    },
+    {
+        id: 3,
+        alt: 'howToUserNetwork',
+        title: 'Data Processing',
+        text: 'Data is transformed into a network representation where each employee is a node and interactions form connections. Each person becomes a point on the web, and the lines between them show conversations. This setup helps Jolint see how well everyone is connected, without knowing any personal details.',
+    },
+    {
+        id: 4,
+        alt: 'howToComputer',
+        title: 'AI  Analysis',
+        text: 'AI and machine learning analyze data to pinpoint drivers of inclusion and belonging. They seek patterns to address questions such as new hire integration speed or how to elevate inclusion scores by addressing organizational weak points. The analysis also delves into social capital variations based on gender, role, and hire timing..',
+    },
+    {
+        id: 5,
+        alt: 'howToGraph',
+        title: 'Insights Interface',
+        text: "Insights from the data analysis are showcased in an intuitive interface, offering aggregated-level insights for easier understanding and action. It highlights key drivers of inclusion and recommends activities tailored to your company's specific challenges, aiding in informed decision-making.",
+    },
+]
