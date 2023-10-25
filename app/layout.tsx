@@ -18,8 +18,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       ? `${pathnameSegments[0].charAt(0).toUpperCase() + pathnameSegments[0].slice(1)} | ${metadata.title}`
       : `Home | ${metadata.title}`;
     
-
-    
     return (
         <html lang="en">
             <head>
