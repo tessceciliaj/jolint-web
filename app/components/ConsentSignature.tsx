@@ -1,42 +1,24 @@
-'use client'
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import { format } from 'date-fns'
 import SignaturePad from 'react-signature-pad-wrapper'
 
-interface ConsentSignatureProps {
-    onDone: () => void // New prop to handle "Done" button click
-}
-
-const ConsentSignature: React.FC<ConsentSignatureProps> = ({ onDone }) => {
+const ConsentSignature: React.FC = () => {
     const today = new Date()
     const formattedDate = format(today, 'dd MMMM yyyy')
     const signaturePadRef = useRef<SignaturePad | null>(null)
     const nameInputRef = useRef<HTMLInputElement | null>(null)
     const [name, setName] = useState<string | undefined>('')
-    const [updateSignature, setUpdateSignature] = useState<boolean>(false)
 
     const clearSignature = (): void => {
         if (signaturePadRef.current) {
             signaturePadRef.current.clear()
-            setUpdateSignature(false)
         }
     }
 
-    const handleDone = () => {
-        if (!name || name.trim() === '') {
-            console.log('Please fill in all required fields.')
-            return
-        }
-        onDone() // Notify parent component to proceed
+    const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const updatedName = e.target.value
+        setName(updatedName)
     }
-
-    useEffect(() => {
-        if (signaturePadRef.current) {
-            const isEmpty = signaturePadRef.current.isEmpty()
-            // The following line is removed as it's not needed anymore
-            // onUpdateSignature(isEmpty, name);
-        }
-    }, [name, signaturePadRef])
 
     return (
         <div>
@@ -54,7 +36,7 @@ const ConsentSignature: React.FC<ConsentSignatureProps> = ({ onDone }) => {
                         type="text"
                         id="name"
                         value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        onChange={handleNameChange}
                         ref={nameInputRef}
                     ></input>
                 </div>
@@ -83,8 +65,29 @@ const ConsentSignature: React.FC<ConsentSignatureProps> = ({ onDone }) => {
                         </button>
                     </div>
                 </div>
-                <div>
-                    <button className="mt-2" onClick={handleDone}>
+                <div></div>
+                <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
+                    <button className="lightBtn">Back</button>
+                    <button
+                        className="blueBtn"
+                        onClick={() => {
+                            if (signaturePadRef.current) {
+                                const isEmpty =
+                                    signaturePadRef.current.isEmpty()
+                                console.log('name: ', name)
+                                console.log('sign: ', isEmpty)
+
+                                if (!isEmpty && name !== '') {
+                                    console.log('completed')
+                                    console.log('NEXT PAGE YEAH')
+                                } else {
+                                    console.log(
+                                        'Please fill in all required fields.'
+                                    )
+                                }
+                            }
+                        }}
+                    >
                         Done
                     </button>
                 </div>

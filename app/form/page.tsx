@@ -1,25 +1,13 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import PartBox from '../components/FormPartBox'
 import FormText from '../components/FormText'
 import ConsentSignature from '../components/ConsentSignature'
 import { partBoxInfo, formTextParagraph } from '../constants'
-import Link from 'next/link'
 
 const Page = () => {
     const [pageNumber, setPageNumber] = useState<number>(12)
     const partBoxPages = [0, 3, 5, 9, 13]
-    const [completedForm, setCompletedForm] = useState<boolean>(false)
-    const [name, setName] = useState<string | undefined>('')
-    const [isEmpty, setIsEmpty] = useState<boolean>(true)
-
-    useEffect(() => {
-        if (name !== undefined && !isEmpty) {
-            setCompletedForm(true)
-        } else {
-            setCompletedForm(false)
-        }
-    }, [name, isEmpty])
 
     const nextPage = (): void => {
         setPageNumber((prev) => prev + 1)
@@ -41,11 +29,7 @@ const Page = () => {
                         />
                     )}
 
-                    {pageNumber === 12 && (
-                        <ConsentSignature
-                            onDone={() => nextPage()} // Handle "Done" button click
-                        />
-                    )}
+                    {pageNumber === 12 && <ConsentSignature />}
 
                     {pageNumber === 13 && (
                         <div className="text-center">
@@ -91,60 +75,27 @@ const Page = () => {
                     </div>
                 )}
 
-                <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
-                    {pageNumber !== 0 && pageNumber !== 13 && (
-                        <button className="lightBtn" onClick={previousPage}>
-                            Back
-                        </button>
-                    )}
+                {pageNumber !== 12 && (
+                    <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
+                        {pageNumber !== 0 && pageNumber !== 13 && (
+                            <button className="lightBtn" onClick={previousPage}>
+                                Back
+                            </button>
+                        )}
 
-                    {pageNumber === 0 && (
-                        <button className="blueBtn" onClick={nextPage}>
-                            Start
-                        </button>
-                    )}
+                        {pageNumber === 0 && (
+                            <button className="blueBtn" onClick={nextPage}>
+                                Start
+                            </button>
+                        )}
 
-                    {pageNumber !== 12 &&
-                        pageNumber !== 0 &&
-                        pageNumber !== 13 && (
+                        {pageNumber !== 0 && pageNumber !== 13 && (
                             <button className="blueBtn" onClick={nextPage}>
                                 Next
                             </button>
                         )}
-                    {pageNumber === 12 && (
-                        <button
-                            className={`orangeBtn ${
-                                completedForm ? 'opacity-100' : 'opacity-50'
-                            }`}
-                            onClick={() => {
-                                // setName(name + ' ') // This line is no longer needed
-                                if (!isEmpty && name !== undefined) {
-                                    console.log('completed')
-                                    nextPage()
-                                } else {
-                                    console.log(
-                                        'Please fill in all required fields.'
-                                    )
-                                }
-                            }}
-                        >
-                            Submit
-                        </button>
-                    )}
-
-                    <div className="flex justify-center">
-                        {pageNumber === 13 && (
-                            <Link href="/">
-                                <button
-                                    className="blueBtn"
-                                    onClick={previousPage}
-                                >
-                                    Done
-                                </button>
-                            </Link>
-                        )}
                     </div>
-                </div>
+                )}
             </div>
         </>
     )
