@@ -14,10 +14,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     const pathname = usePathname()
     
     const pathnameSegments = pathname.split('/').filter(segment => segment);
-    const titleParts = [ pathnameSegments[0].charAt(0).toUpperCase() + pathnameSegments[0].slice(1), metadata.title];
-    const pageTitle = pathnameSegments.length > 0 ? titleParts.join(' | ') : `Home | ${metadata.title}`;
+    const pageTitle = pathnameSegments.length > 0
+      ? `${pathnameSegments[0].charAt(0).toUpperCase() + pathnameSegments[0].slice(1)} | ${metadata.title}`
+      : `Home | ${metadata.title}`;
+    
 
-    console.log(pathnameSegments)
     
     return (
         <html lang="en">
