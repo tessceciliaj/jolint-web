@@ -29,7 +29,12 @@ const Page = () => {
                         />
                     )}
 
-                    {pageNumber === 12 && <ConsentSignature />}
+                    {pageNumber === 12 && (
+                        <ConsentSignature
+                            nextPage={nextPage}
+                            previousPage={previousPage}
+                        />
+                    )}
 
                     {pageNumber === 13 && (
                         <div className="text-center">

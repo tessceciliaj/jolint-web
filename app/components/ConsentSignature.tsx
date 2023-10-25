@@ -2,12 +2,21 @@ import React, { useRef, useState } from 'react'
 import { format } from 'date-fns'
 import SignaturePad from 'react-signature-pad-wrapper'
 
-const ConsentSignature: React.FC = () => {
+type ConsentSignatureProps = {
+    nextPage: () => void
+    previousPage: () => void
+}
+
+const ConsentSignature: React.FC<ConsentSignatureProps> = ({
+    nextPage,
+    previousPage,
+}) => {
     const today = new Date()
     const formattedDate = format(today, 'dd MMMM yyyy')
     const signaturePadRef = useRef<SignaturePad | null>(null)
     const nameInputRef = useRef<HTMLInputElement | null>(null)
     const [name, setName] = useState<string | undefined>('')
+    const [showErrorMessage, setShowErrorMessage] = useState(false)
 
     const clearSignature = (): void => {
         if (signaturePadRef.current) {
@@ -27,12 +36,12 @@ const ConsentSignature: React.FC = () => {
                     <span className="text-accentColor mb-2 mr-2">*</span>
                     Required
                 </div>
-                <div className="flex flex-row my-8">
+                <div className="flex flex-row my-8 md:w-[calc(100%-200px)]">
                     <div>
                         Name:<span className="text-accentColor ml-1">*</span>
                     </div>
                     <input
-                        className="ml-2 border-darkColor border-b border-dashed w-full sm:w-1/2 font-bold"
+                        className="ml-2 border-darkColor border-b border-dashed w-full font-bold"
                         type="text"
                         id="name"
                         value={name}
@@ -51,7 +60,7 @@ const ConsentSignature: React.FC = () => {
                         Signature:
                         <span className="text-accentColor ml-1">*</span>
                     </div>
-                    <div className="border-darkColor border-b border-dashed w-full sm:w-2/3 h-40">
+                    <div className="border-darkColor border-b border-dashed w-full md:w-[calc(100%-200px)] h-40">
                         <SignaturePad
                             options={{
                                 penColor: 'rgb(0, 21, 206)',
@@ -65,25 +74,27 @@ const ConsentSignature: React.FC = () => {
                         </button>
                     </div>
                 </div>
-                <div></div>
+                <div
+                    className={`flex mt-4 text-accentColor ${
+                        showErrorMessage ? 'visible' : 'invisible'
+                    }`}
+                >
+                    Please fill in all required fields
+                </div>
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
-                    <button className="lightBtn">Back</button>
+                    <button className="lightBtn" onClick={previousPage}>
+                        Back
+                    </button>
                     <button
                         className="blueBtn"
                         onClick={() => {
                             if (signaturePadRef.current) {
                                 const isEmpty =
                                     signaturePadRef.current.isEmpty()
-                                console.log('name: ', name)
-                                console.log('sign: ', isEmpty)
-
                                 if (!isEmpty && name !== '') {
-                                    console.log('completed')
-                                    console.log('NEXT PAGE YEAH')
+                                    nextPage()
                                 } else {
-                                    console.log(
-                                        'Please fill in all required fields.'
-                                    )
+                                    setShowErrorMessage(true)
                                 }
                             }
                         }}
