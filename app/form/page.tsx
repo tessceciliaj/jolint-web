@@ -21,11 +21,20 @@ const Page = () => {
             return newVisitedPages;
         });
     };
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    }
     
     const nextPage = (): void => {
-        setPageNumber((prev) => prev + 1)
-        console.log(pageNumber + 1)
-    }
+        setPageNumber((prev) => prev + 1);
+        if (!partBoxPages.includes(pageNumber + 1)) {
+            scrollToTop()
+        }
+    };
     
     const previousPage = (): void => {
       if (pageNumber > 0) {
@@ -33,6 +42,11 @@ const Page = () => {
         updateVisitedPages(pageNumber, false);
       }
     };
+
+    const handlePartBoxClick = (pages: React.SetStateAction<number>[]) => {
+        setPageNumber(pages[0]);
+        scrollToTop()
+    }
 
     return (
         <>
@@ -79,7 +93,8 @@ const Page = () => {
                                 activeOnPage={boxInfo.activeOnPage}
                                 checkmarkPage={boxInfo.checkmarkPage}
                                 currentPage={pageNumber}
-                            />
+                                onclick={() => handlePartBoxClick(boxInfo.pages)}
+                                />
                         ))}
                     </section>
                 )}
@@ -126,9 +141,7 @@ const Page = () => {
                     <div className="flex justify-center">
                         {pageNumber === 13 && (
                             <Link href="/form/finish">
-                                <button
-                                    className="blueBtn"
-                                >
+                                <button className="blueBtn">
                                     Done
                                 </button>
                             </Link>

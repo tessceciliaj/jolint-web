@@ -14,4 +14,5 @@ export type PartBoxProps = {
     activeOnPage: number
     checkmarkPage: number
     currentPage: number
+    onclick: (event: React.MouseEvent<HTMLDivElement>) => void;
 }

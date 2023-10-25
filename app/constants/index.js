@@ -140,6 +140,7 @@ export const partBoxInfo = [
         iconGray: '',
         activeOnPage: 0,
         checkmarkPage: 3,
+        pages: [1, 2],
     },
     {
         id: '2',
@@ -149,6 +150,7 @@ export const partBoxInfo = [
         iconGray: '/formGrayMagnifyingGlass.svg',
         activeOnPage: 3,
         checkmarkPage: 5,
+        pages: [4],
     },
     {
         id: '3',
@@ -158,6 +160,7 @@ export const partBoxInfo = [
         iconGray: '/formGrayGDPR.svg',
         activeOnPage: 5,
         checkmarkPage: 9,
+        pages: [6, 7, 8], 
     },
     {
         id: '4',
@@ -167,6 +170,7 @@ export const partBoxInfo = [
         iconGray: '/formGrayForm.svg',
         activeOnPage: 9,
         checkmarkPage: 13,
+        pages: [10, 11, 12],
     },
 ]
 

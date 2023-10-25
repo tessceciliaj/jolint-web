@@ -9,6 +9,7 @@ const PartBox = ({
     activeOnPage,
     currentPage,
     checkmarkPage,
+    onclick,
 }: PartBoxProps) => {
     return (
         <div className="flex justify-between w-full mb-[15px]">
@@ -16,9 +17,14 @@ const PartBox = ({
                 className={`flex flex-col p-[21px] border-2 rounded-[10px] lg:h-[270px] xl:w-[270px] lg:w-[230px] md:w-[340px] sm:w-full md:h-[260px] w-full 
         ${
             currentPage >= activeOnPage
-                ? ' bg-lightColor border-mediumDarkGray'
+                ? ' bg-lightColor border-mediumDarkGray cursor-pointer hover:border-checkmarkGreen hover:ring-checkmarkGreen hover:ring-2 ring-inset '
                 : ' bg-boxGray border-boxGray'
         }`}
+        onClick={(event) => {
+            if (currentPage >= activeOnPage) {
+                onclick(event);
+            }
+        }}
             >
                 <div className="flex justify-between w-full mb-[15px]">
                     <Image src={icon} alt="Logo" width={51} height={51} />
@@ -27,7 +33,7 @@ const PartBox = ({
                             currentPage >= checkmarkPage
                                 ? ' bg-checkmarkGreen border-checkmarkGreen'
                                 : currentPage >= activeOnPage
-                                ? 'bg-lightColor border-mediumDarkGray'
+                                ? ' bg-lightColor border-mediumDarkGray '
                                 : ' bg-boxGray border-mediumDarkGray'
                         }`}
                     >
