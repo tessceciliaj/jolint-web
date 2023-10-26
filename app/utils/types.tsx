@@ -9,10 +9,12 @@ export type MetadataProps = {
 
 export type PartBoxProps = {
     icon: string
+    iconGray: string
     title: string
     subTitle: string
     activeOnPage: number
-    checkmarkPage: number
     currentPage: number
+    isNextBox: boolean
+    visited: boolean
     onclick: (event: React.MouseEvent<HTMLDivElement>) => void;
 }

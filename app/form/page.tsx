@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PartBox from '../components/FormPartBox'
 import FormText from '../components/FormText'
 import ConsentSignature from '../components/ConsentSignature'
@@ -13,6 +13,42 @@ const Page = () => {
     const partBoxPages = [0, 3, 5, 9, 13]
     const parts = [[1, 2], [4], [6, 7, 8], [10, 11, 12]];
     const currentPart = parts.find((part) => part.includes(pageNumber));
+    const [fullyVisitedParts, setFullyVisitedParts] = useState<number[]>([]);
+
+    useEffect(() => {
+        const partContainingPage = parts.findIndex((part) => part.includes(pageNumber));
+        if (partContainingPage !== -1) {
+            const partPages = parts[partContainingPage];
+            const isPartVisited = partPages.every((page) => visitedPages[page]);
+            if (isPartVisited && !fullyVisitedParts.includes(partContainingPage)) {
+                setFullyVisitedParts((prevFullyVisitedParts) => [...prevFullyVisitedParts, partContainingPage]);
+            }
+        }
+    }, [pageNumber, visitedPages]);
+
+    const isPartFullyVisited = (partIndex) => fullyVisitedParts.includes(partIndex);
+
+    
+    const isNextBox = (boxInfo) => {
+        const currentPartIndex = parts.findIndex((part) => part.includes(pageNumber));
+        const currentBoxPartIndex = parts.findIndex((part) => part.includes(boxInfo.pages[0]));
+    
+        console.log("currentPartIndex:", currentPartIndex);
+        console.log("currentBoxPartIndex:", currentBoxPartIndex);
+    
+        if (currentPartIndex >= 0 && currentBoxPartIndex >= 0) {
+            if (currentPartIndex === currentBoxPartIndex) {
+                const isBoxNext = isPartFullyVisited(currentPartIndex);
+                console.log("isBoxNext:", isBoxNext);
+                return isBoxNext;
+            }
+        }
+    
+        console.log("Box not associated with the current part.");
+        return false;
+    };
+        
+      
 
     const updateVisitedPages = (page: number, value: boolean) => {
         setVisitedPages((prev) => {
@@ -37,13 +73,14 @@ const Page = () => {
     };
     
     const previousPage = (): void => {
-      if (pageNumber > 0) {
-        setPageNumber((prev) => prev - 1);
-        updateVisitedPages(pageNumber, false);
-      }
+        if (pageNumber > 0) {
+          setPageNumber((prev) => prev - 1);
+          updateVisitedPages(pageNumber, false);
+        }
     };
 
     const handlePartBoxClick = (pages: React.SetStateAction<number>[]) => {
+        setVisitedPages(Array(13).fill(false));
         setPageNumber(pages[0]);
         scrollToTop()
     }
@@ -85,14 +122,12 @@ const Page = () => {
                                 key={boxInfo.id}
                                 title={boxInfo.title}
                                 subTitle={boxInfo.subTitle}
-                                icon={
-                                    pageNumber >= boxInfo.activeOnPage
-                                        ? boxInfo.icon
-                                        : boxInfo.iconGray
-                                }
+                                icon={boxInfo.icon}
+                                iconGray={boxInfo.iconGray}
                                 activeOnPage={boxInfo.activeOnPage}
-                                checkmarkPage={boxInfo.checkmarkPage}
                                 currentPage={pageNumber}
+                                isNextBox={isNextBox(boxInfo)}
+                                visited={isPartFullyVisited(parts.findIndex((part) => part.includes(boxInfo.pages[0])))}
                                 onclick={() => handlePartBoxClick(boxInfo.pages)}
                                 />
                         ))}
