@@ -12,7 +12,6 @@ const Header = () => {
             </Link>
             <div className="flex justify-center items-center gap-6">
                 <NavBar />
-<<<<<<< HEAD
                 {/* <div className="flex justify-center items-center gap-1">
                     <Image src={globe} alt="Globe" width={21} height={21} />
                     English
@@ -23,8 +22,6 @@ const Header = () => {
                         height={8}
                     />
                 </div> */}
-=======
->>>>>>> TICKET-100/alt-texts
                 <Link href="/form">
                     <button className="orangeBtn">Consent Form</button>
                 </Link>
