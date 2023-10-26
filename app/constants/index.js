@@ -184,3 +184,14 @@ export const partBoxInfo = [
         checkmarkPage: 13,
     },
 ]
+
+export const metadata = {
+        title: 'Jolint',
+        description: 'Jolint webb',
+    }
+
+
+
+
+
+

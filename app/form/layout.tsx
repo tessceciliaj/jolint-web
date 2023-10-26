@@ -1,14 +1,13 @@
 'use client'
 import React from 'react'
+import '../globals.css'
 import Image from 'next/image'
 import FormHeader from '../components/FormHeader'
-import FormText from '../components/FormText'
-import Footer from '../components/Footer'
 import { RootLayoutProps } from '../utils/types'
 import speaker from '../../public/volume-2.svg'
 import { usePathname } from 'next/navigation'
 
-const layout = ({ children }: RootLayoutProps) => {
+export default function Formlayout ({ children }: RootLayoutProps){
     const pathname = usePathname()
 
     return (
@@ -27,9 +26,8 @@ const layout = ({ children }: RootLayoutProps) => {
                     )}
                 {children}
             </main>
-            <Footer />
-        </div>
+        </div>  
     )
 }
 
-export default layout
+
