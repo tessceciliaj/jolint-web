@@ -1,17 +1,17 @@
 'use client'
 import React from 'react'
+import '../globals.css'
 import Image from 'next/image'
 import FormHeader from '../components/FormHeader'
-import Footer from '../components/Footer'
 import { RootLayoutProps } from '../utils/types'
 import speaker from '../../public/volume-2.svg'
 import { usePathname } from 'next/navigation'
 
-const layout = ({ children }: RootLayoutProps) => {
+export default function Formlayout ({ children }: RootLayoutProps){
     const pathname = usePathname()
 
     return (
-        <div className='min-h-screen flex flex-col'>
+        <div className='min-h-[calc(100vh_-_50px)] flex flex-col'>
             <FormHeader />
             <main className='flex flex-grow flex-col items-center justify-start mt-[43px] mb-[143px] xl:mx-14 md:mx-10 sm:mx-8 mx-4'>
                 {pathname !== '/form/finish' && (
@@ -26,9 +26,8 @@ const layout = ({ children }: RootLayoutProps) => {
                     )}
                 {children}
             </main>
-            <Footer />
-        </div>
+        </div>  
     )
 }
 
-export default layout
+
