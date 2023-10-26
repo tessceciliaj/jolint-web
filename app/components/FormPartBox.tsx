@@ -14,12 +14,12 @@ const PartBox = ({
     return (
         <div className="flex justify-between w-full mb-[15px]">
             <div
-                className={`flex flex-col p-[21px] border-2 rounded-[10px] lg:h-[270px] xl:w-[270px] lg:w-[230px] md:w-[340px] sm:w-full md:h-[260px] w-full 
+                className={`flex flex-col p-[21px] border-2 rounded-[10px] lg:h-[270px] md:h-[250px] h-[215px] xl:w-[270px] lg:w-[230px] w-full 
         ${
             visited
-                ? ' bg-lightColor border-mediumDarkGray cursor-pointer hover:border-checkmarkGreen hover:ring-checkmarkGreen hover:ring-2 ring-inset'
+                ? ' bg-lightColor border-mediumDarkGray formBoxHover'
                 : isNextBox
-                ? ' bg-lightColor border-mediumDarkGray cursor-pointer hover:border-checkmarkGreen hover:ring-checkmarkGreen hover:ring-2 ring-inset'
+                ? ' bg-lightColor border-mediumDarkGray formBoxHover'
                 : ' bg-boxGray border-boxGray'
         }`}
         onClick={(event) => {

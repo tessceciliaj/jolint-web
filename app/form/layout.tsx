@@ -15,7 +15,7 @@ const layout = ({ children }: RootLayoutProps) => {
             <FormHeader />
             <main className='flex flex-grow flex-col items-center justify-start mt-[43px] mb-[143px] xl:mx-14 md:mx-10 sm:mx-8 mx-4'>
                 {pathname !== '/form/finish' && (
-                    <div className="xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full flex flex-row">
+                    <div className="xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[900px] w-full flex flex-row">
                             <h1 className="font-bold sm:text-4xl text-3xl w-fit">
                                 Consent Form for Data Processing
                             </h1>

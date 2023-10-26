@@ -41,11 +41,22 @@ const Page = () => {
             behavior: "smooth",
         });
     }
+
+    function scrollToBottom() {
+        window.scrollTo({
+            top: document.body.scrollHeight,            
+            behavior: "smooth",
+        });
+    }
     
     const nextPage = (): void => {
         setPageNumber((prev) => prev + 1);
         if (!partBoxPages.includes(pageNumber + 1)) {
             scrollToTop()
+        }
+
+        if(pageNumber === 12 || pageNumber === 8 ) {
+            scrollToBottom()
         }
     };
     
@@ -73,7 +84,7 @@ const Page = () => {
 
     return (
         <>
-            <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full">
+            <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[900px] w-full">
                 
                 <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full">
                     <ProgressDots currentPart={currentPart} visitedPages={visitedPages} updateVisitedPages={updateVisitedPages} pageNumber={pageNumber} />
@@ -135,10 +146,10 @@ const Page = () => {
                     )}
                 
                    {pageNumber !== 12 && pageNumber !== 0 && pageNumber !== 13 && (!partBoxPages.includes(pageNumber) || !isPartFullyVisited(3)) && (
-                            <button className="blueBtn" onClick={nextPage}>
-                                Next
-                            </button>
-                        )}
+                        <button className="blueBtn" onClick={nextPage}>
+                            Next
+                        </button>
+                    )}
                         
                     {pageNumber === 0 && !isPartFullyVisited(0) && (
                         <button className="blueBtn" onClick={nextPage}>
