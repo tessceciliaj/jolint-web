@@ -103,8 +103,8 @@ export const formTextParagraph = [
     {
         id: '10_done',
         title: '',
-        text1: 'Your consent form was successfully submitted. We appreciate your collaboration. Thank you!',
-        text2: '',
+        text1: 'Empower your workplace by authorizing consent for reliable data to enhance inclusion and belonging.',
+        text2: 'Click on the steps below to read and access the consent form.',
     },
 ]
 
@@ -155,6 +155,7 @@ export const partBoxInfo = [
         iconGray: '',
         activeOnPage: 0,
         checkmarkPage: 3,
+        pages: [1, 2],
     },
     {
         id: '2',
@@ -164,6 +165,7 @@ export const partBoxInfo = [
         iconGray: '/formGrayMagnifyingGlass.svg',
         activeOnPage: 3,
         checkmarkPage: 5,
+        pages: [4],
     },
     {
         id: '3',
@@ -173,6 +175,7 @@ export const partBoxInfo = [
         iconGray: '/formGrayGDPR.svg',
         activeOnPage: 5,
         checkmarkPage: 9,
+        pages: [6, 7, 8], 
     },
     {
         id: '4',
@@ -182,6 +185,7 @@ export const partBoxInfo = [
         iconGray: '/formGrayForm.svg',
         activeOnPage: 9,
         checkmarkPage: 13,
+        pages: [10, 11, 12],
     },
 ]
 
