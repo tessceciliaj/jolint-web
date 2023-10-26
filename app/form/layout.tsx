@@ -11,7 +11,7 @@ export default function Formlayout ({ children }: RootLayoutProps){
     const pathname = usePathname()
 
     return (
-        <div className='min-h-screen flex flex-col'>
+        <div className='min-h-[calc(100vh_-_200px)] flex flex-col'>
             <FormHeader />
             <main className='flex flex-grow flex-col items-center justify-start mt-[43px] mb-[143px] xl:mx-14 md:mx-10 sm:mx-8 mx-4'>
                 {pathname !== '/form/finish' && (
