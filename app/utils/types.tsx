@@ -12,8 +12,6 @@ export type PartBoxProps = {
     iconGray: string
     title: string
     subTitle: string
-    activeOnPage: number
-    currentPage: number
     isNextBox: boolean
     visited: boolean
     onclick: (event: React.MouseEvent<HTMLDivElement>) => void;

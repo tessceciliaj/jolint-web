@@ -14,6 +14,7 @@ const Page = () => {
     const parts = [[1, 2], [4], [6, 7, 8], [10, 11, 12]];
     const currentPart = parts.find((part) => part.includes(pageNumber));
     const [fullyVisitedParts, setFullyVisitedParts] = useState<number[]>([]);
+    const isPartFullyVisited = (partIndex: number) => fullyVisitedParts.includes(partIndex);
 
     useEffect(() => {
         const partContainingPage = parts.findIndex((part) => part.includes(pageNumber));
@@ -26,30 +27,6 @@ const Page = () => {
         }
     }, [pageNumber, visitedPages]);
 
-    const isPartFullyVisited = (partIndex) => fullyVisitedParts.includes(partIndex);
-
-    
-    const isNextBox = (boxInfo) => {
-        const currentPartIndex = parts.findIndex((part) => part.includes(pageNumber));
-        const currentBoxPartIndex = parts.findIndex((part) => part.includes(boxInfo.pages[0]));
-    
-        console.log("currentPartIndex:", currentPartIndex);
-        console.log("currentBoxPartIndex:", currentBoxPartIndex);
-    
-        if (currentPartIndex >= 0 && currentBoxPartIndex >= 0) {
-            if (currentPartIndex === currentBoxPartIndex) {
-                const isBoxNext = isPartFullyVisited(currentPartIndex);
-                console.log("isBoxNext:", isBoxNext);
-                return isBoxNext;
-            }
-        }
-    
-        console.log("Box not associated with the current part.");
-        return false;
-    };
-        
-      
-
     const updateVisitedPages = (page: number, value: boolean) => {
         setVisitedPages((prev) => {
             const newVisitedPages = [...prev];
@@ -57,7 +34,7 @@ const Page = () => {
             return newVisitedPages;
         });
     };
-
+    
     function scrollToTop() {
         window.scrollTo({
             top: 0,
@@ -74,16 +51,25 @@ const Page = () => {
     
     const previousPage = (): void => {
         if (pageNumber > 0) {
-          setPageNumber((prev) => prev - 1);
-          updateVisitedPages(pageNumber, false);
+            setPageNumber((prev) => prev - 1);
+            updateVisitedPages(pageNumber, false);
         }
     };
-
+    
     const handlePartBoxClick = (pages: React.SetStateAction<number>[]) => {
         setVisitedPages(Array(13).fill(false));
         setPageNumber(pages[0]);
         scrollToTop()
     }
+    
+    const isNextBox = (partIndex: number) => {
+        if (partIndex > 0) {
+          const previousPartIndex = partIndex - 1;
+          const previousPartFullyVisited = isPartFullyVisited(previousPartIndex); 
+          return previousPartFullyVisited;
+        }
+        return true;
+      };
 
     return (
         <>
@@ -117,56 +103,48 @@ const Page = () => {
 
                 {partBoxPages.includes(pageNumber) && (
                     <section className="gap-[20px] w-full flex flex-col lg:grid-cols-4 md:max-w-fit sm:grid sm:grid-cols-2">
-                        {partBoxInfo.map((boxInfo) => (
-                            <PartBox
-                                key={boxInfo.id}
-                                title={boxInfo.title}
-                                subTitle={boxInfo.subTitle}
-                                icon={boxInfo.icon}
-                                iconGray={boxInfo.iconGray}
-                                activeOnPage={boxInfo.activeOnPage}
-                                currentPage={pageNumber}
-                                isNextBox={isNextBox(boxInfo)}
-                                visited={isPartFullyVisited(parts.findIndex((part) => part.includes(boxInfo.pages[0])))}
-                                onclick={() => handlePartBoxClick(boxInfo.pages)}
+                        {partBoxInfo.map((boxInfo) => {
+                            const boxPartIndex = parts.findIndex((part) => part.includes(boxInfo.pages[0]));                            
+                            return (
+                                <PartBox
+                                    key={boxInfo.id}
+                                    title={boxInfo.title}
+                                    subTitle={boxInfo.subTitle}
+                                    icon={boxInfo.icon}
+                                    iconGray={boxInfo.iconGray}
+                                    isNextBox={isNextBox(boxPartIndex)}
+                                    visited={isPartFullyVisited(boxPartIndex)}
+                                    onclick={() => handlePartBoxClick(boxInfo.pages)}
                                 />
-                        ))}
+                            );
+                        })}
                     </section>
                 )}
 
-                {partBoxPages.includes(pageNumber) && pageNumber !== 0 && (
-                    <div className="flex flex-col w-full text-end text-base">
-                        {pageNumber >= 13
-                            ? '4'
-                            : pageNumber >= 9
-                            ? '3'
-                            : pageNumber >= 5
-                            ? '2'
-                            : '1'}
-                        /4
-                    </div>
+                {partBoxPages.includes(pageNumber) && (
+                  <div className="flex flex-col w-full text-end text-base">
+                    {isPartFullyVisited(4) ? '4 / 4' : isPartFullyVisited(3) ? '4 / 4' : isPartFullyVisited(2) ? '3 / 4' : isPartFullyVisited(1) ? '2 / 4' : isPartFullyVisited(0) ? '1 / 4' : ''}
+                  </div>
                 )}
 
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
-                    {pageNumber !== 0 && pageNumber !== 13 && (
+                    {pageNumber !== 0 && pageNumber !== 13 && (!partBoxPages.includes(pageNumber) || !isPartFullyVisited(3)) && (
                         <button className="lightBtn" onClick={previousPage}>
                             Back
                         </button>
                     )}
-
-                    {pageNumber === 0 && (
-                        <button className="blueBtn" onClick={nextPage}>
-                            Start
-                        </button>
-                    )}
-
-                    {pageNumber !== 12 &&
-                        pageNumber !== 0 &&
-                        pageNumber !== 13 && (
+                
+                   {pageNumber !== 12 && pageNumber !== 0 && pageNumber !== 13 && (!partBoxPages.includes(pageNumber) || !isPartFullyVisited(3)) && (
                             <button className="blueBtn" onClick={nextPage}>
                                 Next
                             </button>
                         )}
+                        
+                    {pageNumber === 0 && !isPartFullyVisited(0) && (
+                        <button className="blueBtn" onClick={nextPage}>
+                            Start
+                        </button>
+                    )}
                     {pageNumber === 12 && (
                         <button className="orangeBtn" onClick={nextPage}>
                             Submit
@@ -174,7 +152,7 @@ const Page = () => {
                     )}
 
                     <div className="flex justify-center">
-                        {pageNumber === 13 && (
+                        {isPartFullyVisited(3) && partBoxPages.includes(pageNumber) &&(
                             <Link href="/form/finish">
                                 <button className="blueBtn">
                                     Done

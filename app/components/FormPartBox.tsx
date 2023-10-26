@@ -7,8 +7,6 @@ const PartBox = ({
     iconGray,
     title,
     subTitle,
-    activeOnPage,
-    currentPage,
     visited,
     isNextBox,
     onclick,
@@ -25,18 +23,18 @@ const PartBox = ({
                 : ' bg-boxGray border-boxGray'
         }`}
         onClick={(event) => {
-            if (currentPage >= activeOnPage || visited) {
+            if (isNextBox || visited) {
                 onclick(event);
             }
         }}
             >
                 <div className="flex justify-between w-full mb-[15px]">
-                    <Image src={currentPage >= activeOnPage || visited? icon : iconGray} alt="Logo" width={51} height={51} />
+                    <Image src={isNextBox || visited? icon : iconGray} alt="Logo" width={51} height={51} />
                     <div
                       className={`pt-[2px] border-2 h-[28px] w-[28px] rounded-[5px] ${
                           visited
                               ? 'bg-checkmarkGreen border-checkmarkGreen'
-                              : currentPage >= activeOnPage
+                              : isNextBox
                               ? 'bg-lightColor border-mediumDarkGray'
                               : 'bg-boxGray border-mediumDarkGray'
                       }`}
