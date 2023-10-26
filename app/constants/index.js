@@ -2,22 +2,22 @@ export const navLinks = [
     {
         id: 'howitworks',
         title: 'How it works',
+        href:'',
     },
     {
         id: 'inclusion',
-        title: 'Inclusion',
+        title: 'Why Inclusion',
+        href: '/inclusion',
     },
     {
         id: 'faq',
         title: 'FAQ',
+        href: '/faq',
     },
     {
         id: 'aboutus',
         title: 'About us',
-    },
-    {
-        id: 'contactus',
-        title: 'Contact us',
+        href: '/about',
     },
 ]
 
