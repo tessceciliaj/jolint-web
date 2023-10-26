@@ -103,8 +103,8 @@ export const formTextParagraph = [
     {
         id: '10_done',
         title: '',
-        text1: 'Your consent form was successfully submitted. We appreciate your collaboration. Thank you!',
-        text2: '',
+        text1: 'Empower your workplace by authorizing consent for reliable data to enhance inclusion and belonging.',
+        text2: 'Click on the steps below to read and access the consent form.',
     },
 ]
 

@@ -41,22 +41,11 @@ const Page = () => {
             behavior: "smooth",
         });
     }
-
-    function scrollToBottom() {
-        window.scrollTo({
-            top: document.body.scrollHeight,            
-            behavior: "smooth",
-        });
-    }
     
     const nextPage = (): void => {
         setPageNumber((prev) => prev + 1);
         if (!partBoxPages.includes(pageNumber + 1)) {
             scrollToTop()
-        }
-
-        if(pageNumber === 12 || pageNumber === 8 ) {
-            scrollToBottom()
         }
     };
     
@@ -84,32 +73,19 @@ const Page = () => {
 
     return (
         <>
-            <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[900px] w-full">
+            <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[800px] w-full">
                 
                 <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full">
                     <ProgressDots currentPart={currentPart} visitedPages={visitedPages} updateVisitedPages={updateVisitedPages} pageNumber={pageNumber} />
                 </div>
             
                 <div className="max-w-[850px] mb-[40px]">
-                    {pageNumber !== 13 && (
-                        <FormText
-                            title={formTextParagraph[pageNumber].title}
-                            text1={formTextParagraph[pageNumber].text1}
-                            text2={formTextParagraph[pageNumber].text2}
-                        />
-                    )}
-
+                    <FormText
+                        title={formTextParagraph[pageNumber].title}
+                        text1={formTextParagraph[pageNumber].text1}
+                        text2={formTextParagraph[pageNumber].text2}
+                     />
                     {pageNumber === 12 && <ConsentSignature />}
-
-                    {pageNumber === 13 && (
-                        <div className="text-center">
-                            <FormText
-                                title={formTextParagraph[pageNumber].title}
-                                text1={formTextParagraph[pageNumber].text1}
-                                text2={formTextParagraph[pageNumber].text2}
-                            />
-                        </div>
-                    )}
                 </div>
 
                 {partBoxPages.includes(pageNumber) && (
