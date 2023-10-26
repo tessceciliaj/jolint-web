@@ -3,8 +3,6 @@ import NavBar from './NavBar'
 import Logo from '../../public/JOLINTlogo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-// import arrowdown from '../../public/arrowdown.svg'
-// import globe from '../../public/globe.svg'
 
 const Header = () => {
     return (
@@ -14,6 +12,7 @@ const Header = () => {
             </Link>
             <div className="flex justify-center items-center gap-6">
                 <NavBar />
+<<<<<<< HEAD
                 {/* <div className="flex justify-center items-center gap-1">
                     <Image src={globe} alt="Globe" width={21} height={21} />
                     English
@@ -24,6 +23,8 @@ const Header = () => {
                         height={8}
                     />
                 </div> */}
+=======
+>>>>>>> TICKET-100/alt-texts
                 <Link href="/form">
                     <button className="orangeBtn">Consent Form</button>
                 </Link>
