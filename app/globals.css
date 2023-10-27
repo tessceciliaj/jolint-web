@@ -27,3 +27,7 @@
 .blueProgressDot  {
     @apply w-[16px] h-[16px] border-[1px] bg-activeBlue border-activeBlue rounded-full
 }
+
+.formBoxHover {
+    @apply cursor-pointer sm:hover:border-checkmarkGreen sm:hover:ring-checkmarkGreen sm:hover:ring-2 ring-inset
+}
