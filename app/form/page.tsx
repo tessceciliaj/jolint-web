@@ -4,12 +4,14 @@ import PartBox from '../components/FormPartBox'
 import FormText from '../components/FormText'
 import ConsentSignature from '../components/ConsentSignature'
 import { partBoxInfo, formTextParagraph } from '../constants'
+import ProgressDots from '../components/FormDots'
 import Link from 'next/link'
-import ProgressDots from '../components/FormDots'; 
 
 const Page = () => {
     const [pageNumber, setPageNumber] = useState<number>(0)
-    const [visitedPages, setVisitedPages] = useState<boolean[]>(Array(13).fill(false)); 
+    const [visitedPages, setVisitedPages] = useState<boolean[]>(
+        Array(13).fill(false)
+    )
     const partBoxPages = [0, 3, 5, 9, 13]
     const parts = [[1, 2], [4], [6, 7, 8], [10, 11, 12]];
     const currentPart = parts.find((part) => part.includes(pageNumber));
@@ -76,16 +78,26 @@ const Page = () => {
             <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[800px] w-full">
                 
                 <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full">
-                    <ProgressDots currentPart={currentPart} visitedPages={visitedPages} updateVisitedPages={updateVisitedPages} pageNumber={pageNumber} />
+                    <ProgressDots
+                        currentPart={currentPart}
+                        visitedPages={visitedPages}
+                        updateVisitedPages={updateVisitedPages}
+                        pageNumber={pageNumber}
+                    />
                 </div>
-            
+
                 <div className="max-w-[850px] mb-[40px]">
                     <FormText
                         title={formTextParagraph[pageNumber].title}
                         text1={formTextParagraph[pageNumber].text1}
                         text2={formTextParagraph[pageNumber].text2}
                      />
-                    {pageNumber === 12 && <ConsentSignature />}
+                      {pageNumber === 12 && (
+                        <ConsentSignature
+                            nextPage={nextPage}
+                            previousPage={previousPage}
+                        />
+                    )}
                 </div>
 
                 {partBoxPages.includes(pageNumber) && (
@@ -115,7 +127,7 @@ const Page = () => {
                 )}
 
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
-                    {pageNumber !== 0 && pageNumber !== 13 && (!partBoxPages.includes(pageNumber) || !isPartFullyVisited(3)) && (
+                    {pageNumber !== 0 && pageNumber !== 13 && pageNumber !== 12 && (!partBoxPages.includes(pageNumber) || !isPartFullyVisited(3)) && (
                         <button className="lightBtn" onClick={previousPage}>
                             Back
                         </button>
@@ -132,17 +144,12 @@ const Page = () => {
                             Start
                         </button>
                     )}
-                    {pageNumber === 12 && (
-                        <button className="orangeBtn" onClick={nextPage}>
-                            Submit
-                        </button>
-                    )}
 
                     <div className="flex justify-center">
                         {isPartFullyVisited(3) && partBoxPages.includes(pageNumber) &&(
                             <Link href="/form/finish">
-                                <button className="blueBtn">
-                                    Done
+                                <button className="orangeBtn">
+                                    Submit
                                 </button>
                             </Link>
                         )}
