@@ -8,7 +8,7 @@ import ProgressDots from '../components/FormDots'
 import Link from 'next/link'
 
 const Page = () => {
-    const [pageNumber, setPageNumber] = useState<number>(0)
+    const [pageNumber, setPageNumber] = useState<number>(12)
     const [visitedPages, setVisitedPages] = useState<boolean[]>(
         Array(13).fill(false)
     )
@@ -86,7 +86,7 @@ const Page = () => {
                     />
                 </div>
 
-                <div className="max-w-[850px] mb-[40px]">
+                <div className="max-w-[850px] mb-[40px] w-full">
                     <FormText
                         title={formTextParagraph[pageNumber].title}
                         text1={formTextParagraph[pageNumber].text1}
