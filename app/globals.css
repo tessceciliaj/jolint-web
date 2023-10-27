@@ -27,3 +27,7 @@
 .blueProgressDot  {
     @apply w-[16px] h-[16px] border-[1px] bg-activeBlue border-activeBlue rounded-full
 }
+
+.inclusion-gradient {
+    background-image: linear-gradient(135deg, rgba(255, 173, 159, 1) 0%, rgba(255, 209, 171, 1) 13%, rgba(255, 221, 189, 1) 26%, rgba(250, 232, 202, 1) 39%, rgba(237, 240, 236, 1) 52%, rgba(238, 239, 233, 1) 66%, rgba(231, 239, 247, 1) 83%, rgba(228, 238, 247, 1) 100%);
+  }
