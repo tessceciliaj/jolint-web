@@ -4,7 +4,7 @@ import { howitworks } from '../constants'
 
 const HowItWorks = () => {
     return (
-        <div className="py-10 px-2 m-auto">
+        <div className="py-10 px-2m-auto">
             <h2 className="font-poppins font-bold text-center text-[40px] pb-20">
                 How it works
             </h2>
@@ -24,7 +24,7 @@ const HowItWorks = () => {
                                 height={300}
                             />
                             <div className="max-w-[520px] py-4 md:py-0 md:pl-[168px] text-center md:text-left">
-                                <h3 className="font-kumbhSans text-2xl font-semibold py-8">
+                                <h3 className="font-kumbhSans text-2xl font-semibold py -2">
                                     {article.title}
                                 </h3>
                                 <p>{article.text}</p>
