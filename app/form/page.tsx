@@ -8,7 +8,7 @@ import ProgressDots from '../components/FormDots'
 import Link from 'next/link'
 
 const Page = () => {
-    const [pageNumber, setPageNumber] = useState<number>(12)
+    const [pageNumber, setPageNumber] = useState<number>(0)
     const [visitedPages, setVisitedPages] = useState<boolean[]>(
         Array(13).fill(false)
     )
@@ -126,9 +126,9 @@ const Page = () => {
                   </div>
                 )}
 
-                <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
+                <div className="flex sm:gap-[40px] mt-[30px] w-full">
                     {pageNumber !== 0 && pageNumber !== 13 && pageNumber !== 12 && (!partBoxPages.includes(pageNumber) || !isPartFullyVisited(3)) && (
-                        <button className="lightBtn" onClick={previousPage}>
+                        <button className="lightBtn mr-4" onClick={previousPage}>
                             Back
                         </button>
                     )}
