@@ -7,13 +7,13 @@ const Footer = () => {
     return (
         <>
             <footer className="bg-darkBlue text-lightColor w-full text-base flex flex-col justify-center items-center">
-                <div className="xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full flex flex-col sm:flex-row pt-16 pb-2 sm:space-x-[8%] xl:space-x-[16%] md:px-0 px-8">
+                <div className="xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[900px] w-full flex flex-col sm:flex-row pt-16 pb-2 sm:space-x-[8%] xl:space-x-[16%] lg:px-0 md:px-8 px-8">
                     <div className="w-full">
                         <p>Jolint Network Analytics AB</p>
                         <p className="mt-4">Org. Nr. 559324-1770</p>
                         <p className="mt-4">Gothenburg, Sweden</p>
                     </div>
-                    <div className="w-fit min-w-[200px]">
+                    <div className="w-fit min-w-[190px]">
                         <a href="https://www.linkedin.com/company/jolint-network-analytics-ab/">
                             <p className="mt-4 sm:mt-0">
                                 <Image
