@@ -86,7 +86,7 @@ const Page = () => {
                     />
                 </div>
 
-                <div className="max-w-[850px] mb-[40px]">
+                <div className="max-w-[850px] mb-[40px] w-full">
                     <FormText
                         title={formTextParagraph[pageNumber].title}
                         text1={formTextParagraph[pageNumber].text1}
