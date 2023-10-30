@@ -12,9 +12,9 @@ const Header = () => {
             </Link>
             <div className="flex justify-center items-center gap-6">
                 <NavBar />
-                <Link href="/form">
+                {/* <Link href="/form">
                     <button className="orangeBtn">Consent Form</button>
-                </Link>
+                </Link> */}
             </div>
         </div>
     )
