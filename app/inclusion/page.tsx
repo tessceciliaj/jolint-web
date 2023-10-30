@@ -1,7 +1,10 @@
+import InclusionHero from "../components/InclusionHero"
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <InclusionHero />
+    </div>
   )
 }
 

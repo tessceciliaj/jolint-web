@@ -2,7 +2,7 @@ export const navLinks = [
     {
         id: 'howitworks',
         title: 'How it works',
-        href:'',
+        href: '',
     },
     {
         id: 'inclusion',
@@ -103,8 +103,8 @@ export const formTextParagraph = [
     {
         id: '10_done',
         title: '',
-        text1: 'Your consent form was successfully submitted. We appreciate your collaboration. Thank you!',
-        text2: '',
+        text1: 'Empower your workplace by authorizing consent for reliable data to enhance inclusion and belonging.',
+        text2: 'Click on the steps below to read and access the consent form.',
     },
 ]
 
@@ -140,6 +140,7 @@ export const partBoxInfo = [
         iconGray: '',
         activeOnPage: 0,
         checkmarkPage: 3,
+        pages: [1, 2],
     },
     {
         id: '2',
@@ -149,6 +150,7 @@ export const partBoxInfo = [
         iconGray: '/formGrayMagnifyingGlass.svg',
         activeOnPage: 3,
         checkmarkPage: 5,
+        pages: [4],
     },
     {
         id: '3',
@@ -158,6 +160,7 @@ export const partBoxInfo = [
         iconGray: '/formGrayGDPR.svg',
         activeOnPage: 5,
         checkmarkPage: 9,
+        pages: [6, 7, 8], 
     },
     {
         id: '4',
@@ -167,6 +170,7 @@ export const partBoxInfo = [
         iconGray: '/formGrayForm.svg',
         activeOnPage: 9,
         checkmarkPage: 13,
+        pages: [10, 11, 12],
     },
 ]
 
@@ -186,12 +190,44 @@ export const advantagesText = [
 ]
 
 export const metadata = {
-        title: 'Jolint',
-        description: 'Jolint webb',
-    }
+    title: 'Jolint',
+    description: 'Jolint webb',
+}
 
-
-
-
-
-
+export const howitworks = [
+    {
+        id: 1,
+        img: 'howToNetwork',
+        alt: 'Illustration with documents connecting to each other like a network.',
+        title: 'Data Extraction ',
+        text: "Jolint pulls out interaction info from common work tools like email, but without touching any personal details. Imagine it like seeing where conversations happen without knowing who said what. This way, Jolint gets a bird's-eye view of how people connect at work while keeping everyone's privacy intact.",
+    },
+    {
+        id: 2,
+        img: 'howToSecurity',
+        alt: 'Illustration of a gender neutral person standing next to a big document with a closed padlock on it.',
+        title: 'Anonymization',
+        text: "Jolint gives everyone an anonymized ID, replacing real names and emails to keep things private. So, even when looking at how people interact, there's no way to tell who's who, ensuring everyone's privacy while still understanding the big picture of connections at work.",
+    },
+    {
+        id: 3,
+        img: 'howToUserNetwork',
+        alt: 'Illustration of several anonymous online avatars in circles connected through a big network of lines.',
+        title: 'Data Processing',
+        text: 'Data is transformed into a network representation where each employee is a node and interactions form connections. Each person becomes a point on the web, and the lines between them show conversations. This setup helps Jolint see how well everyone is connected, without knowing any personal details.',
+    },
+    {
+        id: 4,
+        img: 'howToComputer',
+        alt: 'Illustration of a computer screen with and a network of connected clouds with lines to the screen.',
+        title: 'AI  Analysis',
+        text: 'AI and machine learning analyze data to pinpoint drivers of inclusion and belonging. They seek patterns to address questions such as new hire integration speed or how to elevate inclusion scores by addressing organizational weak points. The analysis also delves into social capital variations based on gender, role, and hire timing..',
+    },
+    {
+        id: 5,
+        img: 'howToGraph',
+        alt: 'Illustration of a diverse group of people holding up different kinds of charts to a computer window.',
+        title: 'Insights Interface',
+        text: "Insights from the data analysis are showcased in an intuitive interface, offering aggregated-level insights for easier understanding and action. It highlights key drivers of inclusion and recommends activities tailored to your company's specific challenges, aiding in informed decision-making.",
+    },
+]
