@@ -54,10 +54,11 @@ const NavBar = () => {
                         initial={{ opacity: 0, x: 200 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
+                        className="relative h-screen"
                     >
                         <Link href="/form">
                             <button
-                                className="orangeBtn relative top-36 right-0"
+                                className="orangeBtn absolute bottom-32 right-2"
                                 onClick={closeSidebar}
                             >
                                 Consent Form
@@ -77,7 +78,7 @@ const NavBar = () => {
                     </div>
                 ))}
                 <Link href="/form">
-                    <button className="orangeBtn" onClick={closeSidebar}>
+                    <button className="orangeBtn " onClick={closeSidebar}>
                         Consent Form
                     </button>
                 </Link>
