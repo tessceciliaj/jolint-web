@@ -54,3 +54,12 @@
     background: rgba(255, 255, 255, 0.6);
     width: 100%;
 }
+
+.faq-background {
+    background: rgb(253, 232, 214);
+    background: linear-gradient(
+        177deg,
+        rgba(253, 232, 214, 1) 35%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
