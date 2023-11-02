@@ -5,15 +5,17 @@ import Klaudia from '../../public/klaudia.png'
 const CoFounders = () => {
     return (
         <div className="p-4 md:p-11 max-w-screen-2xl m-auto">
-            <h1 className="font-bold text-4xl p-4 md:p-11">Co-founders:</h1>
+            <h1 className="font-bold text-4xl p-4 md:p-11 text-center md:text-left">
+                Co-founders:
+            </h1>
 
-            <div className="flex p-4 md:p-11">
+            <div className="flex flex-col md:flex-row p-4 md:p-11">
                 <Image
                     src={Klaudia}
                     alt="Klaudia profile picture"
-                    className="w-28 h-28 md:w-[193px] md:h-[193px]"
+                    className="w-28 h-28 md:w-[193px] md:h-[193px] m-auto"
                 />
-                <div className="ml-4 md:ml-6">
+                <div className="ml-4 md:ml-6 text-center md:text-left">
                     <h1 className="font-kumbhSans font-semibold text-xl md:text-2xl mb-4">
                         Klaudia Mur
                     </h1>
@@ -36,13 +38,13 @@ const CoFounders = () => {
                 </div>
             </div>
 
-            <div className="flex p-4 md:p-11">
+            <div className="flex p-4 md:p-11 flex-col md:flex-row">
                 <Image
                     src={Faheem}
                     alt="Faheem profile picture"
-                    className="w-28 h-28 md:w-[193px] md:h-[193px]"
+                    className="w-28 h-28 md:w-[193px] md:h-[193px] m-auto"
                 />
-                <div className="ml-4 md:ml-6">
+                <div className="ml-4 md:ml-6 text-center md:text-left">
                     <h1 className="font-kumbhSans font-semibold text-xl md:text-2xl mb-4">
                         Faheem Shah
                     </h1>

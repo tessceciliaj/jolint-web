@@ -85,11 +85,14 @@ const ConsentSignature: React.FC<ConsentSignatureProps> = ({
                     Please fill in all required fields
                 </div>
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
-                    <button className="lightBtn" onClick={previousPage}>
+                    <button
+                        className="lightBtn w-[175px] h-[55px]"
+                        onClick={previousPage}
+                    >
                         Back
                     </button>
                     <button
-                        className="blueBtn"
+                        className="blueBtn w-[175px] h-[55px]"
                         onClick={() => {
                             if (signaturePadRef.current) {
                                 const isEmpty =

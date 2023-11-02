@@ -10,41 +10,39 @@ const Hero = () => {
             style={{
                 backgroundImage: 'url(/Bg-Startsida.png)',
                 width: '100%',
-                height: '555px',
+                height: '100vh',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
             }}
         >
-            <div className="max-w-screen-2xl flex justify-center items-center overflow-x-hidden">
-                <div className="max-w-screen-md p-2 md:p-8">
-                    <div className="pl-24">
-                        <h1 className="text-4xl md:text-5xl font-poppins font-semibold">
+            <div className="max-w-screen-2xl flex justify-center items-center overflow-x-hidden px-4">
+                <div className="max-w-screen-md p-4 md:p-8">
+                    <div className="md:pl-24 ">
+                        <h1 className="text-4xl md:text-5xl font-poppins font-bold">
                             Let’s Create an Inclusive <br /> Workspace Together
                         </h1>
-                        <p className="text-sm md:text-xl font-kumbhSans font-normal">
+                        <p className=" py-4 md:text-xl font-kumbhSans font-normal">
                             Gain valuable data insights with our solution that
-                            measures <br />
-                            inclusion and belonging within your organization,
-                            enabling <br />
+                            measures inclusion and belonging within your
+                            organization, enabling <br />
                             you to take action for a more inclusive and vibrant
-                            work <br />
-                            culture while maintaining the privacy and integrity
-                            of your <br />
+                            work culture while maintaining the privacy and
+                            integrity of your <br />
                             personal data
                         </p>
                         <div>
-                            <div className="flex flex-wrap gap-2">
-                                <button className="lightBtn">
+                            <div className="flex flex-wrap gap-2 ">
+                                <button className="lightBtn md:w-[175px] w-full h-[55px]">
                                     Why inclusion
                                 </button>
-                                <div className="blueBtn flex items-center">
+                                <div className="blueBtn my-2 flex items-center md:w-[175px] w-full h-[55px] justify-center">
                                     <Play fill="#fff" className="mr-1 ml-2" />
                                     <span>How it works</span>
                                 </div>
                             </div>
                             <div className="mt-4">
-                                <button className="orangeBtn">
+                                <button className="orangeBtn md:w-[175px] w-full h-[55px]">
                                     Consent form
                                 </button>
                             </div>
