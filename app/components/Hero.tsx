@@ -16,9 +16,9 @@ const Hero = () => {
                 alignItems: 'center',
             }}
         >
-            <div className="max-w-screen-2xl flex justify-center items-center">
+            <div className="max-w-screen-2xl flex justify-center items-center overflow-x-hidden">
                 <div className="max-w-screen-md p-2 md:p-8">
-                    <div className="space-y-6">
+                    <div className="pl-24">
                         <h1 className="text-4xl md:text-5xl font-poppins font-semibold">
                             Let’s Create an Inclusive <br /> Workspace Together
                         </h1>
@@ -51,13 +51,13 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="hidden lg:flex md:flex-1 md:justify-end">
+                <div className="hidden lg:flex md:flex-1 md:justify-end relative left-12">
                     <Image
                         src={HeroImage}
                         alt="hero image"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        width={520}
-                        height={410}
+                        width={620}
+                        height={550}
                     />
                 </div>
             </div>
