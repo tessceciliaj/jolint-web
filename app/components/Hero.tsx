@@ -32,7 +32,7 @@ const Hero = () => {
                             personal data
                         </p>
                         <div>
-                            <div className="flex flex-wrap gap-2 ">
+                            <div className="flex flex-wrap gap-2 items-center">
                                 <button className="lightBtn md:w-[175px] w-full h-[55px]">
                                     Why inclusion
                                 </button>
