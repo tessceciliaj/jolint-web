@@ -231,3 +231,108 @@ export const howitworks = [
         text: "Insights from the data analysis are showcased in an intuitive interface, offering aggregated-level insights for easier understanding and action. It highlights key drivers of inclusion and recommends activities tailored to your company's specific challenges, aiding in informed decision-making.",
     },
 ]
+
+    export const aboutInclusion = [
+
+    {
+        id: 1,
+        img: '/girlWithMacbook.png',
+        alt: 'Girl with macbook',
+        title: 'How inclusion helps in work',
+        text: "Inclusion has a profound impact on employee engagement and productivity. When employees feel genuinely included and valued, they become more invested in their work and the organization as a whole.",
+        width: 350,
+        height: 275,
+        color: 'bg-pastelBlue',
+    },
+    {
+        id: 2, 
+        img: '/meeting.png',
+        alt: 'People in meeting',
+        title: 'Building a culture of inclusion',
+        text: 'Increased employee engagement and satisfaction: In an inclusive culture, employees feel a sense of belonging and acceptance. They are more engaged and motivated to perform at their best.',
+        width: 350,
+        height: 275,
+        color: 'bg-pastelBlue',
+
+    },
+    {
+        id: 3, 
+        img: '/meetingInCafe.png',
+        alt:'People having a meeting in cafe',
+        title:'Why equality is important',
+        text:'Equality ensures that every individual is treated fairly and without discrimination. It upholds the principle that all employees, regardless of their race, gender, age, or other, should have equal opportunities.',
+        width: 350,
+        height: 275,
+        color: 'bg-pastelBlue',
+    }
+]
+
+export const aboutDiversity = [
+    {
+        id: 1, 
+        img: '/constructionWorkers.png',
+        alt:'Construction workers',
+        title:'How diversity helps in work',
+        text:'By welcoming individuals from diverse backgrounds, experiences, and perspectives, businesses open doors to wealth of fresh ideas and insights.',
+        width: 350,
+        height: 275,
+        color: 'bg-pastelYellow',
+
+    },
+    {
+        id: 2, 
+        img: '/laughingInCafe.png',
+        alt:'People laughing in cafe',
+        title:'Creating an inclusive culture',
+        text:'Show solidarity with marginalized groups and actively support their inclusion. Advocate for equal opportunities, fair treatment, and representation in decision-making processes.',
+        width: 350,
+        height: 275,
+        color: 'bg-pastelYellow',
+    },
+    {
+        id: 3, 
+        img: '/workingInLibary.png',
+        alt:'People working in a library',
+        title:'The power of diversity',
+        text:'Appreciate and value the diverse backgrounds, experiences, and perspectives of your colleagues. Engage in conversations and initiatives that celebrate diversity, diversity-focused training programs.',
+        width: 350,
+        height: 275,
+        color: 'bg-pastelYellow',
+    }
+]
+
+export const aboutMental = [
+    {
+        id: 1, 
+        img: '/laughingGirlsOutside.png',
+        alt:'Laughing girls outside',
+        title:'Creating a supportive work',
+        text:'Be willing to lend a hand to your colleagues when they need assistance. Collaborate and share knowledge and resources to foster a sense of teamwork.',
+        width: 350,
+        height: 275,
+        color: 'bg-pastelPink',
+    },
+    {
+        id: 2, 
+        img: '/girlThinking.png',
+        alt:'Girl in cafe thinking',
+        title:'Addressing mental health',
+        text:'Offer support during challenging times. Be there for your coworkers during difficult periods, such as personal crises or work-related challenges.',
+        width: 350,
+        height: 275,
+        color: 'bg-pastelPink',
+
+    },
+    {
+        id: 3, 
+        img: '/zenGirl.png',
+        alt:'Girl meditate',
+        title:'Work-life balance',
+        text:'Promote work-life balance. Encourage a healthy work-life balance among your peers. Respect personal boundaries and avoid unnecessarily pressuring colleagues to work beyond their capacity.',
+        width: 350,
+        height: 275,
+        color: 'bg-pastelPink',
+    }
+]
+
+

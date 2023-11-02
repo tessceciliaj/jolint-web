@@ -11,6 +11,7 @@ const InclusionHero = () => {
     Let's explore each of these aspects.
     </p>
         </div>
+        
     </div>
   )
 }
