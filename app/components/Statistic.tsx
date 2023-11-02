@@ -3,7 +3,7 @@ import { statistics } from '../constants'
 
 const Statistic = () => {
     return (
-        <div className=" flex flex-col items-center justify-center w-full text-center pt-16">
+        <div className="max-w-screen-2xl flex flex-col items-center justify-center w-full text-center pt-16 m-auto">
             <h3 className="font-bold text-3xl">Inclusion makes a difference</h3>
             <p className="text-xl font-kumbhSans p-3">
                 Organisations with higher inclusion among coworkers have
