@@ -3,7 +3,7 @@ import { statistics } from '../constants'
 
 const Statistic = () => {
     return (
-        <div className="max-w-screen-2xl flex flex-col items-center justify-center w-full text-center pt-16 m-auto">
+        <div className="max-w-screen-2xl flex flex-col items-center justify-center w-full text-center pt-16 m-auto px-4">
             <h3 className="font-bold text-3xl">Inclusion makes a difference</h3>
             <p className="text-xl font-kumbhSans p-3">
                 Organisations with higher inclusion among coworkers have
@@ -16,7 +16,7 @@ const Statistic = () => {
                             <h4 className="text-4xl text-activeBlue font-semibold">
                                 {statistic.percentage}
                             </h4>
-                            <p className="pt-6 font-kumbhSans">
+                            <p className="pt-6 font-kumbhSans font-semibold">
                                 {statistic.advantage}
                             </p>
                         </div>

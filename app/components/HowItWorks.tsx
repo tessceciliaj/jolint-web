@@ -8,13 +8,13 @@ const HowItWorks = () => {
             <h2 className="font-poppins font-bold text-center text-[40px] pb-20">
                 How it works
             </h2>
-            <div className="max-w-[1107px] m-auto flex flex-col justify-center items-center">
+            <div className="max-w-[1107px] m-auto flex flex-col justify-center items-center px-4">
                 {howitworks.map((article) => {
                     const imagePath = `/${article.img}.svg`
 
                     return (
                         <div
-                            className="flex flex-col items-center md:flex-row pb-[142px]"
+                            className="flex flex-col items-center md:flex-row md:pb-[142px] pb-[80px]"
                             key={article.id}
                         >
                             <Image
