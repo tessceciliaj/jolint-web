@@ -17,13 +17,9 @@ const InclusionHero = () => {
                 </p>
             </div>
         </div>
-<<<<<<< HEAD
         
-    </div>
   )
-=======
-    )
->>>>>>> main
+    
 }
 
 export default InclusionHero

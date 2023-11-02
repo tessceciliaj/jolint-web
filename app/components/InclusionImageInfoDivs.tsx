@@ -43,7 +43,7 @@ function Section({ img, title, text, color }: SectionProps) {
             />
           </div>
           {isOpen && (
-            <p className={`transition-opacity duration-300 ease-in-out opacity-100 p-4 sm:p-0 `}>
+            <p className={`transition-opacity duration-300 ease-in-out opacity-100 p-4 sm:p-0`}>
               {text}
             </p>
           )}
@@ -55,9 +55,9 @@ function Section({ img, title, text, color }: SectionProps) {
 
 const InclusionImageInfoDivs = () => {
   return (
-    <div>
+    <div className="max-w-screen-2xl m-auto">
       <div>
-        <h2 className="text-2xl font-kumbhSans font-bold pl-24 pb-7">
+        <h2 className="text-2xl font-kumbhSans font-bold pl-24 pb-7 ">
           About inclusion at workplace
         </h2>
         <div className="lg:flex lg:flex-row lg:justify-center lg:space-x-6 pb-20">
