@@ -9,28 +9,58 @@
 }
 
 .orangeBtn {
-    @apply w-[175px] h-[55px] rounded-[10px] cursor-pointer font-semibold font-kumbhSans text-xl bg-accentColor text-lightColor hover:bg-opacity-40 hover:text-accentColor transition ease-in-out duration-300 ;
+    @apply w-[175px] h-[55px] rounded-[10px] cursor-pointer font-semibold font-kumbhSans text-xl bg-accentColor text-lightColor hover:bg-opacity-40 hover:text-accentColor transition ease-in-out duration-300;
 }
 
 .blueBtn {
-    @apply  w-[175px] h-[55px] rounded-[10px] cursor-pointer font-semibold font-kumbhSans text-xl bg-activeBlue text-lightColor  hover:bg-lightBlue hover:bg-opacity-70 transition ease-in-out duration-300 ;
+    @apply w-[175px] h-[55px] rounded-[10px] cursor-pointer font-semibold font-kumbhSans text-xl bg-activeBlue text-lightColor  hover:bg-lightBlue hover:bg-opacity-70 transition ease-in-out duration-300;
 }
 
-.lightBtn:hover{
-    @apply  ease-in-out duration-300  bg-activeBlue bg-opacity-40 text-activeBlue border-opacity-0;
+.lightBtn:hover {
+    @apply ease-in-out duration-300  bg-activeBlue bg-opacity-40 text-activeBlue border-opacity-0;
 }
 
-.lightProgressDot  {
-    @apply w-[16px] h-[16px] border-[1px] border-activeBlue rounded-full
+.lightProgressDot {
+    @apply w-[16px] h-[16px] border-[1px] border-activeBlue rounded-full;
 }
 
-.blueProgressDot  {
-    @apply w-[16px] h-[16px] border-[1px] bg-activeBlue border-activeBlue rounded-full
+.blueProgressDot {
+    @apply w-[16px] h-[16px] border-[1px] bg-activeBlue border-activeBlue rounded-full;
 }
 
 .formBoxHover {
     @apply cursor-pointer sm:hover:border-checkmarkGreen sm:hover:ring-checkmarkGreen sm:hover:ring-2 ring-inset
 }
 .inclusion-gradient {
-    background-image: linear-gradient(135deg, rgba(255, 173, 159, 1) 0%, rgba(255, 209, 171, 1) 13%, rgba(255, 221, 189, 1) 26%, rgba(250, 232, 202, 1) 39%, rgba(237, 240, 236, 1) 52%, rgba(238, 239, 233, 1) 66%, rgba(231, 239, 247, 1) 83%, rgba(228, 238, 247, 1) 100%);
+    background: linear-gradient(180deg, #ffffff00 25%, #ffffff 100%),
+      linear-gradient(
+        294.06deg,
+        rgba(7, 63, 234, 0.28) 3.45%,
+        rgba(84, 124, 235, 0.321729) 16.23%,
+        rgba(209, 223, 237, 0.39) 37.14%,
+        rgba(250, 252, 255, 0.9) 56.35%,
+        rgba(250, 220, 194, 0.81) 72.85%,
+        rgba(250, 187, 132, 0.88) 81.4%,
+        rgba(229, 32, 48, 0.432) 100%,
+        rgba(229, 32, 48, 0.87) 100%
+      );
   }
+
+.formBoxHover {
+    @apply cursor-pointer sm:hover:border-checkmarkGreen sm:hover:ring-checkmarkGreen sm:hover:ring-2 ring-inset;
+}
+
+.blur-background {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.6);
+    width: 100%;
+}
+
+.faq-background {
+    background: rgb(253, 232, 214);
+    background: linear-gradient(
+        177deg,
+        rgba(253, 232, 214, 1) 35%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
