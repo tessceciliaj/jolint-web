@@ -29,7 +29,7 @@
 }
 
 .formBoxHover {
-    @apply cursor-pointer sm:hover:border-checkmarkGreen sm:hover:ring-checkmarkGreen sm:hover:ring-2 ring-inset
+    @apply cursor-pointer sm:hover:border-checkmarkGreen sm:hover:ring-checkmarkGreen sm:hover:ring-2 ring-inset;
 }
 .inclusion-gradient {
     background: linear-gradient(180deg, #ffffff00 25%, #ffffff 100%),

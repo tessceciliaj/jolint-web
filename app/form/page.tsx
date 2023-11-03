@@ -87,10 +87,14 @@ const Page = () => {
                 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="max-w-[850px] mb-[40px]">
 =======
                 <div className="max-w-[850px] mb-[40px] w-full">
 >>>>>>> TICKET-109/gradient
+=======
+                <div className="max-w-[850px] mb-[40px] w-full">
+>>>>>>> 6ce7b79572a1b6e677454f1686b4e2e2ce83ed1d
                     <FormText
                         title={formTextParagraph[pageNumber].title}
                         text1={formTextParagraph[pageNumber].text1}
@@ -131,6 +135,7 @@ const Page = () => {
                 )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
                     {pageNumber !== 0 && pageNumber !== 13 && pageNumber !== 12 && (!partBoxPages.includes(pageNumber) || !isPartFullyVisited(3)) && (
                         <button className="lightBtn" onClick={previousPage}>
@@ -139,6 +144,11 @@ const Page = () => {
                     {pageNumber !== 0 && pageNumber !== 13 && pageNumber !== 12 && (!partBoxPages.includes(pageNumber) || !isPartFullyVisited(3)) && (
                         <button className="lightBtn mr-4" onClick={previousPage}>
 >>>>>>> TICKET-109/gradient
+=======
+                <div className="flex sm:gap-[40px] mt-[30px] w-full">
+                    {pageNumber !== 0 && pageNumber !== 13 && pageNumber !== 12 && (!partBoxPages.includes(pageNumber) || !isPartFullyVisited(3)) && (
+                        <button className="lightBtn mr-4" onClick={previousPage}>
+>>>>>>> 6ce7b79572a1b6e677454f1686b4e2e2ce83ed1d
                             Back
                         </button>
                     )}
