@@ -15,9 +15,12 @@ const Page = () => {
     const partBoxPages = [0, 3, 5, 9, 13]
     const parts = [[1, 2], [4], [6, 7, 8], [10, 11, 12]]
     const currentPart = parts.find((part) => part.includes(pageNumber))
-    const [fullyVisitedParts, setFullyVisitedParts] = useState<number[]>([])
-    const isPartFullyVisited = (partIndex: number) =>
-        fullyVisitedParts.includes(partIndex)
+    const [fullyVisitedParts, setFullyVisitedParts] = useState<number[]>(
+        // Initialize with data from local storage or default to an empty array
+        typeof window !== 'undefined'
+            ? JSON.parse(localStorage.getItem('fullyVisitedParts')) || []
+            : []
+    )
 
     useEffect(() => {
         const partContainingPage = parts.findIndex((part) =>
@@ -38,12 +41,31 @@ const Page = () => {
         }
     }, [pageNumber, visitedPages])
 
+    // Function to update visited pages and save to local storage
     const updateVisitedPages = (page: number, value: boolean) => {
         setVisitedPages((prev) => {
             const newVisitedPages = [...prev]
             newVisitedPages[page] = value
             return newVisitedPages
         })
+    }
+
+    // Function to update fully visited parts and save to local storage
+    const updateFullyVisitedParts = (partIndex: number) => {
+        if (!fullyVisitedParts.includes(partIndex)) {
+            const updatedFullyVisitedParts = [...fullyVisitedParts, partIndex]
+            setFullyVisitedParts(updatedFullyVisitedParts)
+
+            if (typeof window !== 'undefined' && partIndex !== -1) {
+                // Save updatedFullyVisitedParts to local storage
+                localStorage.setItem(
+                    'fullyVisitedParts',
+                    JSON.stringify(updatedFullyVisitedParts)
+                )
+            }
+            console.log('fully', fullyVisitedParts, partIndex)
+            console.log('updated fully', updatedFullyVisitedParts, partIndex)
+        }
     }
 
     function scrollToTop() {
@@ -57,6 +79,9 @@ const Page = () => {
         setPageNumber((prev) => prev + 1)
         if (!partBoxPages.includes(pageNumber + 1)) {
             scrollToTop()
+            updateFullyVisitedParts(
+                parts.findIndex((part) => part.includes(pageNumber))
+            )
         }
     }
 
@@ -77,11 +102,14 @@ const Page = () => {
         if (partIndex > 0) {
             const previousPartIndex = partIndex - 1
             const previousPartFullyVisited =
-                isPartFullyVisited(previousPartIndex)
+                fullyVisitedParts.includes(previousPartIndex)
             return previousPartFullyVisited
         }
         return true
     }
+
+    const isPartFullyVisited = (partIndex: number) =>
+        fullyVisitedParts.includes(partIndex)
 
     return (
         <>
@@ -124,9 +152,9 @@ const Page = () => {
                                     iconGray={boxInfo.iconGray}
                                     isNextBox={isNextBox(boxPartIndex)}
                                     visited={isPartFullyVisited(boxPartIndex)}
-                                    onclick={() =>
+                                    onclick={() => {
                                         handlePartBoxClick(boxInfo.pages)
-                                    }
+                                    }}
                                 />
                             )
                         })}
