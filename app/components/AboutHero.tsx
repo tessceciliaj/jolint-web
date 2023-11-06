@@ -8,16 +8,20 @@ const AboutHero = () => {
                 }}
                 className="flex flex-col bg-cover md:bg-contain bg-no-repeat"
             >
-                <div className="p-4 md:p-16">
+                <div className="px-4 pt-8 md:p-16 text-center md:text-left">
                     <h1 className="font-poppins font-bold text-4xl md:text-5xl">
                         About us
                     </h1>
+                    <p className="font-bold md:text-2xl pb-4 md:pb-7 md:hidden">
+                        Learn more about Jolint and
+                        <br /> our work method
+                    </p>
                 </div>
-                <div>
-                    <p className="font-bold text-2xl md:text-4xl pb-4 md:pb-7 pl-4 md:pl-32">
+                <div className="text-center md:text-left md:pl-16">
+                    <p className="font-bold text-2xl md:text-4xl md:p-0 p-4">
                         Our mission
                     </p>
-                    <p className="font-kumbhSans font-normal text-xs md:text-base pl-4 md:pl-36">
+                    <p className="font-kumbhSans text-sm font-normal md:text-base md:p-0 p-4">
                         At Jolint, we are driven by a passion for{' '}
                         <b>improving workplaces</b> and creating a better world
                         for everyone. <br />

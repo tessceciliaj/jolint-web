@@ -58,7 +58,7 @@ const NavBar = () => {
                     >
                         <Link href="/form">
                             <button
-                                className="orangeBtn absolute bottom-32 right-2"
+                                className="orangeBtn w-[175px] h-[55px] absolute bottom-32 right-2"
                                 onClick={closeSidebar}
                             >
                                 Consent Form
@@ -78,7 +78,10 @@ const NavBar = () => {
                     </div>
                 ))}
                 <Link href="/form">
-                    <button className="orangeBtn " onClick={closeSidebar}>
+                    <button
+                        className="orangeBtn w-[175px] h-[55px]"
+                        onClick={closeSidebar}
+                    >
                         Consent Form
                     </button>
                 </Link>
