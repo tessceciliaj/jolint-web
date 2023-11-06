@@ -59,7 +59,7 @@ const InclusionImageInfoDivs = () => {
     return (
         <div className="max-w-screen-2xl m-auto">
             <div>
-                <h2 className="text-2xl font-kumbhSans font-bold xl:ml-2 md:ml-16 ml-4 text-left w-[320px] md:w-full pb-7 ">
+            <h2 className="text-2xl font-kumbhSans font-bold 2xl:pl-4 md:pl-24 p-4 text-left w-[320px] md:w-full pb-7">
                     About inclusion at workplace
                 </h2>
                 <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
@@ -76,7 +76,7 @@ const InclusionImageInfoDivs = () => {
             </div>
 
             <div>
-                <h2 className="text-2xl font-kumbhSans font-bold xl:ml-2 md:ml-16 ml-4 text-left w-[320px] md:w-full pb-7">
+            <h2 className="text-2xl font-kumbhSans font-bold 2xl:pl-4 md:pl-24 p-4 text-left w-[320px] md:w-full pb-7">
                     About diversity in organizations
                 </h2>
                 <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
