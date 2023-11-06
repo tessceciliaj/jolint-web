@@ -22,11 +22,11 @@ function Section({ img, title, text, color }: SectionProps) {
 
   return (
     <div
-      className={`flex flex-col items-center sm:items-start rounded-lg ${
+      className={`flex flex-col items-center sm:items-start rounded-lg m-3 ${
         isOpen ? color : "bg-white"
       }`}
     >
-      <div className="relative">
+      <div className="relative ">
         <Image src={img} alt={title} width={350} height={275} />
         <div
           className={`w-full max-w-[350px] max-h-[275px] p-5 overflow-hidden transition-max-h duration-300 ease-in-out`}
@@ -57,10 +57,10 @@ const InclusionImageInfoDivs = () => {
   return (
     <div className="max-w-screen-2xl m-auto">
       <div>
-        <h2 className="text-2xl font-kumbhSans font-bold pl-24 pb-7 ">
+        <h2 className="text-2xl font-kumbhSans font-bold xl:pl-6 pl-24 pb-7 ">
           About inclusion at workplace
         </h2>
-        <div className="lg:flex lg:flex-row lg:justify-center lg:space-x-6 pb-20">
+        <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
           {aboutInclusion.map((item) => (
             <Section
               key={item.id}
@@ -74,10 +74,10 @@ const InclusionImageInfoDivs = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-kumbhSans font-bold pl-24 pb-7">
+        <h2 className="text-2xl font-kumbhSans font-bold xl:pl-6 pl-24 pb-7">
           About diversity in organizations
         </h2>
-        <div className="lg:flex lg:flex-row lg:justify-center lg:space-x-6 pb-20">
+        <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
           {aboutDiversity.map((item) => (
             <Section
               key={item.id}
@@ -91,10 +91,10 @@ const InclusionImageInfoDivs = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-kumbhSans font-bold pl-24 pb-7">
+        <h2 className="text-2xl font-kumbhSans font-bold 2xl:pl-4 pl-24 pb-7">
           About mental health at work
         </h2>
-        <div className="lg:flex lg:flex-row lg:justify-center lg:space-x-6 pb-20">
+        <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
           {aboutMental.map((item) => (
             <Section
               key={item.id}
