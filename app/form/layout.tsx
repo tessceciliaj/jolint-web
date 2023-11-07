@@ -29,7 +29,10 @@ export default function Formlayout({ children }: RootLayoutProps) {
                         {/* <div className="flex mt-8 w-full justify-end"> */}
                         <div title="How it works">
                             <Link href="/#how-it-works" target="_blank">
-                                <Info className="text-darkGray" size="25" />
+                                <Info
+                                    className="text-mediumDarkGray"
+                                    size="25"
+                                />
                             </Link>
                         </div>
                     </div>
