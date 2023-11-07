@@ -12,7 +12,7 @@ const FAQCard = () => {
     }
 
     return (
-        <div className="flex flex-wrap justify-center gap-5 px-20 py-16">
+        <div className="flex flex-wrap justify-center m-auto gap-5 px-20 py-16 max-w-[1264px]">
             {FAQ.map((card, index) => {
                 const isCardOpen = openIndex === index
 
@@ -51,7 +51,7 @@ const FAQCard = () => {
                                             transition: { duration: 0 },
                                         },
                                     }}
-                                    transition={{ duration: 0.5 }}
+                                    transition={{ duration: 0.2 }}
                                     className="px-7 pb-7 font-kumbhSans leading-8"
                                 >
                                     A: {card.answer}
