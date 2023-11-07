@@ -26,11 +26,17 @@ function Section({ img, title, text, color }: SectionProps) {
             }`}
         >
             <div className="relative ">
-                <Image src={img} alt={title} width={350} height={275} className='xl:w-[500px] ' />
+                <Image
+                    src={img}
+                    alt={title}
+                    width={350}
+                    height={275}
+                    className="xl:w-[500px] "
+                />
                 <div
-                    className={`w-full max-w-[350px] max-h-[275px] p-5 overflow-hidden transition-max-h duration-300 ease-in-out`}
+                    className={`w-[350px] xl:w-[500px] max-h-[275px] p-5 overflow-hidden transition-max-h duration-300 ease-in-out`}
                 >
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-start">
                         <h3 className="font-kumbhSans font-semibold text-base lg:text-xl p-4 sm:p-0 ">
                             {title}
                         </h3>
@@ -56,9 +62,9 @@ function Section({ img, title, text, color }: SectionProps) {
 
 const InclusionImageInfoDivs = () => {
     return (
-        <div className="max-w-screen-2xl m-auto">
+        <div className="w-full md:p-16 xl:px-24 m-auto">
             <div>
-            <h2 className="text-2xl font-kumbhSans font-bold 2xl:pl-4 md:pl-24 p-4 text-left w-[320px] md:w-full pb-7">
+                <h2 className="text-2xl font-kumbhSans font-bold p-4 text-left w-[320px] md:w-full pb-7">
                     About inclusion at workplace
                 </h2>
                 <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
@@ -75,7 +81,7 @@ const InclusionImageInfoDivs = () => {
             </div>
 
             <div>
-            <h2 className="text-2xl font-kumbhSans font-bold 2xl:pl-4 md:pl-24 p-4 text-left w-[320px] md:w-full pb-7">
+                <h2 className="text-2xl font-kumbhSans font-bold p-4 text-left w-[320px] md:w-full pb-7">
                     About diversity in organizations
                 </h2>
                 <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
@@ -92,7 +98,7 @@ const InclusionImageInfoDivs = () => {
             </div>
 
             <div>
-                <h2 className="text-2xl font-kumbhSans font-bold 2xl:pl-4 md:pl-24 p-4 text-left w-[320px] md:w-full pb-7">
+                <h2 className="text-2xl font-kumbhSans font-bold p-4 text-left w-[320px] md:w-full pb-7">
                     About mental health at work
                 </h2>
                 <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
