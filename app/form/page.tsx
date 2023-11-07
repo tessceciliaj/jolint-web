@@ -8,18 +8,36 @@ import ProgressDots from '../components/FormDots'
 import Link from 'next/link'
 
 const Page = () => {
+    const partBoxPages = [0, 3, 5, 9, 13]
+    const parts = [[1, 2], [4], [6, 7, 8], [10, 11, 12]]
     const [pageNumber, setPageNumber] = useState<number>(0)
     const [visitedPages, setVisitedPages] = useState<boolean[]>(
         Array(13).fill(false)
     )
-    const partBoxPages = [0, 3, 5, 9, 13]
-    const parts = [[1, 2], [4], [6, 7, 8], [10, 11, 12]]
     const currentPart = parts.find((part) => part.includes(pageNumber))
-    const [fullyVisitedParts, setFullyVisitedParts] = useState<number[]>([])
+    const [fullyVisitedParts, setFullyVisitedParts] = useState<number[]>(
+        typeof window !== 'undefined'
+            ? JSON.parse(localStorage.getItem('fullyVisitedParts')) || []
+            : []
+    )
     const isPartFullyVisited = (partIndex: number) =>
         fullyVisitedParts.includes(partIndex)
 
     useEffect(() => {
+        const savedFullyVisitedParts = localStorage.getItem('fullyVisitedParts')
+        const initialPageNumber = savedFullyVisitedParts
+            ? partBoxPages[JSON.parse(savedFullyVisitedParts).length]
+            : 0
+
+        setPageNumber(initialPageNumber)
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem(
+            'fullyVisitedParts',
+            JSON.stringify(fullyVisitedParts)
+        )
+
         const partContainingPage = parts.findIndex((part) =>
             part.includes(pageNumber)
         )
@@ -189,12 +207,27 @@ const Page = () => {
                         {isPartFullyVisited(3) &&
                             partBoxPages.includes(pageNumber) && (
                                 <Link href="/form/finish">
-                                    <button className="orangeBtn w-[175px] h-[55px]">
+                                    <button
+                                        className="orangeBtn w-[175px] h-[55px]"
+                                        onClick={() => {
+                                            localStorage.clear()
+                                        }}
+                                    >
                                         Submit
                                     </button>
                                 </Link>
                             )}
                     </div>
+                </div>
+
+                <div className="flex mt-8">
+                    {pageNumber === 2 && (
+                        <Link href="/#how-it-works">
+                            <button className="blueBtn w-[175px] h-[55px]">
+                                How it works
+                            </button>
+                        </Link>
+                    )}
                 </div>
             </div>
         </>

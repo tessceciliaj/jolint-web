@@ -5,7 +5,10 @@ import { howitworks } from '../constants'
 const HowItWorks = () => {
     return (
         <div className="py-10 px-2m-auto">
-            <h2 className="font-poppins font-bold text-center text-[40px] pb-20">
+            <h2
+                id="how-it-works"
+                className="font-poppins font-bold text-center text-[40px] pb-20"
+            >
                 How it works
             </h2>
             <div className="max-w-[1107px] m-auto flex flex-col justify-center items-center px-4">
