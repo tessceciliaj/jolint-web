@@ -58,9 +58,14 @@ const Page = () => {
 
             if (typeof window !== 'undefined' && partIndex !== -1) {
                 // Save updatedFullyVisitedParts to local storage
+
+                const filteredArray = updatedFullyVisitedParts.filter(
+                    (item) => item !== -1
+                )
+
                 localStorage.setItem(
                     'fullyVisitedParts',
-                    JSON.stringify(updatedFullyVisitedParts)
+                    JSON.stringify(filteredArray)
                 )
             }
             console.log('fully', fullyVisitedParts, partIndex)
