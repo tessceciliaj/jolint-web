@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Faheem from '../../public/faheem.png'
-import Klaudia from '../../public/klaudia.png'
+import Faheem from '../../public/faheemNew.png'
+import Klaudia from '../../public/klaudiaNew.png'
 
 const CoFounders = () => {
     return (
@@ -13,25 +13,25 @@ const CoFounders = () => {
                 <Image
                     src={Klaudia}
                     alt="Klaudia profile picture"
-                    className="w-28 h-28 md:w-[193px] md:h-[193px] m-auto"
+                    className="w-48 h-48 md:w-[193px] md:h-[193px] m-auto rounded-full"
                 />
-                <div className="ml-4 md:ml-6 text-center md:text-left">
+                <div className="ml-4 pt-7 md:pt-0 md:ml-6 text-center md:text-left">
                     <h1 className="font-kumbhSans font-semibold text-xl md:text-2xl mb-4">
                         Klaudia Mur
                     </h1>
-                    <p className="font-kumbhSans text-base mt-2">
+                    <p className="font-kumbhSans text-base mt-2 max-w-[710px]">
                         I am a data scientist and physicist. My background in
-                        Complex Adaptive Systems has fueled <br />
+                        Complex Adaptive Systems has fueled 
                         my passion for understanding how people interact,
-                        communicate, and collaborate in the <br />
+                        communicate, and collaborate in the 
                         workplace. My mission is to use data-driven analysis to
-                        make the workplace a better place for <br />
+                        make the workplace a better place for 
                         employees, by understanding the complexities of human
-                        interactions and finding ways to <br />
+                        interactions and finding ways to 
                         improve them. Join me on my journey to enhance workplace
-                        culture and improve the work <br />
+                        culture and improve the work 
                         environment. With my expertise in data analysis and
-                        understanding of human behavior, I am <br />
+                        understanding of human behavior, I am 
                         committed to leading the way towards a more inclusive
                         and equitable work culture for all.
                     </p>
@@ -42,25 +42,25 @@ const CoFounders = () => {
                 <Image
                     src={Faheem}
                     alt="Faheem profile picture"
-                    className="w-28 h-28 md:w-[193px] md:h-[193px] m-auto"
+                    className="w-48 h-48 md:w-[193px] md:h-[193px] m-auto rounded-full"
                 />
-                <div className="ml-4 md:ml-6 text-center md:text-left">
+                <div className="ml-4 pt-7 md:pt-0 md:ml-6 text-center md:text-left">
                     <h1 className="font-kumbhSans font-semibold text-xl md:text-2xl mb-4">
                         Faheem Shah
                     </h1>
-                    <p className="font-kumbhSans text-base mt-2">
+                    <p className="font-kumbhSans text-base mt-2 max-w-[710px]">
                         As the co-founder of Jolint, I bring a wealth of
-                        expertise in organizational communication and <br />
+                        expertise in organizational communication and 
                         collaboration to the table. With a background in
-                        international politics, communication studies, <br />
+                        international politics, communication studies, 
                         and specialized training in these areas, I understand
-                        the intricacies and nuances of effective <br />
+                        the intricacies and nuances of effective 
                         communication within organizations. My passion for this
-                        field led me to start Jolint, with the <br />
+                        field led me to start Jolint, with the 
                         goal of empowering companies to create more inclusive
-                        and equitable work cultures. Join me <br />
+                        and equitable work cultures. Join me 
                         in my journey with Jolint, as we work together to
-                        improve communication and collaboration <br />
+                        improve communication and collaboration 
                         within organizations for a more inclusive work
                         environment.
                     </p>
