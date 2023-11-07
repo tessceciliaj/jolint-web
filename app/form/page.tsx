@@ -86,6 +86,12 @@ const Page = () => {
         }
     }
 
+    const cancelSignature = (): void => {
+        setPageNumber(9)
+        setFullyVisitedParts([0, 1, 2])
+        console.log(fullyVisitedParts)
+    }
+
     const handlePartBoxClick = (pages: React.SetStateAction<number>[]) => {
         setVisitedPages(Array(13).fill(false))
         setPageNumber(pages[0])
@@ -123,7 +129,7 @@ const Page = () => {
                     {pageNumber === 12 && (
                         <ConsentSignature
                             nextPage={nextPage}
-                            previousPage={previousPage}
+                            cancel={cancelSignature}
                         />
                     )}
                 </div>
