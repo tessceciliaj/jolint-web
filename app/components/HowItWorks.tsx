@@ -5,8 +5,16 @@ import BlueLine from './BlueLine'
 
 const HowItWorks = () => {
     return (
+<<<<<<< HEAD
         <div className="py-20 mb-40 px-2m-auto relative">
             <h2 className="font-poppins font-bold text-center text-4xl mb-16 md:m-0">
+=======
+        <div className="py-10 px-2m-auto">
+            <h2
+                id="how-it-works"
+                className="font-poppins font-bold text-center text-[40px] pb-20"
+            >
+>>>>>>> TICKET-129/how-it-works-button
                 How it works
             </h2>
             <div className='hidden md:block sm:absolute m-auto left-0 right-0 top-[340px] bottom-0'>

@@ -11,20 +11,10 @@ const Page = () => {
     const partBoxPages = [0, 3, 5, 9, 13]
     const parts = [[1, 2], [4], [6, 7, 8], [10, 11, 12]]
     const [pageNumber, setPageNumber] = useState<number>(0)
-    // const [pageNumber, setPageNumber] = useState<number>(
-    //     localStorage.getItem('fullyVisitedParts') === null
-    //         ? 0
-    //         : partBoxPages[
-    //               JSON.parse(localStorage.getItem('fullyVisitedParts')).length
-    //           ]
-    // )
-
     const [visitedPages, setVisitedPages] = useState<boolean[]>(
         Array(13).fill(false)
     )
-
     const currentPart = parts.find((part) => part.includes(pageNumber))
-
     const [fullyVisitedParts, setFullyVisitedParts] = useState<number[]>(
         typeof window !== 'undefined'
             ? JSON.parse(localStorage.getItem('fullyVisitedParts')) || []
