@@ -1,5 +1,4 @@
 'use client'
-// Import necessary modules and components
 
 import Image from 'next/image'
 import { useState } from 'react'
@@ -27,12 +26,12 @@ function Section({ img, title, text, color }: SectionProps) {
             }`}
         >
             <div className="relative ">
-                <Image src={img} alt={title} width={350} height={275} />
+                <Image src={img} alt={title} width={350} height={275} className='xl:w-[500px] ' />
                 <div
                     className={`w-full max-w-[350px] max-h-[275px] p-5 overflow-hidden transition-max-h duration-300 ease-in-out`}
                 >
                     <div className="flex justify-between items-center">
-                        <h3 className="font-kumbhSans font-semibold text-base lg:text-xl p-4 sm:p-0">
+                        <h3 className="font-kumbhSans font-semibold text-base lg:text-xl p-4 sm:p-0 ">
                             {title}
                         </h3>
                         <ChevronDown
