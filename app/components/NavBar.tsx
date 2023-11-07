@@ -19,14 +19,14 @@ const NavBar = () => {
 
     return (
         <nav className="gap-10 font-kumbhSans">
-            <div className="md:hidden absolute top-[32px] right-[24px]">
+            <div className="mb:hidden flex items-center justify-center">
                 <button onClick={toggleSidebar}>
-                    {isOpen ? <X /> : <Menu />}
+                    {isOpen ? <X className='h-8 w-8'/> : <Menu className='h-8 w-8'/>}
                 </button>
             </div>
             {isOpen && (
                 <motion.div
-                    className={`md:hidden absolute flex flex-col h-screen pt-20 text-right pr-8 gap-10 bg-lightColor right-0 top-20 font-semibold ${
+                    className={`mb:hidden absolute flex flex-col h-screen pt-20 text-right pr-8 gap-10 bg-lightColor right-0 top-20 font-semibold ${
                         isOpen ? 'blur-background' : ''
                     }`}
                 >
@@ -58,7 +58,7 @@ const NavBar = () => {
                     >
                         <Link href="/form">
                             <button
-                                className="orangeBtn w-[175px] h-[55px] absolute bottom-32 right-2"
+                                className="orangeBtn w-[175px] h-[55px] absolute bottom-32 right-0"
                                 onClick={closeSidebar}
                             >
                                 Consent Form
@@ -67,7 +67,7 @@ const NavBar = () => {
                     </motion.div>
                 </motion.div>
             )}
-            <div className="gap-10 font-kumbhSans hidden md:flex justify-center items-center">
+            <div className="gap-10 font-kumbhSans hidden mb:flex justify-center items-center">
                 {navLinks.map((links) => (
                     <div key={links.id}>
                         <Link href={links.href}>

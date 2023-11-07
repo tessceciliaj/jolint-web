@@ -20,6 +20,7 @@ const Page = () => {
             ? JSON.parse(localStorage.getItem('fullyVisitedParts')) || []
             : []
     )
+
     const isPartFullyVisited = (partIndex: number) =>
         fullyVisitedParts.includes(partIndex)
 
