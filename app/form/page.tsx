@@ -6,7 +6,6 @@ import ConsentSignature from '../components/ConsentSignature'
 import { partBoxInfo, formTextParagraph } from '../constants'
 import ProgressDots from '../components/FormDots'
 import Link from 'next/link'
-// import { Info } from 'lucide-react'
 
 const Page = () => {
     const partBoxPages = [0, 3, 5, 9, 13]
@@ -220,12 +219,6 @@ const Page = () => {
                             )}
                     </div>
                 </div>
-
-                {/* <div className="flex mt-8 w-full justify-end">
-                    <Link href="/#how-it-works" target="_blank">
-                        <Info className="text-darkGray" size="32" />
-                    </Link>
-                </div> */}
             </div>
         </>
     )
