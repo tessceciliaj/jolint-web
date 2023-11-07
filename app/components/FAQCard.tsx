@@ -20,7 +20,7 @@ const FAQCard = () => {
                     <motion.div
                         key={card.question}
                         className={`bg-lightColor rounded w-[350px] ${
-                            isCardOpen ? 'h-[330px]' : 'h-[120px]'
+                            isCardOpen ? '' : 'h-[120px]'
                         }`}
                     >
                         <div
