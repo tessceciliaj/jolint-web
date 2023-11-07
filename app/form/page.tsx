@@ -223,7 +223,7 @@ const Page = () => {
 
                 <div className="flex mt-8 w-full justify-end">
                     <Link href="/#how-it-works" target="_blank">
-                        <Info className="text-activeBlue" size="32" />
+                        <Info className="text-darkGray" size="32" />
                     </Link>
                 </div>
             </div>
