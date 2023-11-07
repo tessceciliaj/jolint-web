@@ -27,11 +27,17 @@ module.exports = {
                 kumbhSans: 'Kumbh Sans',
             },
             screens: {
+                xs: '400px',
+                // Xtra small => @media (min-width: 400px) { ... }
+
                 sm: '640px',
                 // => @media (min-width: 640px) { ... }
 
                 md: '768px',
                 // => @media (min-width: 768px) { ... }
+
+                mb: '840px',
+                // Menu Breakpoint => @media (min-width: 820px) { ... }
 
                 lg: '1024px',
                 // => @media (min-width: 1024px) { ... }

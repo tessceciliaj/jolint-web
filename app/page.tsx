@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Advantages from './components/Advantages'
 import Statistic from './components/Statistic'
 import HowItWorks from './components/HowItWorks'
+import BlueLine from './components/BlueLine'
 
 export default function Home() {
     return (

@@ -1,13 +1,22 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Letter_Icon from '../../public/Letter_Icon.svg'
 import Linkedin_icon from '../../public/Linkedin_icon-cropped.svg'
+import { usePathname } from 'next/navigation'
 
 const Footer = () => {
+    const pathname = usePathname()
+    const isFormPath = pathname === '/form' || pathname === '/form/finish';
+  
+    const containerClassName = isFormPath
+      ? "xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[900px] w-full flex flex-col sm:flex-row pt-16 pb-2 sm:space-x-[8%] xl:space-x-[16%] lg:px-0 md:px-10 px-8"
+      : "xl:max-w-screen-2xl w-full flex flex-col sm:flex-row pt-16 pb-2 sm:space-x-[8%] xl:space-x-[16%] xl:px-4 px-8";
+
     return (
         <>
             <footer className="bg-darkBlue text-lightColor w-full text-base flex flex-col justify-center items-center">
-                <div className="xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[900px] w-full flex flex-col sm:flex-row pt-16 pb-2 sm:space-x-[8%] xl:space-x-[16%] lg:px-0 md:px-8 px-8">
+                <div className={containerClassName}>
                     <div className="w-full">
                         <p>Jolint Network Analytics AB</p>
                         <p className="mt-4">Org. Nr. 559324-1770</p>
