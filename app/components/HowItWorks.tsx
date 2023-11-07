@@ -6,7 +6,10 @@ import BlueLine from './BlueLine'
 const HowItWorks = () => {
     return (
         <div className="py-20 mb-40 px-2m-auto relative">
-            <h2 className="font-poppins font-bold text-center text-4xl mb-16 md:m-0">
+            <h2
+                id="how-it-works"
+                className="font-poppins font-bold text-center text-4xl mb-16 md:m-0"
+            >
                 How it works
             </h2>
             <div className="hidden md:block sm:absolute m-auto left-0 right-0 top-[340px] bottom-0">
