@@ -41,16 +41,13 @@ const Hero = () => {
                                 >
                                     Why inclusion
                                 </Link>
-                                <Link href="#how-it-works">
-                                    <div className="blueBtn xs:w-[175px] w-full h-[55px]">
-                                        <Play
-                                            fill="#fff"
-                                            className="mr-1 ml-2"
-                                        />
-                                        <span className="pr-2.5">
-                                            How it works
-                                        </span>
-                                    </div>
+
+                                <Link
+                                    href="#how-it-works"
+                                    className="blueBtn xs:w-[175px] w-full h-[55px]"
+                                >
+                                    <Play fill="#fff" className="mr-1 ml-2" />
+                                    <span className="pr-2.5">How it works</span>
                                 </Link>
                             </div>
                             <div className="mt-2 flex xs:justify-start justify-center">
