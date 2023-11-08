@@ -22,7 +22,7 @@ const Hero = () => {
                 <div className="max-w-screen-md xs:p-6 p-4 sm:ml-20 md:ml-6 m-0">
                     <div className="max-w-[500px] md:max-w-full">
                         <h1 className="text-4xl md:text-5xl font-poppins font-bold">
-                            Let’s Create an Inclusive <br /> Workspace Together
+                            Let's Create an Inclusive <br /> Workspace Together
                         </h1>
                         <p className="py-4 md:text-xl font-kumbhSans font-normal">
                             Gain valuable data insights with our solution that
@@ -35,16 +35,26 @@ const Hero = () => {
                         </p>
                         <div>
                             <div className="mt-4 xs:mb-4 xs:mt-2 flex flex-wrap xs:flex-row flex-col gap-2 xs:justify-start items-center">
-                                <Link href='/inclusion' className="lightBtn xs:w-[175px] w-full h-[55px]">
+                                <Link
+                                    href="/inclusion"
+                                    className="lightBtn xs:w-[175px] w-full h-[55px]"
+                                >
                                     Why inclusion
                                 </Link>
-                                <div className="blueBtn xs:w-[175px] w-full h-[55px]">
+
+                                <Link
+                                    href="#how-it-works"
+                                    className="blueBtn xs:w-[175px] w-full h-[55px]"
+                                >
                                     <Play fill="#fff" className="mr-1 ml-2" />
-                                    <span className='pr-2.5'>How it works</span>
-                                </div>
+                                    <span className="pr-2.5">How it works</span>
+                                </Link>
                             </div>
                             <div className="mt-2 flex xs:justify-start justify-center">
-                                <Link href='/form' className="orangeBtn xs:w-[175px] w-full h-[55px]">
+                                <Link
+                                    href="/form"
+                                    className="orangeBtn xs:w-[175px] w-full h-[55px]"
+                                >
                                     Consent form
                                 </Link>
                             </div>
