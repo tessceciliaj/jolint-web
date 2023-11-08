@@ -13,9 +13,9 @@ const CoFounders = () => {
                 <Image
                     src={Klaudia}
                     alt="Klaudia profile picture"
-                    className="w-28 h-28 md:w-[193px] md:h-[193px] m-auto rounded-full"
+                    className="w-48 h-48 md:w-[193px] md:h-[193px] m-auto rounded-full"
                 />
-                <div className="ml-4 md:ml-6 text-center md:text-left">
+                <div className="ml-4 pt-7 md:pt-0 md:ml-6 text-center md:text-left">
                     <h1 className="font-kumbhSans font-semibold text-xl md:text-2xl mb-4">
                         Klaudia Mur
                     </h1>
@@ -42,9 +42,9 @@ const CoFounders = () => {
                 <Image
                     src={Faheem}
                     alt="Faheem profile picture"
-                    className="w-28 h-28 md:w-[193px] md:h-[193px] m-auto rounded-full"
+                    className="w-48 h-48 md:w-[193px] md:h-[193px] m-auto rounded-full"
                 />
-                <div className="ml-4 md:ml-6 text-center md:text-left">
+                <div className="ml-4 pt-7 md:pt-0 md:ml-6 text-center md:text-left">
                     <h1 className="font-kumbhSans font-semibold text-xl md:text-2xl mb-4">
                         Faheem Shah
                     </h1>

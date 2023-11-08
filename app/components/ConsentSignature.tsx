@@ -4,12 +4,12 @@ import SignaturePad from 'react-signature-pad-wrapper'
 
 type ConsentSignatureProps = {
     nextPage: () => void
-    previousPage: () => void
+    cancel: () => void
 }
 
 const ConsentSignature: React.FC<ConsentSignatureProps> = ({
     nextPage,
-    previousPage,
+    cancel,
 }) => {
     const today = new Date()
     const formattedDate = format(today, 'dd MMMM yyyy')
@@ -87,9 +87,9 @@ const ConsentSignature: React.FC<ConsentSignatureProps> = ({
                 <div className="flex sm:gap-[40px] gap-4 mt-[30px] w-full">
                     <button
                         className="lightBtn w-[175px] h-[55px]"
-                        onClick={previousPage}
+                        onClick={cancel}
                     >
-                        Back
+                        Cancel
                     </button>
                     <button
                         className="blueBtn w-[175px] h-[55px]"
