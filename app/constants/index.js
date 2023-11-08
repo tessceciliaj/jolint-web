@@ -2,7 +2,7 @@ export const navLinks = [
     {
         id: 'howitworks',
         title: 'How it works',
-        href: '',
+        href: '/#how-it-works',
     },
     {
         id: 'inclusion',

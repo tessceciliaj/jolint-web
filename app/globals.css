@@ -80,3 +80,6 @@
 .bigBlueDot {
     @apply border-[#9AA4FF] border-[3px] bg-[#CCD1FF] ring-[#3449FF] ring-2 ring-offset-2 ring-offset-[#6776FF] w-[25px] h-[25px] rounded-full mb-2; 
 }
+ *{
+    scroll-behavior: smooth;
+ }
