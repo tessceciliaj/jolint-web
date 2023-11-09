@@ -2,7 +2,7 @@ import InclusionHero from "../components/InclusionHero"
 import InclusionImageDiv from "../components/InclusionImageInfoDivs"
 const page = () => {
   return (
-    <div>
+    <div className="">
       <InclusionHero />
       <InclusionImageDiv /> 
     </div>

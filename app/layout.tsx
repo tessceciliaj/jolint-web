@@ -24,7 +24,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <title>{pageTitle}</title>
                 <meta name="description" content={metadata.d} /> 
             </head>
-            <body className={`flex flex-col h-screen ${inter.className}`}>
+            <body className={`flex flex-col h-full ${inter.className}`}>
                 {pathname !== '/form' && 
                 pathname !== '/form/finish' && (
                     <Header />

@@ -3,7 +3,7 @@ import AboutHero from "../components/AboutHero"
 
 const page = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <AboutHero />
         <CoFounders />
     </div>
