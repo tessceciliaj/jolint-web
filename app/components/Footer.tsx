@@ -11,7 +11,7 @@ const Footer = () => {
   
     const containerClassName = isFormPath
       ? "xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[900px] w-full flex flex-col sm:flex-row pt-16 pb-2 sm:space-x-[8%] xl:space-x-[16%] lg:px-0 md:px-10 px-8"
-      : "xl:max-w-screen-2xl w-full flex flex-col sm:flex-row pt-16 pb-2 sm:space-x-[8%] xl:space-x-[16%] xl:px-4 px-8";
+      : "xl:max-w-[1200px] w-full flex flex-col sm:flex-row pt-16 pb-2 sm:space-x-[8%] xl:space-x-[16%] px-8";
 
     return (
         <>

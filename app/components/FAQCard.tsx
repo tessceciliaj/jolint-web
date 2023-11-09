@@ -12,14 +12,14 @@ const FAQCard = () => {
     }
 
     return (
-        <div className="flex flex-wrap justify-center m-auto gap-5 px-20 py-16 max-w-[1264px]">
+        <div className="flex flex-wrap justify-center m-auto gap-5 pt-16">
             {FAQ.map((card, index) => {
                 const isCardOpen = openIndex === index
 
                 return (
                     <motion.div
                         key={card.question}
-                        className={`bg-lightColor rounded w-[350px] ${
+                        className={`bg-lightColor grow rounded-lg w-[350px] max-w-[540px] ${
                             isCardOpen ? '' : 'h-[120px]'
                         }`}
                     >
@@ -31,7 +31,7 @@ const FAQCard = () => {
                                 Q: {card.question}
                             </h3>
                             <ChevronDown
-                                className={`w-8 h-16 mr-7 transform ${
+                                className={`w-8 h-16 mr-7 transform z-0${
                                     isCardOpen ? 'rotate-180' : ''
                                 }`}
                             />

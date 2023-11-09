@@ -26,7 +26,7 @@ const NavBar = () => {
             </div>
             {isOpen && (
                 <motion.div
-                    className={`mb:hidden absolute flex flex-col h-screen pt-20 text-right pr-8 gap-10 bg-lightColor right-0 top-20 font-semibold ${
+                    className={`mb:hidden absolute flex flex-col h-screen pt-20 text-right pr-8 gap-10 bg-lightColor right-0 top-20 font-semibold z-60 ${
                         isOpen ? 'blur-background' : ''
                     }`}
                 >

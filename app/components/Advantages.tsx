@@ -2,7 +2,7 @@ import { advantagesText } from '../constants'
 
 const Advantages = () => {
     return (
-        <div className="w-full md:py-20 pb-8 pt-10 xl:px-2 px-4 md:px-6 max-w-screen-2xl m-auto items-center flex flex-col">
+        <div className="w-full md:py-20 pb-0 pt-10 xl:px-2 px-4 md:px-6 max-w-screen-2xl m-auto items-center flex flex-col">
             <h3 className="font-poppins text-center font-bold md:text-3xl text-2xl p-8 max-w-sm md:max-w-lg lg:max-w-full">
                 Advantages with Jolint at your workplace
             </h3>

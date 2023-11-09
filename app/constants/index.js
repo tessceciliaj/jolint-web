@@ -236,7 +236,7 @@ export const howitworks = [
 
     {
         id: 1,
-        img: '/girlWithMacbook.png',
+        img: '/girlWithMacbook.jpg',
         alt: 'Girl with macbook',
         title: 'How inclusion helps in work',
         text: "Inclusion has a profound impact on employee engagement and productivity. When employees feel genuinely included and valued, they become more invested in their work and the organization as a whole.",
@@ -246,7 +246,7 @@ export const howitworks = [
     },
     {
         id: 2, 
-        img: '/meeting.png',
+        img: '/meeting.jpg',
         alt: 'People in meeting',
         title: 'Building a culture of inclusion',
         text: 'Increased employee engagement and satisfaction: In an inclusive culture, employees feel a sense of belonging and acceptance. They are more engaged and motivated to perform at their best.',
@@ -257,7 +257,7 @@ export const howitworks = [
     },
     {
         id: 3, 
-        img: '/meetingInCafe.png',
+        img: '/meetingInCafe.jpg',
         alt:'People having a meeting in cafe',
         title:'Why equality is important',
         text:'Equality ensures that every individual is treated fairly and without discrimination. It upholds the principle that all employees, regardless of their race, gender, age, or other, should have equal opportunities.',
@@ -270,7 +270,7 @@ export const howitworks = [
 export const aboutDiversity = [
     {
         id: 1, 
-        img: '/constructionWorkers.png',
+        img: '/constructionWorkers.jpg',
         alt:'Construction workers',
         title:'How diversity helps in work',
         text:'By welcoming individuals from diverse backgrounds, experiences, and perspectives, businesses open doors to wealth of fresh ideas and insights.',
@@ -281,7 +281,7 @@ export const aboutDiversity = [
     },
     {
         id: 2, 
-        img: '/laughingInCafe.png',
+        img: '/laughingInCafe.jpg',
         alt:'People laughing in cafe',
         title:'Creating an inclusive culture',
         text:'Show solidarity with marginalized groups and actively support their inclusion. Advocate for equal opportunities, fair treatment, and representation in decision-making processes.',
@@ -291,7 +291,7 @@ export const aboutDiversity = [
     },
     {
         id: 3, 
-        img: '/workingInLibary.png',
+        img: '/workingInLibary.jpg',
         alt:'People working in a library',
         title:'The power of diversity',
         text:'Appreciate and value the diverse backgrounds, experiences, and perspectives of your colleagues. Engage in conversations and initiatives that celebrate diversity, diversity-focused training programs.',
@@ -304,7 +304,7 @@ export const aboutDiversity = [
 export const aboutMental = [
     {
         id: 1, 
-        img: '/laughingGirlsOutside.png',
+        img: '/laughingGirlsOutside.jpg',
         alt:'Laughing girls outside',
         title:'Creating a supportive work',
         text:'Be willing to lend a hand to your colleagues when they need assistance. Collaborate and share knowledge and resources to foster a sense of teamwork.',
@@ -314,7 +314,7 @@ export const aboutMental = [
     },
     {
         id: 2, 
-        img: '/girlThinking.png',
+        img: '/girlThinking.jpg',
         alt:'Girl in cafe thinking',
         title:'Addressing mental health',
         text:'Offer support during challenging times. Be there for your coworkers during difficult periods, such as personal crises or work-related challenges.',
@@ -325,7 +325,7 @@ export const aboutMental = [
     },
     {
         id: 3, 
-        img: '/zenGirl.png',
+        img: '/zenGirl.jpg',
         alt:'Girl meditate',
         title:'Work-life balance',
         text:'Promote work-life balance. Encourage a healthy work-life balance among your peers. Respect personal boundaries and avoid unnecessarily pressuring colleagues to work beyond their capacity.',

@@ -21,23 +21,22 @@ function Section({ img, title, text, color }: SectionProps) {
 
     return (
         <div
-            className={`flex flex-col items-center sm:items-start rounded-lg m-3 ${
+            className={`flex flex-col rounded-lg max-w-[500px]${
                 isOpen ? color : 'bg-white'
             }`}
         >
-            <div className="relative ">
+            <div className="relative w-full items-center flex flex-col">
                 <Image
                     src={img}
                     alt={title}
                     width={350}
                     height={275}
-                    className="xl:w-[500px] "
+                    className='w-full max-w-[500px] rounded-t-lg'
                 />
-                <div
-                    className={`w-[350px] xl:w-[500px] max-h-[275px] p-5 overflow-hidden transition-max-h duration-300 ease-in-out`}
-                >
+                    <div className={`w-full max-w-[500px] sm:py-5 sm:px-4 py-3 px-3 overflow-hidden transition-max-h duration-300 ease-in-out rounded-b-lg ${color}`}>
+
                     <div className="flex justify-between items-start">
-                        <h3 className="font-kumbhSans font-semibold text-base lg:text-xl p-4 sm:p-0 ">
+                        <h3 className="font-kumbhSans font-semibold text-base lg:text-lg p-4 sm:p-0 ">
                             {title}
                         </h3>
                         <ChevronDown
@@ -49,7 +48,7 @@ function Section({ img, title, text, color }: SectionProps) {
                     </div>
                     {isOpen && (
                         <p
-                            className={`transition-opacity duration-300 ease-in-out opacity-100 p-4 sm:p-0`}
+                            className={`transition-opacity duration-300 ease-in-out opacity-100 px-4 sm:px-0 pt-1`}
                         >
                             {text}
                         </p>
@@ -62,58 +61,60 @@ function Section({ img, title, text, color }: SectionProps) {
 
 const InclusionImageInfoDivs = () => {
     return (
-        <div className="w-full md:p-16 xl:px-24 m-auto">
-            <div>
-                <h2 className="text-2xl font-kumbhSans font-bold p-4 text-left w-[320px] md:w-full pb-7">
-                    About inclusion at workplace
-                </h2>
-                <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
-                    {aboutInclusion.map((item) => (
-                        <Section
-                            key={item.id}
-                            img={item.img}
-                            title={item.title}
-                            text={item.text}
-                            color={item.color}
-                        />
-                    ))}
+        <section className='flex flex-col items-center w-full pb-56'>
+            <div className="max-w-[1200px] w-full lg:px-8 md:px-6 px-4">
+                <div>
+                    <h2 className="w-full text-center text-2xl font-kumbhSans font-bold py-4 sm:text-left pb-7">
+                        About inclusion at workplace
+                    </h2>
+                    <div className="sm:grid sm:grid-rows-2 sm:grid-cols-2 mb:grid-rows-1 mb:grid-cols-3 flex sm:flex-row justify-center sm:justify-start flex-col mb:items-top mb:justify-between pb-20 w-full sm:gap-4 gap-6">
+                        {aboutInclusion.map((item) => (
+                            <Section
+                                key={item.id}
+                                img={item.img}
+                                title={item.title}
+                                text={item.text}
+                                color={item.color}
+                            />
+                        ))}
+                    </div>
                 </div>
-            </div>
 
-            <div>
-                <h2 className="text-2xl font-kumbhSans font-bold p-4 text-left w-[320px] md:w-full pb-7">
-                    About diversity in organizations
-                </h2>
-                <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
-                    {aboutDiversity.map((item) => (
-                        <Section
-                            key={item.id}
-                            img={item.img}
-                            title={item.title}
-                            text={item.text}
-                            color={item.color}
-                        />
-                    ))}
+                <div>
+                    <h2 className="w-full text-center text-2xl font-kumbhSans font-bold py-4 sm:text-left pb-7">
+                        About diversity in organizations
+                    </h2>
+                    <div className="sm:grid sm:grid-rows-2 sm:grid-cols-2 mb:grid-rows-1 mb:grid-cols-3 flex sm:flex-row justify-center sm:justify-start flex-col mb:items-top mb:justify-between pb-20 w-full sm:gap-4 gap-6">
+                        {aboutDiversity.map((item) => (
+                            <Section
+                                key={item.id}
+                                img={item.img}
+                                title={item.title}
+                                text={item.text}
+                                color={item.color}
+                            />
+                        ))}
+                    </div>
                 </div>
-            </div>
 
-            <div>
-                <h2 className="text-2xl font-kumbhSans font-bold p-4 text-left w-[320px] md:w-full pb-7">
-                    About mental health at work
-                </h2>
-                <div className="lg:flex lg:flex-row 2xl:justify-between  xl:justify-center lg:space-x-6 pb-20">
-                    {aboutMental.map((item) => (
-                        <Section
-                            key={item.id}
-                            img={item.img}
-                            title={item.title}
-                            text={item.text}
-                            color={item.color}
-                        />
-                    ))}
+                <div>
+                    <h2 className="w-full text-center text-2xl font-kumbhSans font-bold py-4 sm:text-left pb-7">
+                        About mental health at work
+                    </h2>
+                    <div className="sm:grid sm:grid-rows-2 sm:grid-cols-2 mb:grid-rows-1 mb:grid-cols-3 flex sm:flex-row justify-center sm:justify-start flex-col mb:items-top mb:justify-between pb-20 w-full sm:gap-4 gap-6">
+                        {aboutMental.map((item) => (
+                            <Section
+                                key={item.id}
+                                img={item.img}
+                                title={item.title}
+                                text={item.text}
+                                color={item.color}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
