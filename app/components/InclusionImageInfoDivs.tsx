@@ -33,22 +33,22 @@ function Section({ img, title, text, color }: SectionProps) {
                     height={275}
                     className='w-full max-w-[500px] rounded-t-lg'
                 />
-                    <div className={`w-full max-w-[500px] sm:py-5 sm:px-4 py-3 px-3 overflow-hidden transition-max-h duration-300 ease-in-out rounded-b-lg ${color}`}>
+                    <div className={`w-full max-w-[500px] min-h-[80px] sm:min-h-[68px] sm:py-5 sm:px-4 py-3 px-3 overflow-hidden transition-max-h duration-300 ease-in-out rounded-b-lg ${color}`}>
 
                     <div className="flex justify-between items-start">
-                        <h3 className="font-kumbhSans font-semibold text-base lg:text-lg p-4 sm:p-0 ">
+                        <h3 className="font-kumbhSans font-semibold text-base lg:text-lg px-4 pt-4 pb-1 sm:p-0 sm:pb-1">
                             {title}
                         </h3>
                         <ChevronDown
                             onClick={toggleSection}
                             className={`cursor-pointer ${
                                 isOpen ? 'transform rotate-180' : ''
-                            } m-4 sm:m-0`}
+                            } mx-4 mt-4 sm:m-0`}
                         />
                     </div>
                     {isOpen && (
                         <p
-                            className={`transition-opacity duration-300 ease-in-out opacity-100 px-4 sm:px-0 pt-1`}
+                            className={`transition-opacity duration-300 ease-in-out opacity-100 px-4 sm:px-0 pb-3 sm:pb-0`}
                         >
                             {text}
                         </p>
