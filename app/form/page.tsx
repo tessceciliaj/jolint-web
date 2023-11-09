@@ -89,7 +89,6 @@ const Page = () => {
     const cancelSignature = (): void => {
         setPageNumber(9)
         setFullyVisitedParts([0, 1, 2])
-        console.log(fullyVisitedParts)
     }
 
     const handlePartBoxClick = (pages: React.SetStateAction<number>[]) => {
