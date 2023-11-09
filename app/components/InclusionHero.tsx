@@ -17,7 +17,9 @@ const InclusionHero = () => {
                 </p>
             </div>
         </div>
-    )
+        
+  )
+    
 }
 
 export default InclusionHero

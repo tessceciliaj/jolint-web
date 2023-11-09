@@ -21,6 +21,9 @@ module.exports = {
                 activeBlue: '#0015CE',
                 lightBlue: '#021BFF',
                 checkmarkGreen: '#7ACD6D',
+                pastelBlue: '#EFF5FB',
+                pastelYellow: '#FFF7EA',
+                pastelPink: '#FFF5F3',
             },
             fontFamily: {
                 poppins: 'Poppins',
