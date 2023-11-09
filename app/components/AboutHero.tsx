@@ -21,7 +21,7 @@ const AboutHero = () => {
                     <h2 className="font-bold text-2xl md:text-4xl md:p-0 p-4">
                         Our mission
                     </h2>
-                    <p className="font-kumbhSans font-normal text-left md:px-0 p-4 max-w-3xl">
+                    <p className="font-kumbhSans font-normal text-base text-left md:px-0 p-4 max-w-3xl">
                         At Jolint, we are driven by a passion for{' '}
                         <b>improving workplaces</b> and creating a better world
                         for everyone. We make sure to keep ethics and privacy at
