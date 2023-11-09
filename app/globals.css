@@ -5,15 +5,15 @@
 @tailwind utilities;
 
 .lightBtn {
-    @apply rounded-[10px] cursor-pointer font-semibold font-kumbhSans text-xl bg-transparent border-[3px] border-activeBlue;
+    @apply rounded-[10px] justify-center flex items-center cursor-pointer font-semibold font-kumbhSans text-xl bg-transparent border-[3px] border-activeBlue;
 }
 
 .orangeBtn {
-    @apply rounded-[10px] cursor-pointer font-semibold font-kumbhSans text-xl bg-accentColor text-lightColor hover:bg-opacity-40 hover:text-accentColor transition ease-in-out duration-300;
+    @apply rounded-[10px] justify-center flex items-center cursor-pointer font-semibold font-kumbhSans text-xl bg-accentColor text-lightColor hover:bg-opacity-40 hover:text-accentColor transition ease-in-out duration-300;
 }
 
 .blueBtn {
-    @apply rounded-[10px] cursor-pointer font-semibold font-kumbhSans text-xl bg-activeBlue text-lightColor  hover:bg-lightBlue hover:bg-opacity-70 transition ease-in-out duration-300;
+    @apply rounded-[10px] justify-center flex items-center cursor-pointer font-semibold font-kumbhSans text-xl bg-activeBlue text-lightColor  hover:bg-lightBlue hover:bg-opacity-70 transition ease-in-out duration-300;
 }
 
 .lightBtn:hover {
@@ -61,3 +61,22 @@
         rgba(255, 255, 255, 1) 100%
     );
 }
+
+.blueLine {
+    @apply bg-activeBlue h-[450px] w-[2px];
+}
+
+.blueDot {
+    @apply bg-activeBlue w-[25px] h-[25px] rounded-full;
+}
+
+.smallBlueDot {
+    @apply bg-activeBlue w-[18px] h-[18px] rounded-full;
+}
+
+.bigBlueDot {
+    @apply border-[#9AA4FF] border-[3px] bg-[#CCD1FF] ring-[#3449FF] ring-2 ring-offset-2 ring-offset-[#6776FF] w-[25px] h-[25px] rounded-full mb-2; 
+}
+ *{
+    scroll-behavior: smooth;
+ }

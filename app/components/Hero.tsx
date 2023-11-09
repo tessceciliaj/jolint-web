@@ -2,11 +2,12 @@ import React from 'react'
 import HeroImage from '../../public/heroImage.png'
 import Image from 'next/image'
 import { Play } from 'lucide-react'
+import Link from 'next/link'
 
 const Hero = () => {
     return (
         <div
-            className="bg-cover bg-center"
+            className="bg-cover bg-center md:max-h-[670px] xs:max-h-[550px] max-h-[700px]"
             style={{
                 backgroundImage: 'url(/Bg-Startsida.png)',
                 width: '100%',
@@ -14,15 +15,16 @@ const Hero = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                flexDirection: 'column',
             }}
         >
-            <div className="max-w-screen-2xl flex justify-center items-center overflow-x-hidden px-4">
-                <div className="max-w-screen-md p-4 md:p-8">
-                    <div className="md:pl-24 ">
+            <div className="w-full flex md:justify-center md:items-center overflow-x-hidden">
+                <div className="max-w-screen-md xs:p-6 p-4 sm:ml-20 md:ml-6 m-0">
+                    <div className="max-w-[500px] md:max-w-full">
                         <h1 className="text-4xl md:text-5xl font-poppins font-bold">
-                            Let’s Create an Inclusive <br /> Workspace Together
+                            Let's Create an Inclusive <br /> Workspace Together
                         </h1>
-                        <p className=" py-4 md:text-xl font-kumbhSans font-normal">
+                        <p className="py-4 md:text-xl font-kumbhSans font-normal">
                             Gain valuable data insights with our solution that
                             measures inclusion and belonging within your
                             organization, enabling <br />
@@ -32,31 +34,43 @@ const Hero = () => {
                             personal data
                         </p>
                         <div>
-                            <div className="flex flex-wrap gap-2 items-center">
-                                <button className="lightBtn md:w-[175px] w-full h-[55px]">
+                            <div className="mt-4 xs:mb-4 xs:mt-2 flex flex-wrap xs:flex-row flex-col gap-2 xs:justify-start items-center">
+                                <Link
+                                    href="/inclusion"
+                                    className="lightBtn xs:w-[175px] w-full h-[55px]"
+                                >
                                     Why inclusion
-                                </button>
-                                <div className="blueBtn my-2 flex items-center md:w-[175px] w-full h-[55px] justify-center">
+                                </Link>
+
+                                <Link
+                                    href="#how-it-works"
+                                    className="blueBtn xs:w-[175px] w-full h-[55px]"
+                                >
                                     <Play fill="#fff" className="mr-1 ml-2" />
-                                    <span>How it works</span>
-                                </div>
+                                    <span className="pr-2.5">How it works</span>
+                                </Link>
                             </div>
-                            <div className="mt-4">
-                                <button className="orangeBtn md:w-[175px] w-full h-[55px]">
+                            <div className="mt-2 flex xs:justify-start justify-center">
+                                <Link
+                                    href="/form"
+                                    className="orangeBtn xs:w-[175px] w-full h-[55px]"
+                                >
                                     Consent form
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="hidden lg:flex md:flex-1 md:justify-end relative left-12">
-                    <Image
-                        src={HeroImage}
-                        alt="hero image"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        width={620}
-                        height={550}
-                    />
+                <div className="hidden xl:flex lg:flex lg:relative bg-cover bg-center overflow-hidden">
+                    <div className=" lg:max-h-[455.5px] lg:min-h-[455.5px] lg:min-w-[624.78px]">
+                        <Image
+                            src={HeroImage}
+                            alt="hero image"
+                            //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            width={624.78}
+                            height={455.5}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

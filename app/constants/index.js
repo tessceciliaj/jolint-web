@@ -2,7 +2,7 @@ export const navLinks = [
     {
         id: 'howitworks',
         title: 'How it works',
-        href: '',
+        href: '/#how-it-works',
     },
     {
         id: 'inclusion',
@@ -160,7 +160,7 @@ export const partBoxInfo = [
         iconGray: '/formGrayGDPR.svg',
         activeOnPage: 5,
         checkmarkPage: 9,
-        pages: [6, 7, 8], 
+        pages: [6, 7, 8],
     },
     {
         id: '4',
@@ -336,3 +336,29 @@ export const aboutMental = [
 ]
 
 
+export const FAQ = [
+    {
+        question: 'Why do I nees to sign a consent form?',
+        answer: 'To be able to help your organisation to improve inclusion and belonging, also create more diverse and inclusive workplace, we at Jolint need your consent to collect your personal data.',
+    },
+    {
+        question: 'How does AI analyze the data?',
+        answer: 'The algorithms look for patterns and relationships in the data, and will explore gender and age differences, uncovering variations in social influence and work patterns.',
+    },
+    {
+        question: 'Do you read my email and chats?',
+        answer: 'The content of communications and calendars is never viewed nor processed. Jolint will only be processing the metadata associated with those communication channels.',
+    },
+    {
+        question: 'What result will I see?',
+        answer: 'You will access your team result as well as the result of the organisation.',
+    },
+    {
+        question: 'How can inclusion help me at my workplace?',
+        answer: 'Research shows that diverse companies are more innovative and productive. A wide range of perspectives leads to a larger pool of knowledge and experience to choose from, resulting in better decision making and problem solving.',
+    },
+    {
+        question: 'How long will you save my data?',
+        answer: 'The data will be stored as long as Jolint has a collaboration with your organisation. This will make it possible to look for patterns on monthly and yearly basis. With that said, all your data will be anonymized and can not be lead to you.',
+    },
+]
