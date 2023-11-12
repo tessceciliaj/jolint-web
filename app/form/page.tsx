@@ -74,15 +74,14 @@ const Page = () => {
 
     const nextPage = (): void => {
         setPageNumber((prev) => prev + 1)
-        if (!partBoxPages.includes(pageNumber + 1)) {
-            scrollToTop()
-        }
+        scrollToTop()  
     }
 
     const previousPage = (): void => {
         if (pageNumber > 0) {
             setPageNumber((prev) => prev - 1)
             updateVisitedPages(pageNumber, false)
+            scrollToTop()
         }
     }
 
