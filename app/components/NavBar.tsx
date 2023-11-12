@@ -70,7 +70,7 @@ const NavBar = () => {
             <div className="gap-10 font-kumbhSans hidden mb:flex justify-center items-center">
                 {navLinks.map((links) => (
                     <div key={links.id}>
-                        <Link href={links.href}>
+                        <Link href={links.href} className='hover:text-darkGray'>
                             <button onClick={closeSidebar}>
                                 {links.title}
                             </button>
