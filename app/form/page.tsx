@@ -66,23 +66,23 @@ const Page = () => {
     }
 
     function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        })
+        window.scroll(0,0)
     }
 
     const nextPage = (): void => {
-        setPageNumber((prev) => prev + 1)
-        if (!partBoxPages.includes(pageNumber + 1)) {
-            scrollToTop()
-        }
+        setPageNumber((prev) => {
+            return prev + 1;
+        });
+        scrollToTop();
     }
 
     const previousPage = (): void => {
         if (pageNumber > 0) {
-            setPageNumber((prev) => prev - 1)
-            updateVisitedPages(pageNumber, false)
+            setPageNumber((prev) => {
+                return prev - 1;
+            });
+            updateVisitedPages(pageNumber, false);
+            scrollToTop();
         }
     }
 
@@ -195,6 +195,7 @@ const Page = () => {
                             <button
                                 className="blueBtn w-[175px] h-[55px]"
                                 onClick={nextPage}
+                                onTouchStart={nextPage}
                             >
                                 Next
                             </button>
@@ -204,6 +205,7 @@ const Page = () => {
                         <button
                             className="blueBtn w-[175px] h-[55px]"
                             onClick={nextPage}
+                            onTouchStart={nextPage}
                         >
                             Start
                         </button>
