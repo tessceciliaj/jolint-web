@@ -12,7 +12,7 @@ const HowItWorks = () => {
             >
                 How it works
             </h2>
-            <div className="hidden md:block sm:absolute m-auto left-0 right-0 top-[340px] bottom-0">
+            <div className="hidden md:block sm:absolute m-auto left-0 right-0 top-[310px] bottom-0">
                 <BlueLine />
             </div>
             <div className="xl:max-w-screen-2xl m-auto flex flex-col justify-center items-center gap-28 md:gap-0 px-4 md:px-6">
@@ -32,11 +32,11 @@ const HowItWorks = () => {
                                     height={300}
                                 />
                             </div>
-                            <div className="max-w-[540px] py-4 md:py-0 md:text-left text-center col-span-1">
-                                <h3 className="font-kumbhSans text-2xl font-semibold py-2">
+                            <div className="max-w-[540px] py-4 md:py-0 text-left col-span-1">
+                                <h3 className="font-kumbhSans sm:text-2xl text-xl font-semibold py-2">
                                     {article.title}
                                 </h3>
-                                <p>{article.text}</p>
+                                <p className='leading-7'>{article.text}</p>
                             </div>
                             {article.id !== 5 ? (
                                 <div className="md:hidden flex flex-row w-fit gap-2 items-center relative top-8">

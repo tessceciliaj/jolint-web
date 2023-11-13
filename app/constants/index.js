@@ -178,14 +178,17 @@ export const advantagesText = [
     {
         id: 1,
         text: 'Anonymous and \nobjective analysis',
+        hovertext:'Jolints system assigns a unique anonymized ID to every employee, ensuring privacy. AI and machine learning algorithms analyze the data, unlocking valuable insights for informed decision-making.'
     },
     {
         id: 2,
         text: 'More aware employers',
+        hovertext: 'Jolints objective and quantifiable methods measure the access to information people have depending on their role at an organisation and other social parameters'
     },
     {
         id: 3,
         text: 'Healthier work \nenviroment',
+        hovertext: 'Jolint fosters a healthier work environment by providing data-driven insights. Promote well-being, collaboration, and positivity for a thriving workplace.'
     },
 ]
 
