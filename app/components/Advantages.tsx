@@ -24,7 +24,7 @@ const Advantages = () => {
           return (
             <div
               key={advantage.id}
-              className={`lg:p-10 p-6 justify-start items-center w-full bg-darkBlue rounded-lg flex flex-col xl:h-full lg:${showText[index] ? '' : 'h-[176px]'}`}
+              className={`lg:p-10 p-6 justify-start items-center w-full bg-darkBlue rounded-lg flex flex-col xl:min-h-fit lg:h-full lg:min-h-[176px]`}
             >
               <div className='flex flex-col gap-4 text-lg items-center'>
                 <h3 className='text-white font-kumbhSans text-center text-xl font-semibold'>{advantage.text}</h3>
