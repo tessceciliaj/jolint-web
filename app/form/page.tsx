@@ -118,7 +118,7 @@ const Page = () => {
 
     return (
         <>
-            <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[800px] w-full">
+            <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[800px] w-full h-full">
                 <div className="flex items-start flex-col justify-start font-kumbhSans xl:max-w-[1140px] lg:max-w-[980px] md:max-w-[700px] w-full">
                     <ProgressDots
                         currentPart={currentPart}
