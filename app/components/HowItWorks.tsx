@@ -5,7 +5,7 @@ import BlueLine from './BlueLine'
 
 const HowItWorks = () => {
     return (
-        <div className="pb-20 mb-40 px-2m-auto relative">
+        <div className="sm:mb-24 mb-16 px-2m-auto relative">
             <h2
                 id="how-it-works"
                 className="font-poppins font-bold text-center text-4xl mb-16 md:m-0 mb:pt-12 pt-28"
