@@ -69,7 +69,7 @@ const Page = () => {
         window.scroll({
             top: 0,
             left: 0,
-            behavior: 'smooth' // This line specifies smooth scrolling
+            behavior: 'smooth' 
         });
     }
 
@@ -77,7 +77,7 @@ const Page = () => {
         scrollToTop();
         setPageNumber((prev) => {
             const nextPageNumber = prev + 1;
-            if (nextPageNumber == 5 && 9) {
+            if (nextPageNumber === 6 || nextPageNumber === 10) {
                 scrollToTop();
             }
             return nextPageNumber;
@@ -103,7 +103,6 @@ const Page = () => {
         setVisitedPages(Array(13).fill(false))
         setPageNumber(pages[0])
         scrollToTop()
-        console.log(pageNumber)
     }
 
 
