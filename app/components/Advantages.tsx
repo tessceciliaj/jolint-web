@@ -24,10 +24,10 @@ const Advantages = () => {
           return (
             <div
               key={advantage.id}
-              className={`lg:p-10 p-6 justify-start items-center w-full bg-darkBlue rounded-lg flex flex-col xlplus:min-h-fit lg:h-full lg:min-h-[176px]`}
+              className={`lg:p-10 p-6 justify-start items-center w-full h-full bg-darkBlue rounded-lg flex flex-col xlplus:min-h-fit lg:h-full lg:min-h-[176px] md:min-h-[144px]`}
             >
               <div className='flex flex-col gap-4 text-lg items-center'>
-                <h3 className='text-white font-kumbhSans text-center text-xl font-semibold'>{advantage.text}</h3>
+                <h3 className='text-white font-kumbhSans text-center sm:text-xl text-lg font-semibold'>{advantage.text}</h3>
                 <div className={`text-white ${showText[index] ? 'hidden' : 'block'}`} onClick={() => toggleText(index)}>
                     <ChevronDown size={24} className='cursor-pointer'/>
                 </div>

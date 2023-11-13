@@ -24,7 +24,7 @@ const HowItWorks = () => {
                             className="flex flex-col items-center xl:gap-60 md:gap-40 gap-4 md:h-[485px] md:grid md:grid-rows-1 md:grid-cols-2 md:items-center"
                             key={article.id}
                         >
-                            <div className="flex justify-end max-h-[360px]">
+                            <div className="flex justify-end xs:max-w-[480px] xs:max-h-[320px] max-w-[260px]">
                                 <Image
                                     src={imagePath}
                                     alt={article.alt}
