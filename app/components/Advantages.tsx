@@ -1,27 +1,53 @@
-import { advantagesText } from '../constants'
+'use client'
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { advantagesText } from '../constants';
 
 const Advantages = () => {
-    return (
-        <div className="w-full md:py-20 pb-0 pt-10 xl:px-2 px-4 md:px-6 max-w-screen-2xl m-auto items-center flex flex-col">
-            <h3 className="font-poppins text-center font-bold md:text-3xl text-2xl p-8 max-w-sm md:max-w-lg lg:max-w-full">
-                Advantages with Jolint at your workplace
-            </h3>
-            <div className="flex flex-wrap justify-center w-full mx-auto gap-2">
-                {advantagesText.map((advantagesText) => {
-                    return (
-                        <div
-                            key={advantagesText.id}
-                            className="w-full xs:w-[75%] md:w-1/3 lg:w-[32.5%] md:h-[261px] h-[160px] bg-darkBlue rounded-lg p-4 flex flex-col justify-center"
-                        >
-                            <p className="text-white font-poppins font-semibold text-center text-xl whitespace-pre-line">
-                                {advantagesText.text}
-                            </p>
-                        </div>
-                    )
-                })}
-            </div>
-        </div>
-    )
-}
+  const [showText, setShowText] = useState(Array(advantagesText.length).fill(false));
 
-export default Advantages
+  const toggleText = (index) => {
+    setShowText((prev) => {
+      const newShowText = [...prev];
+      newShowText[index] = !newShowText[index];
+      return newShowText;
+    });
+  };
+
+  return (
+    <div className="w-full md:py-20 pb-0 pt-10 px-4 md:px-6 max-w-screen-2xl m-auto items-center flex flex-col">
+      <h3 className="font-poppins text-center font-bold md:text-3xl text-2xl py-8 px-4 sm:max-w-lg lg:max-w-full">
+        Advantages with Jolint at your workplace
+      </h3>
+      <div className="flex mb:flex-row flex-col gap-5 justify-start w-full mx-auto">
+        {advantagesText.map((advantage, index) => {
+          return (
+            <div
+              key={advantage.id}
+              className={`lg:p-10 p-6 justify-start items-center w-full h-full bg-darkBlue rounded-lg flex flex-col xlplus:min-h-fit lg:h-full lg:min-h-[176px] md:min-h-[144px]`}
+            >
+              <div className='flex flex-col gap-4 text-lg items-center'>
+                <h3 className='text-white font-kumbhSans text-center sm:text-xl text-lg font-semibold'>{advantage.text}</h3>
+                <div className={`text-white ${showText[index] ? 'hidden' : 'block'}`} onClick={() => toggleText(index)}>
+                    <ChevronDown size={24} className='cursor-pointer'/>
+                </div>
+              </div>
+
+              <p className={`text-white font-poppins my-6 text-base ${showText[index] ? 'block' : 'hidden'}`}>
+                  {advantage.hovertext}
+              </p>
+              <div className={`text-white flex w-full justify-center transform rotate-180 ${showText[index] ? 'block' : 'hidden'}`} onClick={() => toggleText(index)}>
+                    <ChevronDown size={24} className='cursor-pointer'/>
+                </div>
+
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Advantages;
+
+

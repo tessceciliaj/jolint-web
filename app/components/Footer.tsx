@@ -49,7 +49,7 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="text-center justify-center flex py-12">
+                <div className="text-center justify-center flex py-16">
                     <div className="flex flex-col sm:flex-row">
                         <div>
                             Copyright © 2023 Jolint
