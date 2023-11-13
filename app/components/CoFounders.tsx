@@ -4,7 +4,7 @@ import Klaudia from '../../public/klaudiaNew.png'
 
 const CoFounders = () => {
     return (
-        <div className="md:px-8 px-6 pb-56 pt-20 max-w-[1200px]">
+        <div className="md:px-8 px-6 pb-16 md:pb-52 pt-20 max-w-[1200px]">
             <h1 className="font-bold text-2xl text-center md:text-left">
                 Co-founders
             </h1>
