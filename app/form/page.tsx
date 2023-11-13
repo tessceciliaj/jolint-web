@@ -66,10 +66,7 @@ const Page = () => {
     }
 
     function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
+        window.scroll(0,0)
     }
 
     const nextPage = (): void => {
