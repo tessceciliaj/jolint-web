@@ -38,27 +38,9 @@ const FAQCard = () => {
                         </div>
                         <AnimatePresence>
                             {isCardOpen && (
-                                <motion.p
-                                    key="answer"
-                                    initial="closed"
-                                    animate="open"
-                                    exit="closed"
-                                    variants={{
-                                        open: {
-                                            height: 'auto',
-                                            opacity: 1,
-                                        },
-                                        closed: {
-                                            height: 0,
-                                            opacity: 0,
-                                            transition: { duration: 0 },
-                                        },
-                                    }}
-                                    transition={{ duration: 0.1 }}
-                                    className="px-7 pb-7 font-kumbhSans leading-8"
-                                >
+                                <p className="px-7 pb-7 font-kumbhSans leading-8">
                                     A: {card.answer}
-                                </motion.p>
+                                </p>
                             )}
                         </AnimatePresence>
                     </motion.div>

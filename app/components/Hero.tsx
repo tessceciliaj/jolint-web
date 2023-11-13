@@ -27,11 +27,9 @@ const Hero = () => {
                         <p className="py-4 md:text-xl font-kumbhSans font-normal">
                             Gain valuable data insights with our solution that
                             measures inclusion and belonging within your
-                            organization, enabling <br />
-                            you to take action for a more inclusive and vibrant
-                            work culture while maintaining the privacy and
-                            integrity of your <br />
-                            personal data
+                            organization, enabling you to take action for a more
+                            inclusive and vibrant work culture while maintaining
+                            the privacy and integrity of your personal data
                         </p>
                         <div>
                             <div className="mt-4 xs:mb-4 xs:mt-2 flex flex-wrap xs:flex-row flex-col gap-2 xs:justify-start items-center">
