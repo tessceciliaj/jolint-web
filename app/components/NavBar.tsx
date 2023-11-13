@@ -11,22 +11,30 @@ const NavBar = () => {
 
     const toggleSidebar = () => {
         setIsOpen(!isOpen)
+
+        document.body.classList.toggle('overflow-hidden', !isOpen)
     }
 
     const closeSidebar = () => {
         setIsOpen(false)
+
+        document.body.classList.remove('overflow-hidden')
     }
 
     return (
         <nav className="gap-10 font-kumbhSans">
             <div className="mb:hidden flex items-center justify-center">
                 <button onClick={toggleSidebar}>
-                    {isOpen ? <X className='h-8 w-8'/> : <Menu className='h-8 w-8'/>}
+                    {isOpen ? (
+                        <X className="h-8 w-8" />
+                    ) : (
+                        <Menu className="h-8 w-8" />
+                    )}
                 </button>
             </div>
             {isOpen && (
                 <motion.div
-                    className={`mb:hidden absolute flex flex-col h-screen pt-20 text-right pr-8 gap-10 bg-lightColor right-0 top-20 font-semibold z-60 ${
+                    className={`mb:hidden absolute flex flex-col h-screen pt-24 text-right pr-8 gap-10 bg-lightColor right-0 top-18 font-semibold z-60 overflow-y-hidden ${
                         isOpen ? 'blur-background' : ''
                     }`}
                 >
