@@ -48,6 +48,9 @@ module.exports = {
                 xl: '1280px',
                 // => @media (min-width: 1280px) { ... }
 
+                xlplus: '1292px',
+                // => xl plus for advantages cards @media (min-width: 1280px) { ... }
+
                 '2xl': '1350px',
                 // => @media (min-width: 1536px) { ... }
             },
