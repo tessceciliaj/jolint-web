@@ -65,21 +65,21 @@ const Page = () => {
         })
     }
 
-    function scrollToTop() {
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: 'smooth' 
-        });
-    }
+    useEffect(() => {
+        const handleScrollToTop = () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    
+        document.body.addEventListener('click', handleScrollToTop);
+    
+        return () => {
+          document.body.removeEventListener('click', handleScrollToTop);
+        };
+      }, []);
 
     const nextPage = (): void => {
-        scrollToTop();
         setPageNumber((prev) => {
             const nextPageNumber = prev + 1;
-            if (nextPageNumber === 6 || nextPageNumber === 10) {
-                scrollToTop();
-            }
             return nextPageNumber;
         });
     }
@@ -90,7 +90,6 @@ const Page = () => {
                 return prev - 1;
             });
             updateVisitedPages(pageNumber, false);
-            scrollToTop();
         }
     }
 
@@ -102,9 +101,7 @@ const Page = () => {
     const handlePartBoxClick = (pages: React.SetStateAction<number>[]) => {
         setVisitedPages(Array(13).fill(false))
         setPageNumber(pages[0])
-        scrollToTop()
     }
-
 
     const isNextBox = (partIndex: number) => {
         if (partIndex > 0) {
