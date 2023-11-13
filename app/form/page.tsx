@@ -70,19 +70,19 @@ const Page = () => {
     }
 
     const nextPage = (): void => {
+        scrollToTop();
         setPageNumber((prev) => {
             return prev + 1;
         });
-        scrollToTop();
     }
 
     const previousPage = (): void => {
+        scrollToTop();
         if (pageNumber > 0) {
             setPageNumber((prev) => {
                 return prev - 1;
             });
             updateVisitedPages(pageNumber, false);
-            scrollToTop();
         }
     }
 
@@ -92,9 +92,9 @@ const Page = () => {
     }
 
     const handlePartBoxClick = (pages: React.SetStateAction<number>[]) => {
+        scrollToTop()
         setVisitedPages(Array(13).fill(false))
         setPageNumber(pages[0])
-        scrollToTop()
     }
 
     const isNextBox = (partIndex: number) => {
